@@ -1,57 +1,67 @@
 extends Node2D
 
 @onready var vup = $Vup
-@onready var drag_plot = $DragPlot1
+
+
+## if pet is ill, update node status
+@onready var drag_plot_1 = $DragPlot1
+@onready var drag_plot_2 = $DragPlot2 
 @onready var touch_body_1 = $TouchBody1
 @onready var touch_body_2 = $TouchBody2
 @onready var touch_head_1 = $TouchHead1
 @onready var touch_head_2 = $TouchHead2
 
-
-var viewport_width
-var viewport_height
-
-
-func _ready():
-    vup.width = ProjectSettings.get_setting("display/window/size/viewport_width")
-    vup.height = ProjectSettings.get_setting("display/window/size/viewport_height")
-    vup.update_sprite()
-    
-    viewport_width = ProjectSettings.get_setting("display/window/size/viewport_width")
-    viewport_height = ProjectSettings.get_setting("display/window/size/viewport_height")
-    
-    update_event_node()
-    pass
-
+var drag_plot
+var touch_body
+var touch_head
 
 func update_node():
-    touch_body_1.scale = Vector2(viewport_width/1000, viewport_height/1000)
-    touch_body_2.scale = Vector2(viewport_width/1000, viewport_height/1000)
-    touch_body_1.position = Vector2(viewport_width/2, viewport_height*3/4)
-    touch_head_1.position = Vector2(viewport_width/2, viewport_height/4)
-
-
-func update_event_node():
+    scale = Vector2(float(viewport_size.x)/1000, float(viewport_size.y)/1000)
+    
     if vup.ill:
         touch_body_1.hide()
         touch_body_2.show()
         touch_head_1.hide()
         touch_head_2.show()
-        drag_plot = $DragPlot2
+        touch_body = touch_body_2
+        touch_head = touch_head_2
+        drag_plot = drag_plot_2
     else:
         touch_body_1.show()
         touch_body_2.hide()
         touch_head_1.show()
         touch_head_2.hide()
-        drag_plot = $DragPlot2
+        touch_body = touch_body_1
+        touch_head = touch_head_1
+        drag_plot = drag_plot_1
     pass
+
+
+var viewport_size :Vector2
+var screen_size   :Vector2
+
+func _ready():
+    viewport_size = get_viewport_rect().size
+    screen_size = DisplayServer.screen_get_size()
+
+    update_node()
+    pass
+
+
+## Read Dragging Event
+var dragging = false
+
+func _unhandled_input(event):
+    if event is InputEventMouseButton:
+        if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+            dragging = true
 
 
 ## Read Touch Head Event
 var touch_head_count = 0
 var touch_head_dff1 = -1
 
-func _on_touch_head_1_mouse_shape_entered(shape_idx):
+func _on_touch_head_mouse_shape_entered(shape_idx):
     if vup.touch_head:
         return
     
@@ -65,7 +75,7 @@ func _on_touch_head_1_mouse_shape_entered(shape_idx):
     else:
         touch_head_count = 0
         touch_head_dff1 = -1
-        vup.touch_head = true
+        vup.set_touch_head(true)
     pass
 
 
