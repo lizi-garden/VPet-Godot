@@ -2,7 +2,6 @@ extends Node2D
 
 @onready var vup = $Vup
 
-
 ## if pet is ill, update node status
 @onready var drag_plot_1 = $DragPlot1
 @onready var drag_plot_2 = $DragPlot2 
@@ -16,7 +15,7 @@ var touch_body
 var touch_head
 
 func update_node():
-    scale = Vector2(float(viewport_size.x)/1000, float(viewport_size.y)/1000)
+    set_deferred("scale", Vector2(float(viewport_size.x)/1000, float(viewport_size.y)/1000))
     
     if vup.ill:
         touch_body_1.hide()
@@ -25,7 +24,7 @@ func update_node():
         touch_head_2.show()
         touch_body = touch_body_2
         touch_head = touch_head_2
-        drag_plot_pos = drag_plot_2.global_position
+        drag_plot_pos = drag_plot_2.global_position * float(viewport_size.x)/1000
     else:
         touch_body_1.show()
         touch_body_2.hide()
@@ -33,16 +32,14 @@ func update_node():
         touch_head_2.hide()
         touch_body = touch_body_1
         touch_head = touch_head_1
-        drag_plot_pos = drag_plot_1.global_position
+        drag_plot_pos = drag_plot_1.global_position * float(viewport_size.x)/1000
     pass
 
 
 var viewport_size   :Vector2
-var screen_size     :Vector2
 
 func _ready():
     viewport_size = get_viewport_rect().size
-    screen_size = DisplayServer.screen_get_size()
 
     update_node()
     pass
@@ -104,7 +101,7 @@ func _on_touch_head_input_event(_viewport, event, shape_idx):
     pass
     
 
-func _on_touch_head_mouse_stop_or_exit():
+func _on_touch_head_mouse_stop_or_exit():   
     vup.set_touch_head(false)
     touch_head_count = 0
     touch_head_last = -1
@@ -116,6 +113,3 @@ func _on_touch_body_1_input_event(_viewport, event, _shape_idx):
     if event is InputEventMouseButton and event.double_click:
         print('double click ', event)
     pass
-
-
-

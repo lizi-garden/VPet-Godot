@@ -6,9 +6,9 @@ If you want to find offical repository. please [click here](https://github.com/L
 
 ## TODO
 
-- [y] Rasied
+- [x] Rasied
 - [ ] Climb
-- [ ] Shutdown
+- [x] Shutdown
 
 ## Animation copyright notice and authorization terms
 
