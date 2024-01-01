@@ -1,7 +1,6 @@
 extends Node2D
 
 @onready var animation_tree = $AnimationTree
-@onready var animated_sprite_2d = $AnimatedSprite2D
 
 @export var happy           = false
 @export var ill             = false
@@ -15,14 +14,12 @@ extends Node2D
 @export var move        = false
 @export var music       = false
 @export var pinch       = false
-@export var raised      = false
 @export var say         = false
 @export var sleep       = false
 @export var state       = false
 @export var switch      = false
 @export var think       = false
 @export var touch_body  = false
-@export var touch_head  = false
 @export var work        = false
 @export var shutdown    = false
 
@@ -36,6 +33,8 @@ func _process(_delta):
     pass
 
 
+@export var raised          = false
+@export var mouse_moving    = false
 func set_raised(value):
     raised = value
     animation_tree["parameters/conditions/is_rasied"]                           = value
@@ -44,8 +43,21 @@ func set_raised(value):
     animation_tree["parameters/rasied/normal/conditions/is_released"]           = !value
     animation_tree["parameters/rasied/poorcondition/conditions/is_released"]    = !value
     pass
+    
+func set_mouse_moving(value):
+    mouse_moving = value
+    animation_tree["parameters/rasied/happy/conditions/is_mouse_moving"]        = value
+    animation_tree["parameters/rasied/happy/conditions/is_mouse_stop"]          = !value
+    animation_tree["parameters/rasied/ill/conditions/is_mouse_moving"]          = value
+    animation_tree["parameters/rasied/ill/conditions/is_mouse_stop"]            = !value
+    animation_tree["parameters/rasied/normal/conditions/is_mouse_moving"]       = value
+    animation_tree["parameters/rasied/normal/conditions/is_mouse_stop"]         = !value
+    animation_tree["parameters/rasied/poorcondition/conditions/is_mouse_moving"]= value
+    animation_tree["parameters/rasied/poorcondition/conditions/is_mouse_stop"]  = !value
+    pass
 
 
+@export var touch_head  = false
 func set_touch_head(value):
     touch_head = value
     animation_tree["parameters/conditions/is_touch_head"] = value

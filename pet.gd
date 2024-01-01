@@ -49,29 +49,41 @@ func _ready():
 
 
 ## Read Dragging Event
+@onready var mouse_move_timer = $MouseMoveTimer
 var dragging = false
 var mouse_pos   :Vector2
 var window_pos  :Vector2
 
-func _input(event):
+func _unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
             dragging = true
+            vup.set_raised(true)
         else:
             dragging = false
+            vup.set_raised(false)
     
     if event is  InputEventMouseMotion and dragging:
         window_pos = get_tree().get_root().position
         mouse_pos = get_global_mouse_position()
         get_tree().get_root().position = Vector2(window_pos) + mouse_pos - drag_plot_pos
-
+        vup.set_mouse_moving(true)
+        mouse_move_timer.start()
+    else:
+        vup.set_mouse_moving(false)
     pass
 
+
+func _on_mouse_move_timer_timeout():
+    vup.set_mouse_moving(false)
+    pass
+    
+    
 ## Read Touch Head Event
 # when mouse moving horizontally, touch_head is true.
 # when mouse moving vertically, touch_head is false.
 # when mouse exited touch_head_area and not input in 0.2 seconds, touch_head is false too.
-@onready var timer = $Timer
+@onready var touch_head_timer = $TouchHeadTimer
 var release = true
 var touch_head_count = 0
 var touch_head_last = -1
@@ -85,7 +97,7 @@ func _on_touch_head_input_event(_viewport, event, shape_idx):
                 touch_head_last = -1
             
             if touch_head_count > 2:
-                timer.start()
+                touch_head_timer.start()
                 vup.set_touch_head(true)
             
             touch_head_last = shape_idx
@@ -104,5 +116,6 @@ func _on_touch_body_1_input_event(_viewport, event, _shape_idx):
     if event is InputEventMouseButton and event.double_click:
         print('double click ', event)
     pass
+
 
 

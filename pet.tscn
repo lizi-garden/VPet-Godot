@@ -65,10 +65,14 @@ position = Vector2(580, 260)
 [node name="DragPlot2" type="Node2D" parent="."]
 position = Vector2(460, 230)
 
-[node name="Timer" type="Timer" parent="."]
+[node name="TouchHeadTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="MouseMoveTimer" type="Timer" parent="."]
+wait_time = 0.2
 
 [connection signal="input_event" from="TouchHead1" to="." method="_on_touch_head_input_event"]
 [connection signal="mouse_exited" from="TouchHead1" to="." method="_on_touch_head_mouse_stop_or_exit"]
 [connection signal="input_event" from="TouchHead2" to="." method="_on_touch_head_input_event"]
-[connection signal="timeout" from="Timer" to="." method="_on_touch_head_mouse_stop_or_exit"]
+[connection signal="timeout" from="TouchHeadTimer" to="." method="_on_touch_head_mouse_stop_or_exit"]
+[connection signal="timeout" from="MouseMoveTimer" to="." method="_on_mouse_move_timer_timeout"]

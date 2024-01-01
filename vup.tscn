@@ -1,4 +1,4 @@
-[gd_scene load_steps=668 format=3 uid="uid://dsyornfipknw0"]
+[gd_scene load_steps=679 format=3 uid="uid://dsyornfipknw0"]
 
 [ext_resource type="Script" path="res://vup.gd" id="1_7y2u6"]
 [ext_resource type="Texture2D" uid="uid://dca6oh8ed3h3a" path="res://vup/Default/Happy/1/循环A_000_125.png" id="1_8wgvf"]
@@ -632,7 +632,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("62_tqfx6")
 }],
-"loop": false,
+"loop": true,
 "name": &"happy_raised_d",
 "speed": 6.0
 }, {
@@ -1035,7 +1035,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("143_isck4")
 }],
-"loop": false,
+"loop": true,
 "name": &"ill_raised_d",
 "speed": 6.0
 }, {
@@ -1339,7 +1339,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("224_fhhsp")
 }],
-"loop": false,
+"loop": true,
 "name": &"normal_raised_d_1",
 "speed": 6.0
 }, {
@@ -1377,7 +1377,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("216_wu4xx")
 }],
-"loop": false,
+"loop": true,
 "name": &"normal_raised_d_2",
 "speed": 6.0
 }, {
@@ -1745,7 +1745,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("298_ge8tk")
 }],
-"loop": false,
+"loop": true,
 "name": &"poorcondition_raised_d",
 "speed": 6.0
 }, {
@@ -1923,33 +1923,6 @@ animations = [{
 "speed": 6.0
 }]
 
-[sub_resource type="Animation" id="Animation_1xdt6"]
-length = 2.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("AnimatedSprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("AnimatedSprite2D:animation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": ["normal_raise_d_2"]
-}
-
 [sub_resource type="Animation" id="Animation_uq21x"]
 resource_name = "happy_default_1"
 length = 2.16667
@@ -2039,6 +2012,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_mk5iw"]
 length = 3.66667
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2337,6 +2311,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_7x0fh"]
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2639,6 +2614,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_8uufn"]
 length = 1.33333
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2666,6 +2642,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_7iiwq"]
 length = 1.83333
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -2939,6 +2916,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_h7hxu"]
 length = 1.83333
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -3100,7 +3078,6 @@ _data = {
 "normal_default_1": SubResource("Animation_tlm6c"),
 "normal_default_2": SubResource("Animation_67h1t"),
 "normal_default_3": SubResource("Animation_6c1qt"),
-"normal_raise_d_2": SubResource("Animation_1xdt6"),
 "normal_raised_d_1": SubResource("Animation_8uufn"),
 "normal_raised_d_2": SubResource("Animation_7iiwq"),
 "normal_raised_s_A": SubResource("Animation_fp8cj"),
@@ -3284,8 +3261,8 @@ animation = &"happy_raised_s_C"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nxwro"]
-switch_mode = 2
 advance_mode = 2
+advance_condition = &"is_mouse_stop"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xn3lb"]
 switch_mode = 2
@@ -3307,6 +3284,14 @@ advance_condition = &"is_released"
 advance_mode = 2
 advance_condition = &"is_released"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_t1w51"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_08wh2"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_t01y7"]
 states/End/position = Vector2(1002, 44)
 states/happy_raised_d/node = SubResource("AnimationNodeAnimation_museh")
@@ -3317,7 +3302,8 @@ states/happy_raised_s_B/node = SubResource("AnimationNodeAnimation_nrsiw")
 states/happy_raised_s_B/position = Vector2(637, 44)
 states/happy_raised_s_C/node = SubResource("AnimationNodeAnimation_t2b0g")
 states/happy_raised_s_C/position = Vector2(849, 101)
-transitions = ["Start", "happy_raised_d", SubResource("AnimationNodeStateMachineTransition_ayt2q"), "happy_raised_d", "happy_raised_s_A", SubResource("AnimationNodeStateMachineTransition_nxwro"), "happy_raised_s_A", "happy_raised_s_B", SubResource("AnimationNodeStateMachineTransition_xn3lb"), "happy_raised_s_B", "happy_raised_s_C", SubResource("AnimationNodeStateMachineTransition_k6v48"), "happy_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_eplpl"), "happy_raised_s_A", "happy_raised_s_C", SubResource("AnimationNodeStateMachineTransition_udv5s"), "happy_raised_d", "happy_raised_s_C", SubResource("AnimationNodeStateMachineTransition_m5c84")]
+transitions = ["Start", "happy_raised_d", SubResource("AnimationNodeStateMachineTransition_ayt2q"), "happy_raised_d", "happy_raised_s_A", SubResource("AnimationNodeStateMachineTransition_nxwro"), "happy_raised_s_A", "happy_raised_s_B", SubResource("AnimationNodeStateMachineTransition_xn3lb"), "happy_raised_s_B", "happy_raised_s_C", SubResource("AnimationNodeStateMachineTransition_k6v48"), "happy_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_eplpl"), "happy_raised_s_A", "happy_raised_s_C", SubResource("AnimationNodeStateMachineTransition_udv5s"), "happy_raised_d", "happy_raised_s_C", SubResource("AnimationNodeStateMachineTransition_m5c84"), "happy_raised_s_A", "happy_raised_d", SubResource("AnimationNodeStateMachineTransition_t1w51"), "happy_raised_s_B", "happy_raised_d", SubResource("AnimationNodeStateMachineTransition_08wh2")]
+graph_offset = Vector2(-2, -64)
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ssbpc"]
 animation = &"ill_raised_d"
@@ -3335,8 +3321,8 @@ animation = &"ill_raised_s_C"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bva2w"]
-switch_mode = 2
 advance_mode = 2
+advance_condition = &"is_mouse_stop"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_xdblq"]
 switch_mode = 2
@@ -3358,6 +3344,14 @@ advance_condition = &"is_released"
 advance_mode = 2
 advance_condition = &"is_released"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_rdioe"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0dlti"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_nq1xk"]
 states/End/position = Vector2(833, 35)
 states/Start/position = Vector2(215, 100)
@@ -3369,7 +3363,7 @@ states/ill_raised_s_B/node = SubResource("AnimationNodeAnimation_1onct")
 states/ill_raised_s_B/position = Vector2(587, 35)
 states/ill_raised_s_C/node = SubResource("AnimationNodeAnimation_n384d")
 states/ill_raised_s_C/position = Vector2(716, 100)
-transitions = ["Start", "ill_raised_d", SubResource("AnimationNodeStateMachineTransition_at4yq"), "ill_raised_d", "ill_raised_s_A", SubResource("AnimationNodeStateMachineTransition_bva2w"), "ill_raised_s_A", "ill_raised_s_B", SubResource("AnimationNodeStateMachineTransition_xdblq"), "ill_raised_s_B", "ill_raised_s_C", SubResource("AnimationNodeStateMachineTransition_g3btq"), "ill_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_s6gna"), "ill_raised_s_A", "ill_raised_s_C", SubResource("AnimationNodeStateMachineTransition_kcd0j"), "ill_raised_d", "ill_raised_s_C", SubResource("AnimationNodeStateMachineTransition_a03an")]
+transitions = ["Start", "ill_raised_d", SubResource("AnimationNodeStateMachineTransition_at4yq"), "ill_raised_d", "ill_raised_s_A", SubResource("AnimationNodeStateMachineTransition_bva2w"), "ill_raised_s_A", "ill_raised_s_B", SubResource("AnimationNodeStateMachineTransition_xdblq"), "ill_raised_s_B", "ill_raised_s_C", SubResource("AnimationNodeStateMachineTransition_g3btq"), "ill_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_s6gna"), "ill_raised_s_A", "ill_raised_s_C", SubResource("AnimationNodeStateMachineTransition_kcd0j"), "ill_raised_d", "ill_raised_s_C", SubResource("AnimationNodeStateMachineTransition_a03an"), "ill_raised_s_B", "ill_raised_d", SubResource("AnimationNodeStateMachineTransition_rdioe"), "ill_raised_s_A", "ill_raised_d", SubResource("AnimationNodeStateMachineTransition_0dlti")]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_g1fqh"]
 animation = &"normal_raised_d_1"
@@ -3386,17 +3380,15 @@ animation = &"normal_raised_s_B"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_xxerr"]
 animation = &"normal_raised_s_C"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_5f6f7"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yh0dq"]
 advance_mode = 2
-advance_condition = &"normal_raised_d_1"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_l76dv"]
-advance_mode = 2
-advance_condition = &"normal_raised_d_2"
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_dd3ed"]
+transitions = ["Start", "End", SubResource("AnimationNodeStateMachineTransition_yh0dq")]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lw8ob"]
-switch_mode = 2
 advance_mode = 2
+advance_condition = &"is_mouse_stop"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_84ogv"]
 advance_mode = 2
@@ -3407,8 +3399,8 @@ switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_3nnbs"]
-switch_mode = 2
 advance_mode = 2
+advance_condition = &"is_mouse_stop"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ds6qb"]
 advance_mode = 2
@@ -3426,19 +3418,41 @@ advance_mode = 2
 advance_mode = 2
 advance_condition = &"is_released"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_8b0tx"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bjhsk"]
+advance_mode = 2
+advance_condition = &"normal_raised_d_1"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_pjatv"]
+advance_mode = 2
+advance_condition = &"normal_raised_d_2"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_n2quo"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_x7688"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_twqn3"]
-states/End/position = Vector2(1121, 97)
+states/End/position = Vector2(1162, 98)
+states/Start/position = Vector2(94, 101)
 states/normal_raised_d_1/node = SubResource("AnimationNodeAnimation_g1fqh")
-states/normal_raised_d_1/position = Vector2(344, 43)
+states/normal_raised_d_1/position = Vector2(385, 44)
 states/normal_raised_d_2/node = SubResource("AnimationNodeAnimation_k0scr")
-states/normal_raised_d_2/position = Vector2(344, 153)
+states/normal_raised_d_2/position = Vector2(385, 154)
 states/normal_raised_s_A/node = SubResource("AnimationNodeAnimation_iruct")
-states/normal_raised_s_A/position = Vector2(537, 100)
+states/normal_raised_s_A/position = Vector2(578, 101)
 states/normal_raised_s_B/node = SubResource("AnimationNodeAnimation_07ian")
-states/normal_raised_s_B/position = Vector2(740, 43)
+states/normal_raised_s_B/position = Vector2(781, 44)
 states/normal_raised_s_C/node = SubResource("AnimationNodeAnimation_xxerr")
-states/normal_raised_s_C/position = Vector2(948, 97)
-transitions = ["Start", "normal_raised_d_1", SubResource("AnimationNodeStateMachineTransition_5f6f7"), "Start", "normal_raised_d_2", SubResource("AnimationNodeStateMachineTransition_l76dv"), "normal_raised_d_1", "normal_raised_s_A", SubResource("AnimationNodeStateMachineTransition_lw8ob"), "normal_raised_s_A", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_84ogv"), "normal_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_khak4"), "normal_raised_d_2", "normal_raised_s_A", SubResource("AnimationNodeStateMachineTransition_3nnbs"), "normal_raised_d_1", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_ds6qb"), "normal_raised_d_2", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_y7ggm"), "normal_raised_s_A", "normal_raised_s_B", SubResource("AnimationNodeStateMachineTransition_0wqsx"), "normal_raised_s_B", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_soppx")]
+states/normal_raised_s_C/position = Vector2(989, 98)
+states/start_normal/node = SubResource("AnimationNodeStateMachine_dd3ed")
+states/start_normal/position = Vector2(231, 98)
+transitions = ["normal_raised_d_1", "normal_raised_s_A", SubResource("AnimationNodeStateMachineTransition_lw8ob"), "normal_raised_s_A", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_84ogv"), "normal_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_khak4"), "normal_raised_d_2", "normal_raised_s_A", SubResource("AnimationNodeStateMachineTransition_3nnbs"), "normal_raised_d_1", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_ds6qb"), "normal_raised_d_2", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_y7ggm"), "normal_raised_s_A", "normal_raised_s_B", SubResource("AnimationNodeStateMachineTransition_0wqsx"), "normal_raised_s_B", "normal_raised_s_C", SubResource("AnimationNodeStateMachineTransition_soppx"), "Start", "start_normal", SubResource("AnimationNodeStateMachineTransition_8b0tx"), "start_normal", "normal_raised_d_1", SubResource("AnimationNodeStateMachineTransition_bjhsk"), "start_normal", "normal_raised_d_2", SubResource("AnimationNodeStateMachineTransition_pjatv"), "normal_raised_s_A", "start_normal", SubResource("AnimationNodeStateMachineTransition_n2quo"), "normal_raised_s_B", "start_normal", SubResource("AnimationNodeStateMachineTransition_x7688")]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_5swt0"]
 animation = &"poorcondition_raised_d"
@@ -3456,8 +3470,8 @@ animation = &"poorcondition_raised_s_C"
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b1707"]
-switch_mode = 2
 advance_mode = 2
+advance_condition = &"is_mouse_stop"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4sdqs"]
 switch_mode = 2
@@ -3479,6 +3493,18 @@ advance_condition = &"is_released"
 advance_mode = 2
 advance_condition = &"is_released"
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_eihaw"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_f3nne"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving and normal_raised_d_1"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qa730"]
+advance_mode = 2
+advance_condition = &"is_mouse_moving"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_5l5o3"]
 states/End/position = Vector2(915, 172)
 states/poorcondition_raised_d/node = SubResource("AnimationNodeAnimation_5swt0")
@@ -3489,7 +3515,7 @@ states/poorcondition_raised_s_B/node = SubResource("AnimationNodeAnimation_l1lyb
 states/poorcondition_raised_s_B/position = Vector2(608, 175)
 states/poorcondition_raised_s_C/node = SubResource("AnimationNodeAnimation_yn6o0")
 states/poorcondition_raised_s_C/position = Vector2(752, 108)
-transitions = ["Start", "poorcondition_raised_d", SubResource("AnimationNodeStateMachineTransition_7my3q"), "poorcondition_raised_d", "poorcondition_raised_s_A", SubResource("AnimationNodeStateMachineTransition_b1707"), "poorcondition_raised_s_A", "poorcondition_raised_s_B", SubResource("AnimationNodeStateMachineTransition_4sdqs"), "poorcondition_raised_s_B", "poorcondition_raised_s_C", SubResource("AnimationNodeStateMachineTransition_k5cji"), "poorcondition_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_0ouku"), "poorcondition_raised_s_A", "poorcondition_raised_s_C", SubResource("AnimationNodeStateMachineTransition_3c2r0"), "poorcondition_raised_d", "poorcondition_raised_s_C", SubResource("AnimationNodeStateMachineTransition_trjxi")]
+transitions = ["Start", "poorcondition_raised_d", SubResource("AnimationNodeStateMachineTransition_7my3q"), "poorcondition_raised_d", "poorcondition_raised_s_A", SubResource("AnimationNodeStateMachineTransition_b1707"), "poorcondition_raised_s_A", "poorcondition_raised_s_B", SubResource("AnimationNodeStateMachineTransition_4sdqs"), "poorcondition_raised_s_B", "poorcondition_raised_s_C", SubResource("AnimationNodeStateMachineTransition_k5cji"), "poorcondition_raised_s_C", "End", SubResource("AnimationNodeStateMachineTransition_0ouku"), "poorcondition_raised_s_A", "poorcondition_raised_s_C", SubResource("AnimationNodeStateMachineTransition_3c2r0"), "poorcondition_raised_d", "poorcondition_raised_s_C", SubResource("AnimationNodeStateMachineTransition_trjxi"), "poorcondition_raised_s_B", "poorcondition_raised_s_A", SubResource("AnimationNodeStateMachineTransition_eihaw"), "poorcondition_raised_s_A", "poorcondition_raised_d", SubResource("AnimationNodeStateMachineTransition_f3nne"), "poorcondition_raised_s_B", "poorcondition_raised_d", SubResource("AnimationNodeStateMachineTransition_qa730")]
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_64u6j"]
 advance_mode = 2
@@ -3525,7 +3551,7 @@ advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_45h0p"]
 states/happy/node = SubResource("AnimationNodeStateMachine_t01y7")
-states/happy/position = Vector2(516, 8.39456)
+states/happy/position = Vector2(516, 7.39456)
 states/ill/node = SubResource("AnimationNodeStateMachine_nq1xk")
 states/ill/position = Vector2(516, 70)
 states/normal/node = SubResource("AnimationNodeStateMachine_twqn3")
@@ -3533,7 +3559,7 @@ states/normal/position = Vector2(516, 137.395)
 states/poorcondition/node = SubResource("AnimationNodeStateMachine_5l5o3")
 states/poorcondition/position = Vector2(516, 198.395)
 transitions = ["Start", "happy", SubResource("AnimationNodeStateMachineTransition_64u6j"), "Start", "ill", SubResource("AnimationNodeStateMachineTransition_7gow7"), "Start", "normal", SubResource("AnimationNodeStateMachineTransition_i2xwi"), "Start", "poorcondition", SubResource("AnimationNodeStateMachineTransition_fvswm"), "happy", "End", SubResource("AnimationNodeStateMachineTransition_hph4d"), "ill", "End", SubResource("AnimationNodeStateMachineTransition_igmvp"), "normal", "End", SubResource("AnimationNodeStateMachineTransition_u6egs"), "poorcondition", "End", SubResource("AnimationNodeStateMachineTransition_ms1ov")]
-graph_offset = Vector2(0, -275.605)
+graph_offset = Vector2(0, -166.085)
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_tmkau"]
 
@@ -3932,7 +3958,7 @@ states/music/position = Vector2(659.864, 266)
 states/pinch/node = SubResource("AnimationNodeStateMachine_yphdq")
 states/pinch/position = Vector2(659.864, 323)
 states/rasied/node = SubResource("AnimationNodeStateMachine_45h0p")
-states/rasied/position = Vector2(659.864, 379)
+states/rasied/position = Vector2(659.864, 378)
 states/say/node = SubResource("AnimationNodeStateMachine_tmkau")
 states/say/position = Vector2(659.864, 436)
 states/shutdown/node = SubResource("AnimationNodeStateMachine_ukcul")
@@ -3954,7 +3980,7 @@ states/touch_head/position = Vector2(659.864, 797)
 states/work/node = SubResource("AnimationNodeStateMachine_0fyga")
 states/work/position = Vector2(659.864, 867.514)
 transitions = ["Start", "start_up", SubResource("AnimationNodeStateMachineTransition_gg2w7"), "start_up", "default", SubResource("AnimationNodeStateMachineTransition_k0j0n"), "shutdown", "End", SubResource("AnimationNodeStateMachineTransition_klb0k"), "default", "drink", SubResource("AnimationNodeStateMachineTransition_vdjnn"), "default", "gift", SubResource("AnimationNodeStateMachineTransition_4b2sl"), "default", "idle", SubResource("AnimationNodeStateMachineTransition_ff7cb"), "default", "move", SubResource("AnimationNodeStateMachineTransition_4myp1"), "default", "music", SubResource("AnimationNodeStateMachineTransition_m8uwt"), "default", "pinch", SubResource("AnimationNodeStateMachineTransition_yab2q"), "drink", "default", SubResource("AnimationNodeStateMachineTransition_h6v5c"), "gift", "default", SubResource("AnimationNodeStateMachineTransition_vqotq"), "move", "default", SubResource("AnimationNodeStateMachineTransition_js6p8"), "music", "default", SubResource("AnimationNodeStateMachineTransition_4pfg8"), "pinch", "default", SubResource("AnimationNodeStateMachineTransition_4gq0j"), "idle", "default", SubResource("AnimationNodeStateMachineTransition_l2vmv"), "default", "rasied", SubResource("AnimationNodeStateMachineTransition_q11im"), "default", "say", SubResource("AnimationNodeStateMachineTransition_lvaos"), "default", "sleep", SubResource("AnimationNodeStateMachineTransition_6v0jq"), "default", "state", SubResource("AnimationNodeStateMachineTransition_4npol"), "default", "switch", SubResource("AnimationNodeStateMachineTransition_lppqr"), "default", "think", SubResource("AnimationNodeStateMachineTransition_hfj8l"), "default", "touch_body", SubResource("AnimationNodeStateMachineTransition_6s33h"), "default", "touch_head", SubResource("AnimationNodeStateMachineTransition_2xfmy"), "default", "work", SubResource("AnimationNodeStateMachineTransition_0t3g0"), "rasied", "default", SubResource("AnimationNodeStateMachineTransition_mak7g"), "say", "default", SubResource("AnimationNodeStateMachineTransition_ec1p7"), "sleep", "default", SubResource("AnimationNodeStateMachineTransition_h87nv"), "state", "default", SubResource("AnimationNodeStateMachineTransition_umv27"), "switch", "default", SubResource("AnimationNodeStateMachineTransition_fcxhh"), "think", "default", SubResource("AnimationNodeStateMachineTransition_xyqj8"), "touch_body", "default", SubResource("AnimationNodeStateMachineTransition_ph7c6"), "touch_head", "default", SubResource("AnimationNodeStateMachineTransition_yek2o"), "work", "default", SubResource("AnimationNodeStateMachineTransition_ugjqe"), "drink", "shutdown", SubResource("AnimationNodeStateMachineTransition_g0d2m"), "gift", "shutdown", SubResource("AnimationNodeStateMachineTransition_bn864"), "idle", "shutdown", SubResource("AnimationNodeStateMachineTransition_x6720"), "move", "shutdown", SubResource("AnimationNodeStateMachineTransition_cddcq"), "music", "shutdown", SubResource("AnimationNodeStateMachineTransition_u4mpc"), "pinch", "shutdown", SubResource("AnimationNodeStateMachineTransition_xhmcp"), "rasied", "shutdown", SubResource("AnimationNodeStateMachineTransition_p8o4j"), "say", "shutdown", SubResource("AnimationNodeStateMachineTransition_o1xxc"), "sleep", "shutdown", SubResource("AnimationNodeStateMachineTransition_pusiw"), "state", "shutdown", SubResource("AnimationNodeStateMachineTransition_637oh"), "switch", "shutdown", SubResource("AnimationNodeStateMachineTransition_4d87j"), "think", "shutdown", SubResource("AnimationNodeStateMachineTransition_vrp58"), "touch_body", "shutdown", SubResource("AnimationNodeStateMachineTransition_2hdu8"), "touch_head", "shutdown", SubResource("AnimationNodeStateMachineTransition_b4c3b"), "work", "shutdown", SubResource("AnimationNodeStateMachineTransition_863nh"), "default", "shutdown", SubResource("AnimationNodeStateMachineTransition_j2pty")]
-graph_offset = Vector2(-63.1359, 100.992)
+graph_offset = Vector2(-63.1359, 63.3245)
 
 [node name="Vup" type="Node2D"]
 script = ExtResource("1_7y2u6")
@@ -3962,7 +3988,8 @@ script = ExtResource("1_7y2u6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(500, 500)
 sprite_frames = SubResource("SpriteFrames_rob0e")
-animation = &"happy_touch_head_B"
+animation = &"normal_raised_d_2"
+frame = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -4010,11 +4037,20 @@ parameters/rasied/conditions/is_happy = false
 parameters/rasied/conditions/is_ill = false
 parameters/rasied/conditions/is_poorcondition = false
 parameters/rasied/conditions/normal = false
+parameters/rasied/happy/conditions/is_mouse_moving = false
+parameters/rasied/happy/conditions/is_mouse_stop = false
 parameters/rasied/happy/conditions/is_released = false
+parameters/rasied/ill/conditions/is_mouse_moving = false
+parameters/rasied/ill/conditions/is_mouse_stop = false
 parameters/rasied/ill/conditions/is_released = false
+parameters/rasied/normal/conditions/is_mouse_moving = false
+parameters/rasied/normal/conditions/is_mouse_stop = false
 parameters/rasied/normal/conditions/is_released = false
 parameters/rasied/normal/conditions/normal_raised_d_1 = false
 parameters/rasied/normal/conditions/normal_raised_d_2 = false
+parameters/rasied/poorcondition/conditions/is_mouse_moving = false
+"parameters/rasied/poorcondition/conditions/is_mouse_moving and normal_raised_d_1" = false
+parameters/rasied/poorcondition/conditions/is_mouse_stop = false
 parameters/rasied/poorcondition/conditions/is_released = false
 parameters/start_up/conditions/is_happy = false
 parameters/start_up/conditions/is_happy_1 = false
