@@ -7,3 +7,5 @@
 script = ExtResource("1_jgmrn")
 
 [node name="Pet" parent="." instance=ExtResource("2_xvset")]
+
+[node name="Window" type="Window" parent="."]

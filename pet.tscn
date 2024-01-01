@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://biqph41km6qku"]
+[gd_scene load_steps=8 format=3 uid="uid://biqph41km6qku"]
 
 [ext_resource type="PackedScene" uid="uid://dsyornfipknw0" path="res://vup.tscn" id="1_rel4t"]
 [ext_resource type="Script" path="res://pet.gd" id="1_yjjo8"]
@@ -6,8 +6,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdlto"]
 size = Vector2(600, 500)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k570k"]
+size = Vector2(600, 400)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_x57d4"]
 size = Vector2(300, 500)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t7yvk"]
+size = Vector2(200, 400)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1ced"]
+size = Vector2(200, 400)
 
 [node name="Pet" type="Node2D"]
 script = ExtResource("1_yjjo8")
@@ -22,9 +31,10 @@ shape = SubResource("RectangleShape2D_sdlto")
 
 [node name="TouchBody2" type="Area2D" parent="."]
 visible = false
+position = Vector2(300, 750)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TouchBody2"]
-shape = SubResource("RectangleShape2D_sdlto")
+shape = SubResource("RectangleShape2D_k570k")
 
 [node name="TouchHead1" type="Area2D" parent="."]
 position = Vector2(500, 250)
@@ -39,12 +49,15 @@ shape = SubResource("RectangleShape2D_x57d4")
 
 [node name="TouchHead2" type="Area2D" parent="."]
 visible = false
+position = Vector2(800, 750)
 
 [node name="CollisionShape2DL" type="CollisionShape2D" parent="TouchHead2"]
-shape = SubResource("RectangleShape2D_x57d4")
+position = Vector2(-100, 0)
+shape = SubResource("RectangleShape2D_t7yvk")
 
 [node name="CollisionShape2DR" type="CollisionShape2D" parent="TouchHead2"]
-shape = SubResource("RectangleShape2D_x57d4")
+position = Vector2(100, 0)
+shape = SubResource("RectangleShape2D_h1ced")
 
 [node name="DragPlot1" type="Node2D" parent="."]
 position = Vector2(580, 260)
@@ -52,5 +65,5 @@ position = Vector2(580, 260)
 [node name="DragPlot2" type="Node2D" parent="."]
 position = Vector2(460, 230)
 
-[connection signal="input_event" from="TouchBody1" to="." method="_on_touch_body_1_input_event"]
-[connection signal="mouse_shape_entered" from="TouchHead1" to="." method="_on_touch_head_1_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="TouchHead1" to="." method="_on_touch_head_mouse_shape_entered"]
+[connection signal="mouse_shape_entered" from="TouchHead2" to="." method="_on_touch_head_mouse_shape_entered"]

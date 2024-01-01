@@ -4021,7 +4021,7 @@ script = ExtResource("1_7y2u6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(500, 500)
 sprite_frames = SubResource("SpriteFrames_rob0e")
-animation = &"happy_default_3"
+animation = &"ill_default_2"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

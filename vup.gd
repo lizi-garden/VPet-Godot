@@ -27,30 +27,17 @@ extends Node2D
 @export var shutdown    = false
 
 
-@export var width = 1000
-@export var height = 1000
-
-
 func _process(_delta):
     # set status
     set_happy(happy)
     set_ill(ill)
     set_normal(normal)
     set_poor_condition(poor_condition)
-    
-    # set action
-    set_touch_head(touch_head)
-    set_raised(raised)
-    pass
-
-
-func update_sprite():
-    animated_sprite_2d.scale = Vector2(width/1000, height/1000)
-    animated_sprite_2d.position = Vector2(width/2, height/2)
     pass
 
 
 func set_raised(value):
+    raised = value
     animation_tree["parameters/conditions/is_rasied"]                           = value
     animation_tree["parameters/rasied/happy/conditions/is_released"]            = !value
     animation_tree["parameters/rasied/ill/conditions/is_released"]              = !value
@@ -60,11 +47,13 @@ func set_raised(value):
 
 
 func set_touch_head(value):
+    touch_head = value
     animation_tree["parameters/conditions/is_touch_head"] = value
     pass
     
 
 func set_happy(value):
+    happy = value
     animation_tree["parameters/start_up/conditions/is_happy"]   = value
     animation_tree["parameters/default/conditions/is_happy"]    = value
     animation_tree["parameters/rasied/conditions/is_happy"]     = value
@@ -73,6 +62,7 @@ func set_happy(value):
 
 
 func set_ill(value):
+    ill = value
     animation_tree["parameters/start_up/conditions/is_ill"]     = value
     animation_tree["parameters/default/conditions/is_ill"]      = value
     animation_tree["parameters/rasied/conditions/is_ill"]       = value
@@ -81,6 +71,7 @@ func set_ill(value):
 
 
 func set_normal(value):
+    normal = value
     animation_tree["parameters/start_up/conditions/normal"]     = value
     animation_tree["parameters/default/conditions/normal"]      = value
     animation_tree["parameters/rasied/conditions/normal"]       = value
@@ -89,6 +80,7 @@ func set_normal(value):
 
 
 func set_poor_condition(value):
+    poor_condition = value
     animation_tree["parameters/start_up/conditions/is_poorcondition"]   = value
     animation_tree["parameters/rasied/conditions/is_poorcondition"]     = value
     animation_tree["parameters/default/conditions/is_poorcondition"]    = value
@@ -98,6 +90,6 @@ func set_poor_condition(value):
 func _on_animation_finished(anim_name):
     match anim_name:
         var value when value.contains("touch_head"):
-            touch_head = false
+            set_touch_head(false)
             animation_tree.update_touch_head_event()
     pass

@@ -11,7 +11,7 @@ extends Node2D
 @onready var touch_head_1 = $TouchHead1
 @onready var touch_head_2 = $TouchHead2
 
-var drag_plot
+var drag_plot_pos
 var touch_body
 var touch_head
 
@@ -25,7 +25,7 @@ func update_node():
         touch_head_2.show()
         touch_body = touch_body_2
         touch_head = touch_head_2
-        drag_plot = drag_plot_2
+        drag_plot_pos = drag_plot_2.global_position
     else:
         touch_body_1.show()
         touch_body_2.hide()
@@ -33,12 +33,12 @@ func update_node():
         touch_head_2.hide()
         touch_body = touch_body_1
         touch_head = touch_head_1
-        drag_plot = drag_plot_1
+        drag_plot_pos = drag_plot_1.global_position
     pass
 
 
-var viewport_size :Vector2
-var screen_size   :Vector2
+var viewport_size   :Vector2
+var screen_size     :Vector2
 
 func _ready():
     viewport_size = get_viewport_rect().size
@@ -50,12 +50,24 @@ func _ready():
 
 ## Read Dragging Event
 var dragging = false
+var mouse_in_pos:Vector2
+var mouse_pos   :Vector2
+var window_pos  :Vector2
 
 func _unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
             dragging = true
-
+            mouse_in_pos = get_global_mouse_position()
+        else:
+            dragging = false
+    
+    if event is  InputEventMouseMotion and dragging:
+        window_pos = get_tree().get_root().position
+        mouse_pos = get_global_mouse_position()
+        get_tree().get_root().position = Vector2(window_pos) + mouse_pos - drag_plot_pos
+        
+    pass
 
 ## Read Touch Head Event
 var touch_head_count = 0
