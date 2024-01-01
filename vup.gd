@@ -49,6 +49,7 @@ func set_raised(value):
 func set_touch_head(value):
     touch_head = value
     animation_tree["parameters/conditions/is_touch_head"] = value
+    animation_tree["parameters/touch_head/conditions/is_not_touch_head"] = !value
     pass
     
 
@@ -88,8 +89,4 @@ func set_poor_condition(value):
 
 
 func _on_animation_finished(anim_name):
-    match anim_name:
-        var value when value.contains("touch_head"):
-            set_touch_head(false)
-            animation_tree.update_touch_head_event()
     pass

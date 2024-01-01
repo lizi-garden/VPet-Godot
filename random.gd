@@ -8,7 +8,6 @@ func _ready():
 
 func update_event():
     update_default_event()
-    update_touch_head_event()
     update_raised_event()
     pass
 
@@ -22,56 +21,6 @@ func update_raised_event():
         "event2":
             self["parameters/rasied/normal/conditions/normal_raised_d_1"] = false
             self["parameters/rasied/normal/conditions/normal_raised_d_2"] = true
-    pass
-
-
-func update_touch_head_event():
-    var happy_event = get_event_3()
-    match happy_event:
-        "event1":
-            self["parameters/touch_head/normal/conditions/normal_touch_head_A"] = true
-            self["parameters/touch_head/normal/conditions/normal_touch_head_B"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_C"] = false
-        "event2":
-            self["parameters/touch_head/normal/conditions/normal_touch_head_A"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_B"] = true
-            self["parameters/touch_head/normal/conditions/normal_touch_head_C"] = false
-        "event3":
-            self["parameters/touch_head/normal/conditions/normal_touch_head_A"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_B"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_C"] = true
-    
-    
-    var ill_event = get_event_3()
-    match ill_event:
-        "event1":
-            self["parameters/touch_head/ill/conditions/ill_touch_head_A"] = true
-            self["parameters/touch_head/ill/conditions/ill_touch_head_B"] = false
-            self["parameters/touch_head/ill/conditions/ill_touch_head_C"] = false
-        "event2":
-            self["parameters/touch_head/ill/conditions/ill_touch_head_A"] = false
-            self["parameters/touch_head/ill/conditions/ill_touch_head_B"] = true
-            self["parameters/touch_head/ill/conditions/ill_touch_head_C"] = false
-        "event3":
-            self["parameters/touch_head/ill/conditions/ill_touch_head_A"] = false
-            self["parameters/touch_head/ill/conditions/ill_touch_head_B"] = false
-            self["parameters/touch_head/ill/conditions/ill_touch_head_C"] = true
-        
-    
-    var normal_event = get_event_3()
-    match normal_event:
-        "event1":
-            self["parameters/touch_head/normal/conditions/normal_touch_head_A"] = true
-            self["parameters/touch_head/normal/conditions/normal_touch_head_B"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_C"] = false
-        "event1":
-            self["parameters/touch_head/normal/conditions/normal_touch_head_A"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_B"] = true
-            self["parameters/touch_head/normal/conditions/normal_touch_head_C"] = false
-        "event1":
-            self["parameters/touch_head/normal/conditions/normal_touch_head_A"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_B"] = false
-            self["parameters/touch_head/normal/conditions/normal_touch_head_C"] = true
     pass
             
 
