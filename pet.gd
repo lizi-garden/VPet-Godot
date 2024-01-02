@@ -55,9 +55,11 @@ func _unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
             dragging = true
+            Input.set_default_cursor_shape(Input.CURSOR_DRAG)
             vup.set_raised(true)
         else:
             dragging = false
+            Input.set_default_cursor_shape(Input.CURSOR_ARROW)
             vup.set_raised(false)
     
     if event is  InputEventMouseMotion and dragging:
@@ -95,6 +97,7 @@ func _on_touch_head_input_event(_viewport, event, shape_idx):
             
             if touch_head_count > 2:
                 touch_head_timer.start()
+                Input.set_default_cursor_shape(Input.CURSOR_MOVE)
                 vup.set_touch_head(true)
             
             touch_head_last = shape_idx
@@ -102,6 +105,7 @@ func _on_touch_head_input_event(_viewport, event, shape_idx):
     
 
 func _on_touch_head_mouse_stop_or_exit():   
+    Input.set_default_cursor_shape(Input.CURSOR_ARROW)
     vup.set_touch_head(false)
     touch_head_count = 0
     touch_head_last = -1
