@@ -100,5 +100,11 @@ func set_poor_condition(value):
     pass
 
 
-func _on_animation_finished(anim_name):
+func _on_animation_started(anim_name):
+    print(anim_name)
+    match anim_name:
+        var value when value.contains("_s_C"):
+            animation_tree.update_default_event()
+        var value when value.contains("normal_raised_s_A"):
+            animation_tree.update_raised_event()
     pass

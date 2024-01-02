@@ -3980,7 +3980,7 @@ states/touch_head/position = Vector2(659.864, 797)
 states/work/node = SubResource("AnimationNodeStateMachine_0fyga")
 states/work/position = Vector2(659.864, 867.514)
 transitions = ["Start", "start_up", SubResource("AnimationNodeStateMachineTransition_gg2w7"), "start_up", "default", SubResource("AnimationNodeStateMachineTransition_k0j0n"), "shutdown", "End", SubResource("AnimationNodeStateMachineTransition_klb0k"), "default", "drink", SubResource("AnimationNodeStateMachineTransition_vdjnn"), "default", "gift", SubResource("AnimationNodeStateMachineTransition_4b2sl"), "default", "idle", SubResource("AnimationNodeStateMachineTransition_ff7cb"), "default", "move", SubResource("AnimationNodeStateMachineTransition_4myp1"), "default", "music", SubResource("AnimationNodeStateMachineTransition_m8uwt"), "default", "pinch", SubResource("AnimationNodeStateMachineTransition_yab2q"), "drink", "default", SubResource("AnimationNodeStateMachineTransition_h6v5c"), "gift", "default", SubResource("AnimationNodeStateMachineTransition_vqotq"), "move", "default", SubResource("AnimationNodeStateMachineTransition_js6p8"), "music", "default", SubResource("AnimationNodeStateMachineTransition_4pfg8"), "pinch", "default", SubResource("AnimationNodeStateMachineTransition_4gq0j"), "idle", "default", SubResource("AnimationNodeStateMachineTransition_l2vmv"), "default", "rasied", SubResource("AnimationNodeStateMachineTransition_q11im"), "default", "say", SubResource("AnimationNodeStateMachineTransition_lvaos"), "default", "sleep", SubResource("AnimationNodeStateMachineTransition_6v0jq"), "default", "state", SubResource("AnimationNodeStateMachineTransition_4npol"), "default", "switch", SubResource("AnimationNodeStateMachineTransition_lppqr"), "default", "think", SubResource("AnimationNodeStateMachineTransition_hfj8l"), "default", "touch_body", SubResource("AnimationNodeStateMachineTransition_6s33h"), "default", "touch_head", SubResource("AnimationNodeStateMachineTransition_2xfmy"), "default", "work", SubResource("AnimationNodeStateMachineTransition_0t3g0"), "rasied", "default", SubResource("AnimationNodeStateMachineTransition_mak7g"), "say", "default", SubResource("AnimationNodeStateMachineTransition_ec1p7"), "sleep", "default", SubResource("AnimationNodeStateMachineTransition_h87nv"), "state", "default", SubResource("AnimationNodeStateMachineTransition_umv27"), "switch", "default", SubResource("AnimationNodeStateMachineTransition_fcxhh"), "think", "default", SubResource("AnimationNodeStateMachineTransition_xyqj8"), "touch_body", "default", SubResource("AnimationNodeStateMachineTransition_ph7c6"), "touch_head", "default", SubResource("AnimationNodeStateMachineTransition_yek2o"), "work", "default", SubResource("AnimationNodeStateMachineTransition_ugjqe"), "drink", "shutdown", SubResource("AnimationNodeStateMachineTransition_g0d2m"), "gift", "shutdown", SubResource("AnimationNodeStateMachineTransition_bn864"), "idle", "shutdown", SubResource("AnimationNodeStateMachineTransition_x6720"), "move", "shutdown", SubResource("AnimationNodeStateMachineTransition_cddcq"), "music", "shutdown", SubResource("AnimationNodeStateMachineTransition_u4mpc"), "pinch", "shutdown", SubResource("AnimationNodeStateMachineTransition_xhmcp"), "rasied", "shutdown", SubResource("AnimationNodeStateMachineTransition_p8o4j"), "say", "shutdown", SubResource("AnimationNodeStateMachineTransition_o1xxc"), "sleep", "shutdown", SubResource("AnimationNodeStateMachineTransition_pusiw"), "state", "shutdown", SubResource("AnimationNodeStateMachineTransition_637oh"), "switch", "shutdown", SubResource("AnimationNodeStateMachineTransition_4d87j"), "think", "shutdown", SubResource("AnimationNodeStateMachineTransition_vrp58"), "touch_body", "shutdown", SubResource("AnimationNodeStateMachineTransition_2hdu8"), "touch_head", "shutdown", SubResource("AnimationNodeStateMachineTransition_b4c3b"), "work", "shutdown", SubResource("AnimationNodeStateMachineTransition_863nh"), "default", "shutdown", SubResource("AnimationNodeStateMachineTransition_j2pty")]
-graph_offset = Vector2(-63.1359, 63.3245)
+graph_offset = Vector2(-63.1359, 306.371)
 
 [node name="Vup" type="Node2D"]
 script = ExtResource("1_7y2u6")
@@ -3988,8 +3988,7 @@ script = ExtResource("1_7y2u6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(500, 500)
 sprite_frames = SubResource("SpriteFrames_rob0e")
-animation = &"normal_raised_d_2"
-frame = 3
+animation = &"ill_raised_s_A"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -4063,4 +4062,4 @@ parameters/touch_head/conditions/is_not_touch_head = false
 parameters/touch_head/conditions/normal = false
 script = ExtResource("208_rvl8j")
 
-[connection signal="animation_finished" from="AnimationTree" to="." method="_on_animation_finished"]
+[connection signal="animation_started" from="AnimationTree" to="." method="_on_animation_started"]
