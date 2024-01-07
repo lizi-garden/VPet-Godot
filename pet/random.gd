@@ -1,4 +1,5 @@
 ## Generate and Update random events
+#TODO 1. update startup event 2. random of shuffle bag
 extends AnimationTree
 
 func _ready():
@@ -15,8 +16,8 @@ func update_event():
 
 
 func update_touch_body_event():
-    var touch_body_turn = get_event_2()
-    match touch_body_turn:
+    var touch_body_turn_event = get_event_2()
+    match touch_body_turn_event:
         "event1":
             self["parameters/touch_body/happy/turn/conditions/happy_touch_body_Turn_A1"] = true
             self["parameters/touch_body/happy/turn/conditions/happy_touch_body_Turn_A2"] = false
@@ -24,8 +25,8 @@ func update_touch_body_event():
             self["parameters/touch_body/happy/turn/conditions/happy_touch_body_Turn_A1"] = false
             self["parameters/touch_body/happy/turn/conditions/happy_touch_body_Turn_A2"] = true
     
-    var touch_body = get_event_2()
-    match touch_body:
+    var touch_body_event = get_event_2()
+    match touch_body_event:
         "event1":
             self["parameters/touch_body/happy/not_turn/conditions/happy_touch_body_A1"] = true
             self["parameters/touch_body/happy/not_turn/conditions/happy_touch_body_A2"] = false
@@ -100,6 +101,18 @@ func update_default_event():
         "event2":
             self["parameters/default/poorcondition/conditions/poorcondition_default_1"] = false
             self["parameters/default/poorcondition/conditions/poorcondition_default_2"] = true
+    pass
+    
+
+func update_shutdown_event():
+    var shutdown_event = get_event_2()
+    match shutdown_event:
+        "event1":
+            self["parameters/shutdown/normal/conditions/normal_shutdown_1"] = true
+            self["parameters/shutdown/normal/conditions/normal_shutdown_2"] = false
+        "event2":
+            self["parameters/shutdown/normal/conditions/normal_shutdown_1"] = false
+            self["parameters/shutdown/normal/conditions/normal_shutdown_2"] = true
     pass
     
 

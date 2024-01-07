@@ -19,6 +19,7 @@ size = Vector2(200, 400)
 size = Vector2(200, 400)
 
 [node name="Pet" type="Node2D"]
+scale = Vector2(1, 0.996916)
 script = ExtResource("1_yjjo8")
 
 [node name="Vup" parent="." instance=ExtResource("1_rel4t")]

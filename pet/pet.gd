@@ -203,3 +203,9 @@ func _on_touch_body_mouse_stop_or_exit():
     touch_body_turn_count = 0
     touch_body_turn_last = -1
     pass
+
+
+## Read Shutdown Event
+func shutdown():
+    vup.set_shutdown(true)
+    pass

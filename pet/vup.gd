@@ -23,7 +23,6 @@ extends Node2D
 @export var switch      = false
 @export var think       = false
 @export var work        = false
-@export var shutdown    = false
 
 
 func _process(_delta):
@@ -87,6 +86,14 @@ func set_touch_head(value):
     animation_tree["parameters/conditions/is_touch_head"] = value
     animation_tree["parameters/touch_head/conditions/is_not_touch_head"] = !value
     pass
+
+
+@export_subgroup("ui_event")
+@export var shutdown    = false
+func set_shutdown(value):
+    shutdown = value
+    animation_tree["parameters/conditions/shutdown"] = value
+    pass
     
 
 func set_happy(value):
@@ -96,6 +103,7 @@ func set_happy(value):
     animation_tree["parameters/rasied/conditions/is_happy"]     = value
     animation_tree["parameters/touch_body/conditions/is_happy"] = value
     animation_tree["parameters/touch_head/conditions/is_happy"] = value
+    animation_tree["parameters/shutdown/conditions/is_happy"]   = value
     pass
 
 
@@ -106,6 +114,7 @@ func set_ill(value):
     animation_tree["parameters/rasied/conditions/is_ill"]       = value
     animation_tree["parameters/touch_body/conditions/is_ill"]   = value
     animation_tree["parameters/touch_head/conditions/is_ill"]   = value
+    animation_tree["parameters/shutdown/conditions/is_ill"]     = value
     pass
 
 
@@ -115,6 +124,7 @@ func set_normal(value):
     animation_tree["parameters/default/conditions/normal"]      = value
     animation_tree["parameters/rasied/conditions/normal"]       = value
     animation_tree["parameters/touch_head/conditions/normal"]   = value
+    animation_tree["parameters/shutdown/conditions/normal"]     = value
     pass
 
 
@@ -123,6 +133,7 @@ func set_poor_condition(value):
     animation_tree["parameters/start_up/conditions/is_poorcondition"]   = value
     animation_tree["parameters/rasied/conditions/is_poorcondition"]     = value
     animation_tree["parameters/default/conditions/is_poorcondition"]    = value
+    animation_tree["parameters/shutdown/conditions/is_poorcondition"]   = value
     pass
 
 
@@ -134,4 +145,13 @@ func _on_animation_started(anim_name):
             animation_tree.update_raised_event()
         var value when value.contains("happy_touch_body_A1") or value.contains("happy_touch_body_Turn_A1"):
             animation_tree.update_touch_body_event()
+    pass
+
+
+func _on_animation_finished(anim_name):
+    match anim_name:
+        var value when value.contains("shutdown"):
+            animation_tree.update_shutdown_event()
+            set_shutdown(false)
+            get_tree().quit()
     pass
