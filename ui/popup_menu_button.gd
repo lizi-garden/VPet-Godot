@@ -5,7 +5,10 @@ signal about_to_popup
 
 func _ready():
     popup_menu.hide()
-    connect("mouse_entered", func(): show_popup_menu())
+    popup_menu.disable_3d = true
+    popup_menu.gui_disable_input = false
+    connect("mouse_entered", show_popup_menu)
+    connect("focus_entered", show_popup_menu)
     pass
 
 
@@ -21,6 +24,12 @@ var button_pos      :Vector2
 
 ## Adjusts popup position and sizing for the [b]MenuButton[/b], then shows the [PopupMenu].
 func show_popup_menu():
+    # Switch on Hover
+    for child in get_parent().get_children():
+        if child.switch_on_hover:
+            if child is PopupMenuButton:    child.hide_popup_menu()
+            elif child is PopupPanelButton: child.hide_popup_panel()
+    
     # Get Window Position
     window_pos = get_tree().get_root().position
     

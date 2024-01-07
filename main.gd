@@ -1,2 +1,9 @@
-extends Node2D
+extends Node
 
+@onready var ui = $UI
+@onready var pet = $Pet
+
+
+func _ready():
+    ui.connect("exit", pet.shutdown)
+    pass

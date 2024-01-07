@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://biqph41km6qku" path="res://pet/pet.tscn" id="2_xvset"]
 [ext_resource type="PackedScene" uid="uid://dsthj3x3pr5fb" path="res://ui/ui.tscn" id="3_lcv7l"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node"]
 script = ExtResource("1_jgmrn")
 
 [node name="Pet" parent="." instance=ExtResource("2_xvset")]
