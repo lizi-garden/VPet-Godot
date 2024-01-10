@@ -1,0 +1,179 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqvyv05r42teg"]
+
+[ext_resource type="Script" path="res://modeditor/mod_editer.gd" id="1_2bnyc"]
+[ext_resource type="Theme" uid="uid://5m2lhduot4nl" path="res://modeditor/mod_editer.tres" id="2_j151c"]
+
+[node name="ModEditer" type="Window"]
+title = "Mod Editer"
+initial_position = 3
+size = Vector2i(990, 540)
+current_screen = 0
+script = ExtResource("1_2bnyc")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 986.0
+offset_bottom = 536.0
+theme = ExtResource("2_j151c")
+
+[node name="MenuBar" type="MenuBar" parent="VBoxContainer"]
+layout_mode = 2
+flat = true
+
+[node name="File" type="PopupMenu" parent="VBoxContainer/MenuBar"]
+item_count = 2
+item_0/text = "Open folder"
+item_0/id = 1
+item_1/text = "Open Archive"
+item_1/id = 2
+
+[node name="Control" type="PopupMenu" parent="VBoxContainer/MenuBar"]
+item_count = 4
+item_0/text = "Play"
+item_0/id = 0
+item_1/text = "Pause"
+item_1/id = 2
+item_2/text = "Stop"
+item_2/id = 1
+item_3/text = "Replay"
+item_3/id = 3
+
+[node name="Setting" type="PopupMenu" parent="VBoxContainer/MenuBar"]
+item_count = 1
+item_0/text = "Default Folder"
+item_0/id = 0
+
+[node name="LoadDefaultFolder" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/LoadDefaultFolder"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="Label" type="Label" parent="VBoxContainer/LoadDefaultFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+text = "Load Default Folder
+"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/LoadDefaultFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 8.0
+placeholder_text = "Windows c:\\dirname     Linux /home/hostname/dirname"
+clear_button_enabled = true
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/LoadDefaultFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Default"
+
+[node name="Button" type="Button" parent="VBoxContainer/LoadDefaultFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "..."
+
+[node name="OpenFolder" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/OpenFolder"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="Label" type="Label" parent="VBoxContainer/OpenFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "Open Folder
+"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/OpenFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+placeholder_text = "Windows c:\\dirname     Linux /home/hostname/dirname"
+clear_button_enabled = true
+
+[node name="Button" type="Button" parent="VBoxContainer/OpenFolder/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "..."
+
+[node name="OpenZip" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/OpenZip"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="Label" type="Label" parent="VBoxContainer/OpenZip/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+text = "Open Archive"
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/OpenZip/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+placeholder_text = "Windows c:\\filename     Linux /home/hostname/filename"
+
+[node name="Button" type="Button" parent="VBoxContainer/OpenZip/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "..."
+
+[node name="AnimationPlayer" type="MarginContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/AnimationPlayer"]
+layout_mode = 2
+theme = ExtResource("2_j151c")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/AnimationPlayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/AnimationPlayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Tree" type="Tree" parent="VBoxContainer/AnimationPlayer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PlayerRect" type="TextureRect" parent="VBoxContainer/AnimationPlayer/HBoxContainer"]
+layout_mode = 2
+
+[node name="LoadDefaultFolderDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+initial_position = 1
+size = Vector2i(588, 159)
+ok_button_text = "选择当前文件夹"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="OpenFolderDialog" type="FileDialog" parent="."]
+title = "Open a Directory"
+initial_position = 1
+size = Vector2i(588, 159)
+ok_button_text = "选择当前文件夹"
+file_mode = 2
+access = 2
+use_native_dialog = true
+
+[node name="OpenZipDialog" type="FileDialog" parent="."]
+title = "Open a File"
+initial_position = 1
+size = Vector2i(496, 159)
+ok_button_text = "打开"
+file_mode = 0
+access = 2
+filters = PackedStringArray("*.zip")
+use_native_dialog = true
+
+[connection signal="index_pressed" from="VBoxContainer/MenuBar/File" to="." method="_on_file_index_pressed"]
