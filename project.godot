@@ -10,10 +10,15 @@ config_version=5
 
 [application]
 
-config/name="V Pet"
+config/name="VPet"
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
+
+[autoload]
+
+ModLoaderStore="*res://addons/mod_loader/mod_loader_store.gd"
+ModLoader="*res://addons/mod_loader/mod_loader.gd"
 
 [display]
 
