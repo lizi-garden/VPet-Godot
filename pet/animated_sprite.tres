@@ -1,0 +1,585 @@
+[gd_resource type="SpriteFrames" load_steps=131 format=3 uid="uid://b4pws1rils2bi"]
+
+[ext_resource type="Texture2D" uid="uid://drap87carsggf" path="res://mods/vup/default/happy_1/loris_younger_vup-0.png" id="1_7jl2m"]
+[ext_resource type="Texture2D" uid="uid://njv7s1ycgli" path="res://mods/vup/default/happy_1/loris_younger_vup-1.png" id="2_x5b8l"]
+[ext_resource type="Texture2D" uid="uid://bwbnjg3be46c3" path="res://mods/vup/default/happy_1/loris_younger_vup-2.png" id="3_qwn7o"]
+[ext_resource type="Texture2D" uid="uid://d3mw04alkwt5m" path="res://mods/vup/default/happy_1/loris_younger_vup-3.png" id="4_nsfrw"]
+[ext_resource type="Texture2D" uid="uid://bl8ipifat1j4l" path="res://mods/vup/default/happy_1/loris_younger_vup-4.png" id="5_jgskx"]
+[ext_resource type="Texture2D" uid="uid://b0rt7aq2wsmsa" path="res://mods/vup/default/happy_1/loris_younger_vup-5.png" id="6_01vqo"]
+[ext_resource type="Texture2D" uid="uid://cl65g4kupbrom" path="res://mods/vup/default/happy_1/loris_younger_vup-6.png" id="7_lxdms"]
+[ext_resource type="Texture2D" uid="uid://cji6up2a7evuy" path="res://mods/vup/default/happy_1/loris_younger_vup-7.png" id="8_5este"]
+[ext_resource type="Texture2D" uid="uid://drkj5i6lmyqmw" path="res://mods/vup/default/happy_1/loris_younger_vup-8.png" id="9_6sypg"]
+[ext_resource type="Texture2D" uid="uid://c6pgc6fcpl34m" path="res://mods/vup/default/happy_1/loris_younger_vup-9.png" id="10_6s48i"]
+[ext_resource type="Texture2D" uid="uid://dvfewriafwyxl" path="res://mods/vup/default/happy_1/loris_younger_vup-10.png" id="11_4vucy"]
+[ext_resource type="Texture2D" uid="uid://botlfodu7vww5" path="res://mods/vup/default/happy_1/loris_younger_vup-11.png" id="12_ctwdd"]
+[ext_resource type="Texture2D" uid="uid://blikmghr43pep" path="res://mods/vup/default/happy_1/loris_younger_vup-12.png" id="13_qrf8f"]
+[ext_resource type="Texture2D" uid="uid://dgydxxuxuyao4" path="res://mods/vup/default/happy_2/loris_younger_vup-0.png" id="14_t0huj"]
+[ext_resource type="Texture2D" uid="uid://cbibj0nu0ja2i" path="res://mods/vup/default/happy_2/loris_younger_vup-1.png" id="15_gsxvd"]
+[ext_resource type="Texture2D" uid="uid://dhanau2abom0w" path="res://mods/vup/default/happy_2/loris_younger_vup-2.png" id="16_vykh5"]
+[ext_resource type="Texture2D" uid="uid://dss2kflxmrqkf" path="res://mods/vup/default/happy_2/loris_younger_vup-3.png" id="17_0k07f"]
+[ext_resource type="Texture2D" uid="uid://b47t51xkvohyi" path="res://mods/vup/default/happy_2/loris_younger_vup-4.png" id="18_j5f3j"]
+[ext_resource type="Texture2D" uid="uid://daw16ugc1v21o" path="res://mods/vup/default/happy_2/loris_younger_vup-5.png" id="19_als34"]
+[ext_resource type="Texture2D" uid="uid://b5r08kg7t60i0" path="res://mods/vup/default/happy_2/loris_younger_vup-6.png" id="20_yf5rc"]
+[ext_resource type="Texture2D" uid="uid://pvr5fq05bmgr" path="res://mods/vup/default/happy_2/loris_younger_vup-7.png" id="21_duapf"]
+[ext_resource type="Texture2D" uid="uid://bbt88qmtj58qa" path="res://mods/vup/default/happy_2/loris_younger_vup-8.png" id="22_oivlh"]
+[ext_resource type="Texture2D" uid="uid://e5ypgtwocc4" path="res://mods/vup/default/happy_2/loris_younger_vup-9.png" id="23_dryx2"]
+[ext_resource type="Texture2D" uid="uid://c20a32piecdwu" path="res://mods/vup/default/happy_2/loris_younger_vup-10.png" id="24_f486a"]
+[ext_resource type="Texture2D" uid="uid://7axkp7n5g1ca" path="res://mods/vup/default/happy_2/loris_younger_vup-11.png" id="25_gvnj4"]
+[ext_resource type="Texture2D" uid="uid://bved51pq4ak2t" path="res://mods/vup/default/happy_2/loris_younger_vup-12.png" id="26_mu1xl"]
+[ext_resource type="Texture2D" uid="uid://bx2rvohgr8h5j" path="res://mods/vup/default/happy_3/loris_younger_vup-0.png" id="27_xco6y"]
+[ext_resource type="Texture2D" uid="uid://dlsabe712pxrg" path="res://mods/vup/default/happy_3/loris_younger_vup-1.png" id="28_n3giw"]
+[ext_resource type="Texture2D" uid="uid://dfknf30n1w5lw" path="res://mods/vup/default/happy_3/loris_younger_vup-2.png" id="29_nachb"]
+[ext_resource type="Texture2D" uid="uid://cfgmnnirtsn65" path="res://mods/vup/default/happy_3/loris_younger_vup-3.png" id="30_bxsh5"]
+[ext_resource type="Texture2D" uid="uid://c6ddrbd7lihk" path="res://mods/vup/default/happy_3/loris_younger_vup-4.png" id="31_tcfah"]
+[ext_resource type="Texture2D" uid="uid://cajrce0k2ux5x" path="res://mods/vup/default/happy_3/loris_younger_vup-5.png" id="32_pcsrh"]
+[ext_resource type="Texture2D" uid="uid://bcu64hjnn46p6" path="res://mods/vup/default/happy_3/loris_younger_vup-6.png" id="33_30dh4"]
+[ext_resource type="Texture2D" uid="uid://cw0lceinyadmh" path="res://mods/vup/default/happy_3/loris_younger_vup-7.png" id="34_enico"]
+[ext_resource type="Texture2D" uid="uid://dy3q7u6wjriwa" path="res://mods/vup/default/happy_3/loris_younger_vup-8.png" id="35_gdwxm"]
+[ext_resource type="Texture2D" uid="uid://bjrbnyo6cwpvd" path="res://mods/vup/default/happy_3/loris_younger_vup-9.png" id="36_hnxij"]
+[ext_resource type="Texture2D" uid="uid://ces2yv3gybi4y" path="res://mods/vup/default/happy_3/loris_younger_vup-10.png" id="37_duyx6"]
+[ext_resource type="Texture2D" uid="uid://yfebo7224840" path="res://mods/vup/default/happy_3/loris_younger_vup-11.png" id="38_x22mg"]
+[ext_resource type="Texture2D" uid="uid://c32ieiql2cvcf" path="res://mods/vup/default/happy_3/loris_younger_vup-12.png" id="39_f7n7x"]
+[ext_resource type="Texture2D" uid="uid://uipwdc8rgjo5" path="res://mods/vup/default/ill_1/loris_younger_vup-0.png" id="40_gjskv"]
+[ext_resource type="Texture2D" uid="uid://b3ih8b08chlve" path="res://mods/vup/default/ill_1/loris_younger_vup-1.png" id="41_p3uvd"]
+[ext_resource type="Texture2D" uid="uid://dbdontox4kycl" path="res://mods/vup/default/ill_1/loris_younger_vup-2.png" id="42_8vqxo"]
+[ext_resource type="Texture2D" uid="uid://4xfwscjmfair" path="res://mods/vup/default/ill_1/loris_younger_vup-3.png" id="43_4x2d2"]
+[ext_resource type="Texture2D" uid="uid://bpxbyp33g821" path="res://mods/vup/default/ill_1/loris_younger_vup-4.png" id="44_4x7uc"]
+[ext_resource type="Texture2D" uid="uid://cwtkun445ghdn" path="res://mods/vup/default/ill_1/loris_younger_vup-5.png" id="45_xl6fn"]
+[ext_resource type="Texture2D" uid="uid://wrh8peaeq07r" path="res://mods/vup/default/ill_1/loris_younger_vup-6.png" id="46_1bkt1"]
+[ext_resource type="Texture2D" uid="uid://d1v5randmi0g2" path="res://mods/vup/default/ill_1/loris_younger_vup-7.png" id="47_wamwi"]
+[ext_resource type="Texture2D" uid="uid://c2uyc1463gvcc" path="res://mods/vup/default/ill_1/loris_younger_vup-8.png" id="48_1l2qc"]
+[ext_resource type="Texture2D" uid="uid://dkswtatwvvnrw" path="res://mods/vup/default/ill_1/loris_younger_vup-9.png" id="49_stg6l"]
+[ext_resource type="Texture2D" uid="uid://dub76vmrmpjiu" path="res://mods/vup/default/ill_1/loris_younger_vup-10.png" id="50_sjnub"]
+[ext_resource type="Texture2D" uid="uid://ysbg84efcvsl" path="res://mods/vup/default/ill_1/loris_younger_vup-11.png" id="51_udx23"]
+[ext_resource type="Texture2D" uid="uid://xiptvw8oxinq" path="res://mods/vup/default/ill_1/loris_younger_vup-12.png" id="52_0di20"]
+[ext_resource type="Texture2D" uid="uid://bqwy2kcueyyds" path="res://mods/vup/default/ill_2/loris_younger_vup-0.png" id="53_ep37r"]
+[ext_resource type="Texture2D" uid="uid://k62xcih6s4ni" path="res://mods/vup/default/ill_2/loris_younger_vup-1.png" id="54_i1wj0"]
+[ext_resource type="Texture2D" uid="uid://mj2wbn4h0bk6" path="res://mods/vup/default/ill_2/loris_younger_vup-2.png" id="55_cphq0"]
+[ext_resource type="Texture2D" uid="uid://bb5lmxjcibseu" path="res://mods/vup/default/ill_2/loris_younger_vup-3.png" id="56_iqvgf"]
+[ext_resource type="Texture2D" uid="uid://dtnl46lo5ci1o" path="res://mods/vup/default/ill_2/loris_younger_vup-4.png" id="57_kgv4s"]
+[ext_resource type="Texture2D" uid="uid://dr2c2bk7c4xxl" path="res://mods/vup/default/ill_2/loris_younger_vup-5.png" id="58_d2muh"]
+[ext_resource type="Texture2D" uid="uid://gowaa7kg3216" path="res://mods/vup/default/ill_2/loris_younger_vup-6.png" id="59_hrr0h"]
+[ext_resource type="Texture2D" uid="uid://dxg1y50l5kjdt" path="res://mods/vup/default/ill_2/loris_younger_vup-7.png" id="60_1dh54"]
+[ext_resource type="Texture2D" uid="uid://dlepcflc2fwj3" path="res://mods/vup/default/ill_2/loris_younger_vup-8.png" id="61_se00s"]
+[ext_resource type="Texture2D" uid="uid://deodeqncpv3nv" path="res://mods/vup/default/ill_2/loris_younger_vup-9.png" id="62_gga63"]
+[ext_resource type="Texture2D" uid="uid://ccii0q3vyblyg" path="res://mods/vup/default/ill_2/loris_younger_vup-10.png" id="63_hlilr"]
+[ext_resource type="Texture2D" uid="uid://c047qfqnbwl4s" path="res://mods/vup/default/ill_2/loris_younger_vup-11.png" id="64_yu0fp"]
+[ext_resource type="Texture2D" uid="uid://bf40asp2vqweu" path="res://mods/vup/default/ill_2/loris_younger_vup-12.png" id="65_40k2v"]
+[ext_resource type="Texture2D" uid="uid://so8owsgas6rd" path="res://mods/vup/default/ill_2/loris_younger_vup-13.png" id="66_15jp8"]
+[ext_resource type="Texture2D" uid="uid://bnib21dt1v23r" path="res://mods/vup/default/ill_2/loris_younger_vup-14.png" id="67_b4ufv"]
+[ext_resource type="Texture2D" uid="uid://d0ceclb05jvaw" path="res://mods/vup/default/ill_2/loris_younger_vup-15.png" id="68_8bsue"]
+[ext_resource type="Texture2D" uid="uid://chlqd1vlwfx2l" path="res://mods/vup/default/ill_2/loris_younger_vup-16.png" id="69_q8whh"]
+[ext_resource type="Texture2D" uid="uid://bh6q6vvm8lp6w" path="res://mods/vup/default/ill_2/loris_younger_vup-17.png" id="70_e8tim"]
+[ext_resource type="Texture2D" uid="uid://ccqqfovwgsfts" path="res://mods/vup/default/ill_2/loris_younger_vup-18.png" id="71_prgaj"]
+[ext_resource type="Texture2D" uid="uid://bn15rmeptabvd" path="res://mods/vup/default/ill_2/loris_younger_vup-19.png" id="72_utgpr"]
+[ext_resource type="Texture2D" uid="uid://is47q5nduwgd" path="res://mods/vup/default/normal_1/loris_younger_vup-0.png" id="73_eev45"]
+[ext_resource type="Texture2D" uid="uid://d0prxtx5r1jue" path="res://mods/vup/default/normal_1/loris_younger_vup-1.png" id="74_2dnjf"]
+[ext_resource type="Texture2D" uid="uid://d0o11u7vw6df4" path="res://mods/vup/default/normal_1/loris_younger_vup-2.png" id="75_6nhf5"]
+[ext_resource type="Texture2D" uid="uid://d0xae8v8l648n" path="res://mods/vup/default/normal_1/loris_younger_vup-3.png" id="76_fim2s"]
+[ext_resource type="Texture2D" uid="uid://dbcjwalymnxfn" path="res://mods/vup/default/normal_1/loris_younger_vup-4.png" id="77_gwnjo"]
+[ext_resource type="Texture2D" uid="uid://dq0wrvynyx3yg" path="res://mods/vup/default/normal_1/loris_younger_vup-5.png" id="78_uuuyh"]
+[ext_resource type="Texture2D" uid="uid://cemkfrbujoxhx" path="res://mods/vup/default/normal_1/loris_younger_vup-6.png" id="79_tkho4"]
+[ext_resource type="Texture2D" uid="uid://bfx733h8x3yek" path="res://mods/vup/default/normal_1/loris_younger_vup-7.png" id="80_4qdxw"]
+[ext_resource type="Texture2D" uid="uid://bspyckbttwfc7" path="res://mods/vup/default/normal_2/loris_younger_vup-0.png" id="81_3vbyv"]
+[ext_resource type="Texture2D" uid="uid://1sm4d5ry7ixj" path="res://mods/vup/default/normal_2/loris_younger_vup-1.png" id="82_xexbh"]
+[ext_resource type="Texture2D" uid="uid://df6tr6omnawv5" path="res://mods/vup/default/normal_2/loris_younger_vup-2.png" id="83_ovf7n"]
+[ext_resource type="Texture2D" uid="uid://bhte4ye8frfdn" path="res://mods/vup/default/normal_2/loris_younger_vup-3.png" id="84_g0wk4"]
+[ext_resource type="Texture2D" uid="uid://b7qxf36370dvf" path="res://mods/vup/default/normal_2/loris_younger_vup-4.png" id="85_t68vf"]
+[ext_resource type="Texture2D" uid="uid://dpu4ysv5bl117" path="res://mods/vup/default/normal_2/loris_younger_vup-5.png" id="86_30l4w"]
+[ext_resource type="Texture2D" uid="uid://ch4wsxshtxgpi" path="res://mods/vup/default/normal_2/loris_younger_vup-6.png" id="87_sj46v"]
+[ext_resource type="Texture2D" uid="uid://dc2wt088n5tx0" path="res://mods/vup/default/normal_2/loris_younger_vup-7.png" id="88_ncusa"]
+[ext_resource type="Texture2D" uid="uid://bobb3tvcfvwqp" path="res://mods/vup/default/normal_3/loris_younger_vup-0.png" id="89_mapft"]
+[ext_resource type="Texture2D" uid="uid://kb7qvo7q4rnh" path="res://mods/vup/default/normal_3/loris_younger_vup-1.png" id="90_siuip"]
+[ext_resource type="Texture2D" uid="uid://xk1els30f84f" path="res://mods/vup/default/normal_3/loris_younger_vup-2.png" id="91_3nqqu"]
+[ext_resource type="Texture2D" uid="uid://img5ehmh3vyy" path="res://mods/vup/default/normal_3/loris_younger_vup-3.png" id="92_1hlx7"]
+[ext_resource type="Texture2D" uid="uid://dfe4la7o8d47e" path="res://mods/vup/default/normal_3/loris_younger_vup-4.png" id="93_tm8v8"]
+[ext_resource type="Texture2D" uid="uid://dn2eeebsyva0" path="res://mods/vup/default/normal_3/loris_younger_vup-5.png" id="94_lpceb"]
+[ext_resource type="Texture2D" uid="uid://crlh6x6dnw4kq" path="res://mods/vup/default/normal_3/loris_younger_vup-6.png" id="95_rwujs"]
+[ext_resource type="Texture2D" uid="uid://bxvjxbdm2p0h" path="res://mods/vup/default/normal_3/loris_younger_vup-7.png" id="96_vn077"]
+[ext_resource type="Texture2D" uid="uid://dyemfkcky3rbs" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-0.png" id="97_n2m3t"]
+[ext_resource type="Texture2D" uid="uid://ojyrmtcc3uqa" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-1.png" id="98_ft7x7"]
+[ext_resource type="Texture2D" uid="uid://crwkfdhyirisu" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-2.png" id="99_k2xs4"]
+[ext_resource type="Texture2D" uid="uid://dm0k4likl2xhe" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-3.png" id="100_e3xet"]
+[ext_resource type="Texture2D" uid="uid://banv8qx0vgyem" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-4.png" id="101_8b7j0"]
+[ext_resource type="Texture2D" uid="uid://cmkcso63qwc27" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-5.png" id="102_4kd3y"]
+[ext_resource type="Texture2D" uid="uid://1q5m1ujdiqix" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-6.png" id="103_1paqu"]
+[ext_resource type="Texture2D" uid="uid://bhq8angooxvdo" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-7.png" id="104_0v1aw"]
+[ext_resource type="Texture2D" uid="uid://bitjs1qo7p0fr" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-8.png" id="105_1jw13"]
+[ext_resource type="Texture2D" uid="uid://5da42mvwgddm" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-9.png" id="106_a6b2t"]
+[ext_resource type="Texture2D" uid="uid://byfclixhylqgv" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-10.png" id="107_ogtnt"]
+[ext_resource type="Texture2D" uid="uid://cmxyfdsxxjori" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-11.png" id="108_ae771"]
+[ext_resource type="Texture2D" uid="uid://bncju3kih5jg1" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-12.png" id="109_8hdxk"]
+[ext_resource type="Texture2D" uid="uid://c2fl15qhmdk3r" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-13.png" id="110_gdsl5"]
+[ext_resource type="Texture2D" uid="uid://d4er3ce50xnbs" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-14.png" id="111_tex45"]
+[ext_resource type="Texture2D" uid="uid://dgfhok37hli7j" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-15.png" id="112_fyoxl"]
+[ext_resource type="Texture2D" uid="uid://df6itucc1wk66" path="res://mods/vup/default/poorcondition_1/loris_younger_vup-16.png" id="113_apshk"]
+[ext_resource type="Texture2D" uid="uid://bwxb4beobh4nu" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-0.png" id="114_o6h3l"]
+[ext_resource type="Texture2D" uid="uid://dwd48gjlxijol" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-1.png" id="115_ufw0f"]
+[ext_resource type="Texture2D" uid="uid://c7vn65uxs6vhi" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-2.png" id="116_ncrjh"]
+[ext_resource type="Texture2D" uid="uid://pktoohguxgs5" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-3.png" id="117_gub6m"]
+[ext_resource type="Texture2D" uid="uid://devkk0whtttyo" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-4.png" id="118_4gcb8"]
+[ext_resource type="Texture2D" uid="uid://b87l2aygtitvp" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-5.png" id="119_r6w20"]
+[ext_resource type="Texture2D" uid="uid://cduuurnuemxyi" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-6.png" id="120_0qk4q"]
+[ext_resource type="Texture2D" uid="uid://c4flhbr1gjxbk" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-7.png" id="121_823wi"]
+[ext_resource type="Texture2D" uid="uid://bu3onv00bymvt" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-8.png" id="122_vc0ei"]
+[ext_resource type="Texture2D" uid="uid://b50ej51q2dod5" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-9.png" id="123_xk2fh"]
+[ext_resource type="Texture2D" uid="uid://jveq5hunfcyc" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-10.png" id="124_hou84"]
+[ext_resource type="Texture2D" uid="uid://lpfde4pyd448" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-11.png" id="125_qp322"]
+[ext_resource type="Texture2D" uid="uid://fqgr5q0hpbp7" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-12.png" id="126_yyl1b"]
+[ext_resource type="Texture2D" uid="uid://c6i6d1v03e3k0" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-13.png" id="127_cij7x"]
+[ext_resource type="Texture2D" uid="uid://ca3yh4g2ql5x2" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-14.png" id="128_djgys"]
+[ext_resource type="Texture2D" uid="uid://ce1lt755tktjb" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-15.png" id="129_31w13"]
+[ext_resource type="Texture2D" uid="uid://cvtlxdit15rgj" path="res://mods/vup/default/poorcondition_2/loris_younger_vup-16.png" id="130_j4k6g"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7jl2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_x5b8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qwn7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_nsfrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jgskx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_01vqo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_lxdms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_5este")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6sypg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6s48i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4vucy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ctwdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_qrf8f")
+}],
+"loop": true,
+"name": &"default_happy_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_t0huj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_gsxvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_vykh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0k07f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_j5f3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_als34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_yf5rc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_duapf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_oivlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_dryx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_f486a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_gvnj4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_mu1xl")
+}],
+"loop": true,
+"name": &"default_happy_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_xco6y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_n3giw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_nachb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_bxsh5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_tcfah")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_pcsrh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_30dh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_enico")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_gdwxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_hnxij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_duyx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_x22mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_f7n7x")
+}],
+"loop": true,
+"name": &"default_happy_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_gjskv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_p3uvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_8vqxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_4x2d2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_4x7uc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_xl6fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_1bkt1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_wamwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_1l2qc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_stg6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_sjnub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_udx23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0di20")
+}],
+"loop": true,
+"name": &"default_ill_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_ep37r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_i1wj0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_cphq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_iqvgf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_kgv4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_d2muh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_hrr0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_1dh54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_se00s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_gga63")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_hlilr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_yu0fp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_40k2v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_15jp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_b4ufv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_8bsue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_q8whh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_e8tim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_prgaj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_utgpr")
+}],
+"loop": true,
+"name": &"default_ill_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("73_eev45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_2dnjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_6nhf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_fim2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_gwnjo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_uuuyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_tkho4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_4qdxw")
+}],
+"loop": true,
+"name": &"default_normal_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("81_3vbyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_xexbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_ovf7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_g0wk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_t68vf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_30l4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_sj46v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_ncusa")
+}],
+"loop": true,
+"name": &"default_normal_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("89_mapft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_siuip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_3nqqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_1hlx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_tm8v8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_lpceb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_rwujs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_vn077")
+}],
+"loop": true,
+"name": &"default_normal_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("97_n2m3t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ft7x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_k2xs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_e3xet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_8b7j0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_4kd3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_1paqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_0v1aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_1jw13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_a6b2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ogtnt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ae771")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_8hdxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_gdsl5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_tex45")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_fyoxl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_apshk")
+}],
+"loop": true,
+"name": &"default_poorcondition_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("114_o6h3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_ufw0f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_ncrjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_gub6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_4gcb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_r6w20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_0qk4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_823wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_vc0ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_xk2fh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_hou84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_qp322")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_yyl1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_cij7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_djgys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_31w13")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_j4k6g")
+}],
+"loop": true,
+"name": &"default_poorcondition_2",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"shutdown_happy",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": false,
+"name": &"startup_happy_1",
+"speed": 5.0
+}]
