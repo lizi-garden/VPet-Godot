@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://biqph41km6qku"]
 
-[ext_resource type="PackedScene" uid="uid://dsyornfipknw0" path="res://pet/vup.tscn" id="1_rel4t"]
-[ext_resource type="Script" path="res://pet/pet.gd" id="1_yjjo8"]
+[ext_resource type="Script" path="res://pet/pet.gd" id="1_364np"]
+[ext_resource type="PackedScene" uid="uid://dsyornfipknw0" path="res://pet/vup.tscn" id="2_wso17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdlto"]
 size = Vector2(300, 300)
@@ -20,9 +20,9 @@ size = Vector2(200, 400)
 
 [node name="Pet" type="Node2D"]
 scale = Vector2(1, 0.996916)
-script = ExtResource("1_yjjo8")
+script = ExtResource("1_364np")
 
-[node name="Vup" parent="." instance=ExtResource("1_rel4t")]
+[node name="Vup" parent="." instance=ExtResource("2_wso17")]
 
 [node name="TouchBody1" type="Area2D" parent="."]
 position = Vector2(500, 700)

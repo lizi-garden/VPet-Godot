@@ -1,157 +1,130 @@
 extends Node2D
 
-@onready var animation_tree = $AnimationTree
+signal current_action_changed(action)
+signal current_state_changed(state)
 
-@export_group("parameters")
-@export_subgroup("status")
-@export var happy           = true
-@export var ill             = false
-@export var normal          = false
-@export var poor_condition  = false
+enum State {
+    HAPPY,
+    ILL,
+    NORMAL,
+    POORCONDITION
+}
 
+enum Action {
+    DEFAULT,
+    DRINK,
+    EAT,
+    GIFT,
+    IDLE,
+    MOVE,
+    MUSIC,
+    PINCH,
+    RAISED,
+    SAY,
+    SHUTDOWN,
+    SLEEP,
+    STARTUP,
+    STATE,
+    SWITCH,
+    THINK,
+    TOUCHBODY,
+    TOUCHHEAD,
+    WORK
+}
 
-@export_subgroup("other")
-@export var drink       = false
-@export var gift        = false
-@export var idle        = false
-@export var move        = false
-@export var music       = false
-@export var pinch       = false
-@export var say         = false
-@export var sleep       = false
-@export var state       = false
-@export var switch      = false
-@export var think       = false
-@export var work        = false
+@onready var animation_player = $AnimationPlayer
 
+@export var current_action = Action.STARTUP:
+    set(value):
+        if current_action != value:
+            current_action = value
+            current_action_changed.emit(value)
+            pass
 
-func _process(_delta):
-    # set status
-    set_happy(happy)
-    set_ill(ill)
-    set_normal(normal)
-    set_poor_condition(poor_condition)
-    pass
+@export var current_state = State.NORMAL:
+    set(value):
+        if current_state != value:
+            current_state = value
+            current_state_changed.emit(value)
+            pass
+
+func _ready():
+    connect("current_action_changed", _on_current_action_changed)
+    start_up(current_state)
     
-
-@export_subgroup("touch_body")
-@export var touch_body      = false
-@export var touch_body_turn = false
-func set_touch_body(value):
-    touch_body = value
-    animation_tree["parameters/conditions/is_touch_body"]                               = value
-    animation_tree["parameters/touch_body/happy/conditions/is_not_turn"]                = value
-    animation_tree["parameters/touch_body/happy/not_turn/conditions/is_not_touch_body"] = !value
-    animation_tree["parameters/touch_body/ill/conditions/is_not_touch_body"]            = !value
-    pass
-
-func set_touch_body_turn(value):
-    touch_body_turn = value
-    animation_tree["parameters/conditions/is_touch_body"]                       = value
-    animation_tree["parameters/touch_body/happy/turn/conditions/is_not_turn"]   = !value
-    animation_tree["parameters/touch_body/happy/conditions/is_not_turn"]        = !value
-    animation_tree["parameters/touch_body/happy/conditions/is_turn"]            = value
+    randomize()
     pass
 
 
-@export_subgroup("raised")
-@export var raised          = false
-@export var mouse_moving    = false
-func set_raised(value):
-    raised = value
-    animation_tree["parameters/conditions/is_rasied"]                           = value
-    animation_tree["parameters/rasied/happy/conditions/is_released"]            = !value
-    animation_tree["parameters/rasied/ill/conditions/is_released"]              = !value
-    animation_tree["parameters/rasied/normal/conditions/is_released"]           = !value
-    animation_tree["parameters/rasied/poorcondition/conditions/is_released"]    = !value
+func _on_current_action_changed(action):
+    match action:
+        Action.DEFAULT: default(current_state)
+        Action.DRINK:   pass
+        Action.EAT:     pass
+        Action.GIFT:    pass
+        Action.IDLE:    pass
+        Action.MOVE:    pass
+        Action.MUSIC:   pass
+        Action.PINCH:   pass
+        Action.RAISED:  pass
+        Action.SAY:     pass
+        Action.SHUTDOWN:pass
+        Action.SLEEP:   pass
+        Action.STARTUP: start_up(current_state)
+        Action.STATE:   pass
+        Action.SWITCH:  pass
+        Action.THINK:   pass
+        Action.TOUCHBODY:pass
+        Action.TOUCHHEAD:pass
+        Action.WORK:    pass
     pass
+
+
+func default(state :State):
+    match state:
+        State.HAPPY:            play_animation("default", "happy")
+        State.ILL:              play_animation("default", "ill")
+        State.NORMAL:           play_animation("default", "normal")
+        State.POORCONDITION:    play_animation("default", "poorcondition")
+    pass
+
+
+func start_up(state :State):
+    match state:
+        State.HAPPY:            play_animation("startup", "happy")
+        State.ILL:              play_animation("startup", "ill")
+        State.NORMAL:           play_animation("startup", "normal")
+        State.POORCONDITION:    play_animation("startup", "poorcondition")
+    pass
+
+
+var _lists      :Array
+var _lists_full :Array
+
+func play_animation(action_name :String, state_name :String):
+    # Get the number of animations
+    var num
+    for i in range(1, 4):
+        if animation_player.has_animation(action_name + "_" + state_name + "_" + str(i)):
+            num = i
     
-func set_mouse_moving(value):
-    mouse_moving = value
-    animation_tree["parameters/rasied/happy/conditions/is_mouse_moving"]        = value
-    animation_tree["parameters/rasied/happy/conditions/is_mouse_stop"]          = !value
-    animation_tree["parameters/rasied/ill/conditions/is_mouse_moving"]          = value
-    animation_tree["parameters/rasied/ill/conditions/is_mouse_stop"]            = !value
-    animation_tree["parameters/rasied/normal/conditions/is_mouse_moving"]       = value
-    animation_tree["parameters/rasied/normal/conditions/is_mouse_stop"]         = !value
-    animation_tree["parameters/rasied/poorcondition/conditions/is_mouse_moving"]= value
-    animation_tree["parameters/rasied/poorcondition/conditions/is_mouse_stop"]  = !value
-    pass
-
-
-@export_subgroup("touch_head")
-@export var touch_head  = false
-func set_touch_head(value):
-    touch_head = value
-    animation_tree["parameters/conditions/is_touch_head"] = value
-    animation_tree["parameters/touch_head/conditions/is_not_touch_head"] = !value
-    pass
-
-
-@export_subgroup("ui_event")
-@export var shutdown    = false
-func set_shutdown(value):
-    shutdown = value
-    animation_tree["parameters/conditions/shutdown"] = value
-    pass
+    # Check _lists and _lists_full
+    if _lists_full != range(1, num + 1):
+        _lists_full = range(1, num + 1)
+        _lists = []
     
-
-func set_happy(value):
-    happy = value
-    animation_tree["parameters/start_up/conditions/is_happy"]   = value
-    animation_tree["parameters/default/conditions/is_happy"]    = value
-    animation_tree["parameters/rasied/conditions/is_happy"]     = value
-    animation_tree["parameters/touch_body/conditions/is_happy"] = value
-    animation_tree["parameters/touch_head/conditions/is_happy"] = value
-    animation_tree["parameters/shutdown/conditions/is_happy"]   = value
-    pass
-
-
-func set_ill(value):
-    ill = value
-    animation_tree["parameters/start_up/conditions/is_ill"]     = value
-    animation_tree["parameters/default/conditions/is_ill"]      = value
-    animation_tree["parameters/rasied/conditions/is_ill"]       = value
-    animation_tree["parameters/touch_body/conditions/is_ill"]   = value
-    animation_tree["parameters/touch_head/conditions/is_ill"]   = value
-    animation_tree["parameters/shutdown/conditions/is_ill"]     = value
-    pass
-
-
-func set_normal(value):
-    normal = value
-    animation_tree["parameters/start_up/conditions/normal"]     = value
-    animation_tree["parameters/default/conditions/normal"]      = value
-    animation_tree["parameters/rasied/conditions/normal"]       = value
-    animation_tree["parameters/touch_head/conditions/normal"]   = value
-    animation_tree["parameters/shutdown/conditions/normal"]     = value
-    pass
-
-
-func set_poor_condition(value):
-    poor_condition = value
-    animation_tree["parameters/start_up/conditions/is_poorcondition"]   = value
-    animation_tree["parameters/rasied/conditions/is_poorcondition"]     = value
-    animation_tree["parameters/default/conditions/is_poorcondition"]    = value
-    animation_tree["parameters/shutdown/conditions/is_poorcondition"]   = value
-    pass
-
-
-func _on_animation_started(anim_name):
-    match anim_name:
-        var value when value.contains("_C"):
-            animation_tree.update_default_event()
-        var value when value.contains("normal_raised_s_A"):
-            animation_tree.update_raised_event()
-        var value when value.contains("happy_touch_body_A1") or value.contains("happy_touch_body_Turn_A1"):
-            animation_tree.update_touch_body_event()
+    if _lists.is_empty():
+        _lists = range(1, num + 1)
+        _lists.shuffle()
+    
+    # Play animations randomly
+    var random = _lists.pop_back()
+    animation_player.play(action_name + "_" + state_name + "_" + str(random))
     pass
 
 
 func _on_animation_finished(anim_name):
     match anim_name:
-        var value when value.contains("shutdown"):
-            animation_tree.update_shutdown_event()
-            set_shutdown(false)
-            get_tree().quit()
+        var value when value.contains("startup"):
+            current_action = Action.DEFAULT
     pass
