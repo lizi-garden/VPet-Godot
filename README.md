@@ -6,9 +6,10 @@ If you want to find offical repository. please [click here](https://github.com/L
 
 ## TODO
 
-- [x] Rasied
-- [ ] Climb
-- [x] Shutdown
+- [ ] MainUI
+- [ ] EatWindow
+- [ ] SettingWindow
+- [ ] Mod Support
 
 ## Animation copyright notice and authorization terms
 
