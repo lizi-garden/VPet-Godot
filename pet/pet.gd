@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var vup = $Vup
 
-## if pet is ill, update node status
+## If pet is ill, update node status
 @onready var drag_plot_1 = $DragPlot1
 @onready var drag_plot_2 = $DragPlot2 
 @onready var touch_body_1 = $TouchBody1
@@ -15,16 +15,17 @@ var touch_body
 var touch_head
 
 func update_node():
-    set_deferred("scale", Vector2(float(viewport_size.x)/1000, float(viewport_size.y)/1000))
+    var viewport_size = get_viewport_rect().size
+    set_deferred("scale", Vector2(float(viewport_size.x)/500, float(viewport_size.y)/500))
     
-    if vup.ill:
+    if vup.current_action == vup.Mood.ILL:
         touch_body_1.hide()
         touch_body_2.show()
         touch_head_1.hide()
         touch_head_2.show()
         touch_body = touch_body_2
         touch_head = touch_head_2
-        drag_plot_pos = drag_plot_2.global_position * float(viewport_size.x)/1000
+        drag_plot_pos = drag_plot_2.global_position * float(viewport_size.x)/500
     else:
         touch_body_1.show()
         touch_body_2.hide()
@@ -32,63 +33,70 @@ func update_node():
         touch_head_2.hide()
         touch_body = touch_body_1
         touch_head = touch_head_1
-        drag_plot_pos = drag_plot_1.global_position * float(viewport_size.x)/1000
-    pass
+        drag_plot_pos = drag_plot_1.global_position * float(viewport_size.x)/500
 
-
-var viewport_size   :Vector2
 
 func _ready():
-    viewport_size = get_viewport_rect().size
-    
-    # Touch Body Timer
-    touch_body_timer_l2r.connect("timeout", func(): touch_body_l2r = false)
-    touch_body_timer_r2l.connect("timeout", func(): touch_body_r2l = false)
-    touch_body_timer_u2d.connect("timeout", func(): touch_body_u2d = false)
-    touch_body_timer_u2d.connect("timeout", func(): touch_body_d2u = false)
-
     update_node()
-    pass
 
 
-## Read Dragging Event
-@onready var mouse_move_timer = $MouseMoveTimer
-var dragging = false
+## Read Raised Event
+@onready var raised_handler_delay_timer = $HandlerDelayTimer/Raised
+@onready var raised_unhandler_timer = $UnhandledTimer/Raised
+
+var dragging = false:
+    set(value):
+        if value:       Input.set_default_cursor_shape(Input.CURSOR_DRAG)
+        else:           Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+        dragging = value
+            
 var mouse_pos   :Vector2
 var window_pos  :Vector2
 
 func _unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-            dragging = true
-            Input.set_default_cursor_shape(Input.CURSOR_DRAG)
-            vup.set_raised(true)
+            if raised_handler_delay_timer.time_left == 0 and not dragging:
+                raised_handler_delay_timer.start()
+            
         else:
-            dragging = false
-            Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-            vup.set_raised(false)
+            raised_unhandler_timer.start()
+            if dragging:
+                dragging = false
+                vup.raised_stop(false)
+
     
-    if event is  InputEventMouseMotion and dragging:
-        window_pos = get_tree().get_root().position
-        mouse_pos = get_global_mouse_position()
-        get_tree().get_root().position = Vector2(window_pos) + mouse_pos - drag_plot_pos
-        vup.set_mouse_moving(true)
-        mouse_move_timer.start()
+    if event is InputEventMouseMotion and dragging:
+            window_pos = get_tree().get_root().position
+            mouse_pos = get_global_mouse_position()
+            get_tree().get_root().position = Vector2(window_pos) + mouse_pos - drag_plot_pos
+            raised_unhandler_timer.start()
+            vup.raised_moving()
+
+
+# Handler Delay Raised
+func _on_handler_delay_raised_timeout():
+    dragging = true
+    
+    window_pos = get_tree().get_root().position
+    mouse_pos = get_global_mouse_position()
+    get_tree().get_root().position = Vector2(window_pos) + mouse_pos - drag_plot_pos
+    raised_unhandler_timer.start()
+    vup.raised_moving()
+
+
+# Unhandled Raised
+func _on_unhandled_raised_timeout():
+    if dragging:
+        vup.raised_stop(true)
     else:
-        vup.set_mouse_moving(false)
-    pass
+        raised_handler_delay_timer.stop()
+        raised_handler_delay_timer.wait_time = 1.0
 
 
-func _on_mouse_move_timer_timeout():
-    vup.set_mouse_moving(false)
-    pass
-    
-    
 ## Read Touch Head Event
-# When mouse moving horizontally, set touch_head true.
-# When mouse moving vertically, set touch_head false.
-# When mouse exited touch_head_area and not input in 0.2 seconds, set touch_head false too.
-@onready var touch_head_timer = $TouchHeadTimer
+@onready var touch_head_unhandler_timer = $UnhandledTimer/TouchHead
+
 var touch_head_count = 0
 var touch_head_last = -1
 
@@ -96,116 +104,89 @@ func _on_touch_head_input_event(_viewport, event, shape_idx):
     if event is InputEventMouseMotion and not dragging:
         if abs(event.velocity.x) > 10:
             if touch_head_last != -1 and shape_idx != touch_head_last:
+                touch_head_unhandler_timer.start()
                 touch_head_count += 1
-            else:
-                touch_head_last = -1
-            
+                
+
             if touch_head_count > 2:
-                touch_head_timer.start()
+                touch_head_unhandler_timer.start()
                 Input.set_default_cursor_shape(Input.CURSOR_MOVE)
-                vup.set_touch_head(true)
+                vup.touch_head(true)
             
             touch_head_last = shape_idx
-    pass
-    
 
-func _on_touch_head_mouse_stop_or_exit():   
-    Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-    vup.set_touch_head(false)
+
+# Unhandled Touch Head Event
+func _on_unhandled_touch_head_timeout():
     touch_head_count = 0
     touch_head_last = -1
-    pass
+    
+    if vup.current_action == vup.Action.TOUCHHEAD:
+        vup.touch_head(false)
+        Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 
 ## Read Touch Body Event
-@onready var touch_body_timer = $TouchBodyTimer/Timer
-@onready var touch_body_timer_l2r = $TouchBodyTimer/L2R
-@onready var touch_body_timer_r2l = $TouchBodyTimer/R2L
-@onready var touch_body_timer_u2d = $TouchBodyTimer/U2D
-@onready var touch_body_timer_d2u = $TouchBodyTimer/D2U
+@onready var touch_body_unhandler_timer = $UnhandledTimer/TouchBody
 
-# Touch Body
 var touch_body_count = 0
 var touch_body_last = -1
 
-# Touch Body Turn
-var touch_body_turn_count = 0
-var touch_body_turn_last = -1
-
-# Velocity Direction
-var touch_body_l2r = false:
-    set(value):
-        touch_body_l2r = value
-        touch_body_timer_l2r.start()
-
-var touch_body_r2l = false:
-    set(value):
-        touch_body_r2l = value
-        touch_body_timer_r2l.start()
-
-var touch_body_u2d = false:
-    set(value):
-        touch_body_u2d = value
-        touch_body_timer_u2d.start()
-
-var touch_body_d2u = false:
-    set(value):
-        touch_body_d2u = value
-        touch_body_timer_d2u.start()
-        
-func _on_touch_body_input_event(_viewport, event, shape_idx):
-    if event is InputEventMouseMotion:
-        if event.velocity.x > 50:   touch_body_l2r = true
-        if event.velocity.x < -50:  touch_body_r2l = true
-        if event.velocity.y > 50:   touch_body_u2d = true
-        if event.velocity.y < -50:  touch_body_d2u = true
-    
-    if touch_body_l2r and touch_body_r2l and touch_body_u2d and touch_body_d2u:
-        if touch_body_turn_last != -1 and shape_idx != touch_body_turn_last:
-            touch_body_turn_count += 1
-        else:
-            touch_body_turn_last = -1
+func _on_touch_body_input_event(shape_idx):
+    if touch_body_last != -1 and shape_idx != touch_body_last:
+        touch_body_count += 1
+        touch_body_unhandler_timer.start()
             
-        if touch_body_turn_count > 4:
-            touch_body_timer.start()
-            Input.set_default_cursor_shape(Input.CURSOR_MOVE)
-            vup.set_touch_body_turn(true)
-        
-        touch_body_turn_last = shape_idx
-        pass
-    elif touch_body_l2r or touch_body_r2l or touch_body_u2d or touch_body_d2u:
-        if touch_body_last != -1 and shape_idx != touch_body_last:
-            touch_body_count += 1
-        else:
-            touch_body_last = -1
+    if touch_body_count > 4:
+        touch_body_unhandler_timer.start()
+        Input.set_default_cursor_shape(Input.CURSOR_MOVE)
+        vup.touch_body(true)
             
-        if touch_body_count > 4:
-            touch_body_timer.start()
-            Input.set_default_cursor_shape(Input.CURSOR_MOVE)
-            vup.set_touch_body(true)
-        
-        touch_body_last = shape_idx
-        pass
-    
-    pass
+    touch_body_last = shape_idx
 
 
-func _on_touch_body_mouse_stop_or_exit():
-    Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-    
-    # Touch Body
-    vup.set_touch_body(false)
+# Unhandled Touch Body Event
+func _on_unhandled_touch_body_timeout():
     touch_body_count = 0
     touch_body_last = -1
     
-    # Touch Body Turn
-    vup.set_touch_body_turn(false)
-    touch_body_turn_count = 0
-    touch_body_turn_last = -1
-    pass
+    if vup.current_action == vup.Action.TOUCHBODY:
+        vup.touch_body(false)
+        Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
 
-## Read Shutdown Event
-func shutdown():
-    vup.set_shutdown(true)
-    pass
+## Read Happy Turn Event
+@onready var happy_turn_unhandler_timer = $UnhandledTimer/HappyTurn
+
+var happy_turn_count = 0
+var happy_turn_sum = 0
+var happy_turn_last = -1
+
+func _on_happy_turn_input_event(shape_idx):
+    if happy_turn_last != -1 and shape_idx != happy_turn_last:
+        happy_turn_unhandler_timer.start()
+        happy_turn_count += 1
+        happy_turn_sum += shape_idx
+            
+    if happy_turn_count > 4:
+        # 6 = 0 + 1 + 2 + 3, sum of 4 shape_idx
+        if happy_turn_sum == 6:
+            happy_turn_unhandler_timer.start()
+            Input.set_default_cursor_shape(Input.CURSOR_MOVE)
+            vup.happy_turn(true)
+        else:
+            happy_turn_sum = 0
+    
+    happy_turn_last = shape_idx
+
+
+# Unhandled Happy Turn Event
+func _on_unhandled_happy_turn_timeout():
+    happy_turn_count = 0
+    happy_turn_sum = 0
+    happy_turn_last = -1
+    
+    if vup.current_action == vup.Action.HAPPYTURN:
+        vup.happy_turn(false)
+        Input.set_default_cursor_shape(Input.CURSOR_ARROW)
+

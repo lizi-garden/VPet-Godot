@@ -5,5 +5,5 @@ extends Node
 
 
 func _ready():
-    ui.connect("exit", pet.shutdown)
+    ui.connect("exit", pet.vup.shutdown)
     pass

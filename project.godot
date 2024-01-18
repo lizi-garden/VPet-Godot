@@ -11,6 +11,12 @@ config_version=5
 [application]
 
 config/name="VPet"
+config/name_localized={
+"zh_CN": "虚拟桌宠模拟器"
+}
+config/description="An open-source desktop pet/shimeji/virtual pet app by godot"
+config/version="0.0.1"
+config/tags=PackedStringArray("桌面", "虚拟桌宠")
 run/main_scene="res://main.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.png"
@@ -28,7 +34,7 @@ window/per_pixel_transparency/allowed=true
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/behaviour_toolkit/plugin.cfg")
+enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
 
 [rendering]
 

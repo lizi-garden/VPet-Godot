@@ -113,7 +113,6 @@ switch_on_hover = true
 [node name="EatMenu" type="PopupMenu" parent="MainUI"]
 disable_3d = true
 size = Vector2i(100, 89)
-always_on_top = true
 extend_to_title = true
 item_count = 3
 item_0/text = "Eat"
@@ -127,7 +126,6 @@ item_2/id = 2
 disable_3d = true
 gui_disable_input = true
 size = Vector2i(500, 195)
-always_on_top = true
 extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
@@ -230,7 +228,6 @@ value = 100.0
 [node name="ActivePanel" type="PopupPanel" parent="MainUI"]
 disable_3d = true
 size = Vector2i(500, 195)
-always_on_top = true
 extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
@@ -238,7 +235,6 @@ content_scale_size = Vector2i(1000, 495)
 [node name="CustomPanel" type="PopupPanel" parent="MainUI"]
 disable_3d = true
 size = Vector2i(500, 195)
-always_on_top = true
 extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
@@ -246,7 +242,6 @@ content_scale_size = Vector2i(1000, 495)
 [node name="SystemMenu" type="PopupMenu" parent="MainUI"]
 disable_3d = true
 size = Vector2i(116, 62)
-always_on_top = true
 extend_to_title = true
 item_count = 2
 item_0/text = "ScreenShot"
@@ -256,7 +251,6 @@ item_1/id = 1
 
 [node name="RightClickMenu" type="PopupMenu" parent="MainUI"]
 size = Vector2i(83, 62)
-always_on_top = true
 extend_to_title = true
 item_count = 2
 item_0/text = "Setting"
