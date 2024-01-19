@@ -1,46 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://dsthj3x3pr5fb"]
+[gd_scene load_steps=4 format=3 uid="uid://dsthj3x3pr5fb"]
 
 [ext_resource type="Script" path="res://ui/main_ui.gd" id="1_6ecxr"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_ba0m6"]
-[ext_resource type="Script" path="res://ui/popup_menu_button.gd" id="2_0e0lk"]
-[ext_resource type="Script" path="res://ui/popup_panel_button.gd" id="3_f0c56"]
-[ext_resource type="PackedScene" uid="uid://bdjabf7pisdel" path="res://ui/setting_window.tscn" id="4_w8kvc"]
-
-[sub_resource type="Theme" id="Theme_40g52"]
-
-[sub_resource type="Animation" id="Animation_3agnr"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MainUI/Dock:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_fd2gc"]
-resource_name = "fade_out"
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("MainUI/Dock:modulate:a")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(1, -0.25, 0, 0.4, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 1)
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_nl6l3"]
-_data = {
-"RESET": SubResource("Animation_3agnr"),
-"fade_out": SubResource("Animation_fd2gc")
-}
+[ext_resource type="Script" path="res://ui/popup_bar.gd" id="5_pm2p1"]
 
 [node name="UI" type="Node"]
 script = ExtResource("1_ba0m6")
@@ -49,68 +11,14 @@ script = ExtResource("1_ba0m6")
 layer = 2
 script = ExtResource("1_6ecxr")
 
-[node name="Dock" type="HBoxContainer" parent="MainUI"]
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -100.0
-grow_horizontal = 2
-grow_vertical = 0
-alignment = 1
+[node name="PopupBar" type="Control" parent="MainUI"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_pm2p1")
 
-[node name="EatButton" type="Button" parent="MainUI/Dock" node_paths=PackedStringArray("popup_menu")]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = SubResource("Theme_40g52")
-text = "Eat"
-text_overrun_behavior = 3
-script = ExtResource("2_0e0lk")
-popup_menu = NodePath("../../EatMenu")
-direct = true
-switch_on_hover = true
-
-[node name="InfoButton" type="Button" parent="MainUI/Dock" node_paths=PackedStringArray("popup_panel")]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Info"
-text_overrun_behavior = 3
-script = ExtResource("3_f0c56")
-popup_panel = NodePath("../../InfoPanel")
-direct = true
-switch_on_hover = true
-
-[node name="ActiveButton" type="Button" parent="MainUI/Dock" node_paths=PackedStringArray("popup_panel")]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Active"
-text_overrun_behavior = 3
-script = ExtResource("3_f0c56")
-popup_panel = NodePath("../../ActivePanel")
-direct = true
-switch_on_hover = true
-
-[node name="CustomButton" type="Button" parent="MainUI/Dock" node_paths=PackedStringArray("popup_panel")]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Custom"
-text_overrun_behavior = 3
-script = ExtResource("3_f0c56")
-popup_panel = NodePath("../../CustomPanel")
-direct = true
-switch_on_hover = true
-
-[node name="SystemButton" type="Button" parent="MainUI/Dock" node_paths=PackedStringArray("popup_menu")]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "System"
-text_overrun_behavior = 3
-script = ExtResource("2_0e0lk")
-popup_menu = NodePath("../../SystemMenu")
-direct = true
-switch_on_hover = true
-
-[node name="EatMenu" type="PopupMenu" parent="MainUI"]
+[node name="Eat" type="PopupMenu" parent="MainUI/PopupBar"]
 disable_3d = true
 size = Vector2i(100, 89)
 extend_to_title = true
@@ -122,7 +30,7 @@ item_1/id = 1
 item_2/text = "Medicine"
 item_2/id = 2
 
-[node name="InfoPanel" type="PopupPanel" parent="MainUI"]
+[node name="Info" type="PopupPanel" parent="MainUI/PopupBar"]
 disable_3d = true
 gui_disable_input = true
 size = Vector2i(500, 195)
@@ -130,17 +38,17 @@ extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/InfoPanel"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/PopupBar/Info"]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 496.0
 offset_bottom = 191.0
 size_flags_horizontal = 3
 
-[node name="Wealth" type="HBoxContainer" parent="MainUI/InfoPanel/VBoxContainer"]
+[node name="Wealth" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/InfoPanel/VBoxContainer/Wealth"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Wealth"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -148,33 +56,33 @@ text = "Wealth:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Value" type="Label" parent="MainUI/InfoPanel/VBoxContainer/Wealth"]
+[node name="Value" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Wealth"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 text = "100 RMB"
 
-[node name="Health" type="HBoxContainer" parent="MainUI/InfoPanel/VBoxContainer"]
+[node name="Health" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/InfoPanel/VBoxContainer/Health"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Health"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Health:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/InfoPanel/VBoxContainer/Health"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Health"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="Mood" type="HBoxContainer" parent="MainUI/InfoPanel/VBoxContainer"]
+[node name="Mood" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/InfoPanel/VBoxContainer/Mood"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Mood"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -182,17 +90,17 @@ text = "Mood:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/InfoPanel/VBoxContainer/Mood"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Mood"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="Satiety" type="HBoxContainer" parent="MainUI/InfoPanel/VBoxContainer"]
+[node name="Satiety" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/InfoPanel/VBoxContainer/Satiety"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Satiety"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -200,17 +108,17 @@ text = "Satiety:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/InfoPanel/VBoxContainer/Satiety"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Satiety"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="Thirst" type="HBoxContainer" parent="MainUI/InfoPanel/VBoxContainer"]
+[node name="Thirst" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/InfoPanel/VBoxContainer/Thirst"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Thirst"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -218,28 +126,28 @@ text = "Thirst:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/InfoPanel/VBoxContainer/Thirst"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Thirst"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="ActivePanel" type="PopupPanel" parent="MainUI"]
+[node name="Active" type="PopupPanel" parent="MainUI/PopupBar"]
 disable_3d = true
 size = Vector2i(500, 195)
 extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
 
-[node name="CustomPanel" type="PopupPanel" parent="MainUI"]
+[node name="Custom" type="PopupPanel" parent="MainUI/PopupBar"]
 disable_3d = true
 size = Vector2i(500, 195)
 extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
 
-[node name="SystemMenu" type="PopupMenu" parent="MainUI"]
+[node name="System" type="PopupMenu" parent="MainUI/PopupBar"]
 disable_3d = true
 size = Vector2i(116, 62)
 extend_to_title = true
@@ -257,18 +165,5 @@ item_0/text = "Setting"
 item_0/id = 0
 item_1/text = "Exit"
 item_1/id = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="MainUI"]
-root_node = NodePath("../..")
-libraries = {
-"": SubResource("AnimationLibrary_nl6l3")
-}
-
-[node name="Timer" type="Timer" parent="MainUI"]
-wait_time = 5.0
-one_shot = true
-
-[node name="SettingWindow" parent="." instance=ExtResource("4_w8kvc")]
-disable_3d = true
 
 [connection signal="index_pressed" from="MainUI/RightClickMenu" to="." method="_on_right_click_menu_index_pressed"]
