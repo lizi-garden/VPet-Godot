@@ -1,4 +1,4 @@
-[gd_scene load_steps=851 format=3 uid="uid://dsyornfipknw0"]
+[gd_scene load_steps=852 format=3 uid="uid://dsyornfipknw0"]
 
 [ext_resource type="Script" path="res://pet/vup.gd" id="1_7y2u6"]
 [ext_resource type="Texture2D" uid="uid://drap87carsggf" path="res://mods/vup/default/happy_1/loris_younger_vup-0.png" id="2_g0qoi"]
@@ -780,6 +780,7 @@
 [ext_resource type="Texture2D" uid="uid://dduw478ixj0c8" path="res://mods/vup/touch_body/happy_turn_tb2_c/loris_younger_vup-3.png" id="628_hpfh2"]
 [ext_resource type="Texture2D" uid="uid://dxvwccconibd6" path="res://mods/vup/touch_body/happy_turn_tb2_c/loris_younger_vup-4.png" id="629_rbg28"]
 [ext_resource type="Texture2D" uid="uid://dc2butjq2jjjx" path="res://mods/vup/touch_body/happy_turn_tb2_c/loris_younger_vup-5.png" id="630_0100o"]
+[ext_resource type="Texture2D" uid="uid://vj5k3r2jde3r" path="res://mods/image/food.png" id="700_ccyup"]
 [ext_resource type="Script" path="res://state/fsm.gd" id="735_2lgoq"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_8bfo5"]
@@ -3472,6 +3473,30 @@ animations = [{
 
 [sub_resource type="Animation" id="Animation_vy53b"]
 length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer2:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer2:offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-30, -110)]
+}
 
 [sub_resource type="Animation" id="Animation_2cuad"]
 length = 2.6
@@ -3803,6 +3828,30 @@ tracks/3/keys = {
 "update": 1,
 "values": ["eat_happy_1"]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D/Layer2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
+}
 
 [sub_resource type="Animation" id="Animation_34edp"]
 length = 4.8
@@ -3853,6 +3902,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["eat_ill_1"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D/Layer2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-130, 300)]
 }
 
 [sub_resource type="Animation" id="Animation_ax5ft"]
@@ -3905,6 +3978,30 @@ tracks/3/keys = {
 "update": 1,
 "values": ["eat_normal_1"]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D/Layer2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
+}
 
 [sub_resource type="Animation" id="Animation_d8qh3"]
 length = 3.8
@@ -3955,6 +4052,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": ["eat_poorcondition_1"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimatedSprite2D/Layer2:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.6, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
 }
 
 [sub_resource type="Animation" id="Animation_mpwmw"]
@@ -5427,17 +5548,21 @@ position = Vector2(250, 250)
 
 [node name="Layer1" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_8bfo5")
-animation = &"touch_body_happy_turn_tb1_a"
+animation = &"eat_ill_1"
+frame = 23
 
 [node name="Layer2" type="Sprite2D" parent="AnimatedSprite2D"]
 visibility_layer = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("700_ccyup")
+offset = Vector2(-30, -110)
 
 [node name="Layer3" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 visibility_layer = 4
 position = Vector2(1, 0)
 sprite_frames = SubResource("SpriteFrames_4uj5w")
 animation = &"eat_ill_1"
+frame = 23
 speed_scale = 1.2
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
