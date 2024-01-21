@@ -65,7 +65,7 @@ func show_popup_menu(button :Button, popup_menu :PopupMenu):
     popup_menu_pos.y = button_pos.y - popup_menu_size.y
     popup_menu.position = popup_menu_pos
     
-    popup_menu.show()
+    popup_menu.popup()
 
 
 
@@ -94,4 +94,4 @@ func show_popup_panel(button :Button, popup_panel :PopupPanel):
     popup_panel_pos.y = window_pos.y + viewport_size.y*2/5
     popup_panel.position = popup_panel_pos
     
-    popup_panel.show()
+    popup_panel.popup()
