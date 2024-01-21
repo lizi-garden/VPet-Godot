@@ -1,6 +1,16 @@
 extends CanvasLayer
 
+signal popup_items_window(tab_name :String)
+
+@onready var items_menu = $PopupBar/Items
+@onready var system_menu = $PopupBar/System
 @onready var right_click_menu = $RightClickMenu
+
+@export var wealth_value    :float
+@export var health          :int
+@export var mood            :int
+@export var satiety         :int
+@export var thirst          :int
 
 var viewport_pos    :Vector2
 var viewport_size   :Vector2
@@ -8,7 +18,6 @@ var viewport_size   :Vector2
 func _ready():
     viewport_size = get_viewport().size
     right_click_menu.hide()
-    pass
 
 
 func _unhandled_input(event):
@@ -19,3 +28,6 @@ func _unhandled_input(event):
             right_click_menu.show()
 
 
+func _on_item_index_pressed(index):
+    var item_name = items_menu.get_item_text(index).to_lower()
+    popup_items_window.emit(item_name)

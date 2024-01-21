@@ -1,0 +1,195 @@
+[gd_scene load_steps=5 format=3 uid="uid://dl2v75gbsgsqc"]
+
+[ext_resource type="Script" path="res://ui/items_window.gd" id="1_tjnsq"]
+[ext_resource type="ButtonGroup" uid="uid://cgjtf6ex0m1k2" path="res://ui/items_button.tres" id="2_af5sp"]
+[ext_resource type="Theme" uid="uid://5m2lhduot4nl" path="res://modeditor/mod_editer.tres" id="2_m4bx0"]
+[ext_resource type="Texture2D" uid="uid://vj5k3r2jde3r" path="res://mods/image/food.png" id="2_xar11"]
+
+[node name="ItemsWindow" type="Window"]
+title = "Items Window"
+position = Vector2i(0, 36)
+size = Vector2i(990, 540)
+transient = true
+exclusive = true
+popup_window = true
+keep_title_visible = true
+script = ExtResource("1_tjnsq")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+theme = ExtResource("2_m4bx0")
+
+[node name="Food" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_af5sp")
+text = "Food"
+
+[node name="Drink" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_af5sp")
+text = "Drink
+"
+
+[node name="Medicine" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+toggle_mode = true
+button_group = ExtResource("2_af5sp")
+text = "Medicine"
+
+[node name="FoodContainer" type="ScrollContainer" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/FoodContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_text_lines = 2
+auto_height = true
+item_count = 11
+max_columns = 5
+same_column_width = true
+fixed_column_width = 120
+icon_mode = 0
+fixed_icon_size = Vector2i(100, 100)
+item_0/text = "Food"
+item_0/icon = ExtResource("2_xar11")
+item_0/selectable = false
+item_1/text = "Food"
+item_1/icon = ExtResource("2_xar11")
+item_1/selectable = false
+item_2/text = "Food"
+item_2/icon = ExtResource("2_xar11")
+item_2/selectable = false
+item_3/text = "Food"
+item_3/icon = ExtResource("2_xar11")
+item_3/selectable = false
+item_4/text = "Food"
+item_4/icon = ExtResource("2_xar11")
+item_4/selectable = false
+item_5/text = "Food"
+item_5/icon = ExtResource("2_xar11")
+item_5/selectable = false
+item_6/text = "Food"
+item_6/icon = ExtResource("2_xar11")
+item_6/selectable = false
+item_7/text = "Food"
+item_7/icon = ExtResource("2_xar11")
+item_7/selectable = false
+item_8/text = "Food"
+item_8/icon = ExtResource("2_xar11")
+item_8/selectable = false
+item_9/text = "Food"
+item_9/icon = ExtResource("2_xar11")
+item_9/selectable = false
+item_10/text = ""
+
+[node name="DrinkContainer" type="ScrollContainer" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/DrinkContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_text_lines = 2
+auto_height = true
+item_count = 10
+max_columns = 5
+same_column_width = true
+fixed_column_width = 120
+icon_mode = 0
+fixed_icon_size = Vector2i(100, 100)
+item_0/text = "Drink"
+item_0/icon = ExtResource("2_xar11")
+item_0/selectable = false
+item_1/text = "Drink"
+item_1/icon = ExtResource("2_xar11")
+item_1/selectable = false
+item_2/text = "Drink"
+item_2/icon = ExtResource("2_xar11")
+item_2/selectable = false
+item_3/text = "Drink"
+item_3/icon = ExtResource("2_xar11")
+item_3/selectable = false
+item_4/text = "Drink"
+item_4/icon = ExtResource("2_xar11")
+item_4/selectable = false
+item_5/text = "Drink"
+item_5/icon = ExtResource("2_xar11")
+item_5/selectable = false
+item_6/text = "Drink"
+item_6/icon = ExtResource("2_xar11")
+item_6/selectable = false
+item_7/text = "Drink"
+item_7/icon = ExtResource("2_xar11")
+item_7/selectable = false
+item_8/text = "Drink"
+item_8/icon = ExtResource("2_xar11")
+item_8/selectable = false
+item_9/text = "Drink"
+item_9/icon = ExtResource("2_xar11")
+item_9/selectable = false
+
+[node name="MedicineContainer" type="ScrollContainer" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/MedicineContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_text_lines = 2
+auto_height = true
+item_count = 10
+max_columns = 5
+same_column_width = true
+fixed_column_width = 120
+icon_mode = 0
+fixed_icon_size = Vector2i(100, 100)
+item_0/text = "Medicine"
+item_0/icon = ExtResource("2_xar11")
+item_0/selectable = false
+item_1/text = "Medicine"
+item_1/icon = ExtResource("2_xar11")
+item_1/selectable = false
+item_2/text = "Medicine"
+item_2/icon = ExtResource("2_xar11")
+item_2/selectable = false
+item_3/text = "Medicine"
+item_3/icon = ExtResource("2_xar11")
+item_3/selectable = false
+item_4/text = "Medicine"
+item_4/icon = ExtResource("2_xar11")
+item_4/selectable = false
+item_5/text = "Medicine"
+item_5/icon = ExtResource("2_xar11")
+item_5/selectable = false
+item_6/text = "Medicine"
+item_6/icon = ExtResource("2_xar11")
+item_6/selectable = false
+item_7/text = "Medicine"
+item_7/icon = ExtResource("2_xar11")
+item_7/selectable = false
+item_8/text = "Medicine"
+item_8/icon = ExtResource("2_xar11")
+item_8/selectable = false
+item_9/text = "Medicine"
+item_9/icon = ExtResource("2_xar11")
+item_9/selectable = false
