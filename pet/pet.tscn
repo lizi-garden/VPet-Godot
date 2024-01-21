@@ -115,10 +115,10 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
-[connection signal="mouse_shape_entered" from="TouchBody1" to="." method="_on_happy_turn_input_event"]
 [connection signal="mouse_shape_entered" from="TouchBody1" to="." method="_on_touch_body_input_event"]
-[connection signal="mouse_shape_entered" from="TouchBody2" to="." method="_on_happy_turn_input_event"]
+[connection signal="mouse_shape_entered" from="TouchBody1" to="." method="_on_happy_turn_input_event"]
 [connection signal="mouse_shape_entered" from="TouchBody2" to="." method="_on_touch_body_input_event"]
+[connection signal="mouse_shape_entered" from="TouchBody2" to="." method="_on_happy_turn_input_event"]
 [connection signal="input_event" from="TouchHead1" to="." method="_on_touch_head_input_event"]
 [connection signal="input_event" from="TouchHead2" to="." method="_on_touch_head_input_event"]
 [connection signal="timeout" from="HandlerDelayTimer/Raised" to="." method="_on_handler_delay_raised_timeout"]

@@ -73,8 +73,12 @@ enum Mode {
 ################################################################################
 
 func eat(food :Texture2D):
-    eat_food_sprite.texture = food
+    if food:
+        eat_food_sprite.texture = food
+    
     current_action = Action.EAT
+    animation_player.stop(true)
+    eat_set_play(current_mood)
 
 
 func shutdown():
