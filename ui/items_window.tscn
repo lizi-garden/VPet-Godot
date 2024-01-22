@@ -6,9 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://vj5k3r2jde3r" path="res://mods/image/food.png" id="2_xar11"]
 
 [node name="ItemsWindow" type="Window"]
+disable_3d = true
 title = "Items Window"
-position = Vector2i(0, 36)
-size = Vector2i(990, 540)
+position = Vector2i(30, 50)
+size = Vector2i(900, 540)
+wrap_controls = true
 transient = true
 exclusive = true
 popup_window = true

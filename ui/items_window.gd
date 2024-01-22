@@ -12,8 +12,13 @@ extends Window
 @onready var medicine_item_list = $HBoxContainer/MedicineContainer/ItemList
 
 
+func _init():
+    pass
+
+
 func _ready():
-    connect("close_requested", _on_windows_close_requested)
+    connect("close_requested", hide)
+    connect("focus_exited", hide)
     
     food_button.connect("toggled", func(toggled_on): if toggled_on: switch_tab("food"))
     drink_button.connect("toggled", func(toggled_on): if toggled_on: switch_tab("drink"))
@@ -23,10 +28,6 @@ func _ready():
     drink_item_list.connect("item_activated", func(index): _on_item_activated(index, "drink"))
     medicine_item_list.connect("item_activated", func(index): _on_item_activated(index, "medicine"))
     pass
-
-
-func _on_windows_close_requested():
-    queue_free()
 
 
 func switch_tab(tab :String):
@@ -51,3 +52,5 @@ func _on_item_activated(index :int, category :String):
         "food":     parent.eat.emit(food_item_list.get_item_icon(index))
         "drink":    parent.drink.emit(drink_item_list.get_item_icon(index))
         "medicine": parent.eat.emit(medicine_item_list.get_item_icon(index))
+
+    hide()

@@ -1,23 +1,38 @@
 [gd_scene load_steps=4 format=3 uid="uid://dsthj3x3pr5fb"]
 
-[ext_resource type="Script" path="res://ui/main_ui.gd" id="1_6ecxr"]
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_ba0m6"]
-[ext_resource type="Script" path="res://ui/custom/popup_bar.gd" id="5_pm2p1"]
+[ext_resource type="Script" path="res://ui/main_ui.gd" id="2_476th"]
+[ext_resource type="Script" path="res://ui/custom/popup_bar.gd" id="2_ov4nx"]
 
-[node name="UI" type="Node"]
+[node name="UI" type="CanvasLayer"]
+layer = 0
 script = ExtResource("1_ba0m6")
 
-[node name="MainUI" type="CanvasLayer" parent="."]
-script = ExtResource("1_6ecxr")
+[node name="RightClickMenu" type="PopupMenu" parent="."]
+size = Vector2i(83, 62)
+extend_to_title = true
+item_count = 2
+item_0/text = "Setting"
+item_0/id = 0
+item_1/text = "Exit"
+item_1/id = 1
+
+[node name="MainUI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+script = ExtResource("2_476th")
 
 [node name="PopupBar" type="Control" parent="MainUI"]
-layout_mode = 3
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("5_pm2p1")
+mouse_filter = 1
+script = ExtResource("2_ov4nx")
 
 [node name="Items" type="PopupMenu" parent="MainUI/PopupBar"]
 disable_3d = true
@@ -158,14 +173,20 @@ item_0/id = 0
 item_1/text = "Recording"
 item_1/id = 1
 
-[node name="RightClickMenu" type="PopupMenu" parent="MainUI"]
-size = Vector2i(83, 62)
-extend_to_title = true
+[node name="MenuButton" type="MenuButton" parent="MainUI"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 430.0
+offset_top = 20.0
+offset_right = 480.0
+offset_bottom = 70.0
+grow_horizontal = 0
+flat = false
 item_count = 2
-item_0/text = "Setting"
-item_0/id = 0
-item_1/text = "Exit"
-item_1/id = 1
-
-[connection signal="index_pressed" from="MainUI/PopupBar/Items" to="MainUI" method="_on_item_index_pressed"]
-[connection signal="index_pressed" from="MainUI/RightClickMenu" to="." method="_on_right_click_menu_index_pressed"]
+popup/item_0/text = "Food"
+popup/item_0/id = 0
+popup/item_1/text = "Setting"
+popup/item_1/id = 1

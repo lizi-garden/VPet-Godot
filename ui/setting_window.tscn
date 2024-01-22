@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://bdjabf7pisdel"]
 
-[node name="PopupWindow" type="Window"]
+[node name="SettingWindow" type="Window"]
+title = "Setting Window"
+position = Vector2i(0, 36)
 size = Vector2i(990, 540)
-visible = false
 
 [node name="TabContainer" type="TabContainer" parent="."]
 anchors_preset = 15
@@ -12,33 +13,24 @@ grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
 
-[node name="Eat" type="TextEdit" parent="TabContainer"]
+[node name="Data" type="VBoxContainer" parent="TabContainer"]
+layout_mode = 2
+
+[node name="Custom" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="Info" type="TextEdit" parent="TabContainer"]
+[node name="Mods" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="Active" type="TextEdit" parent="TabContainer"]
+[node name="System" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
 
-[node name="Custom" type="TextEdit" parent="TabContainer"]
+[node name="Info" type="VBoxContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
-
-[node name="System" type="HFlowContainer" parent="TabContainer"]
-visible = false
-layout_mode = 2
-
-[node name="LocateLabel" type="Label" parent="TabContainer/System"]
-layout_mode = 2
-text = "ScreenShot Location"
-
-[node name="LocatePath" type="Label" parent="TabContainer/System"]
-layout_mode = 2
-text = "ScreenShot Location"
 
 [node name="FileDialog" type="FileDialog" parent="."]
 size = Vector2i(295, 154)
