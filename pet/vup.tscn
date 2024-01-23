@@ -1,4 +1,4 @@
-[gd_scene load_steps=852 format=3 uid="uid://dsyornfipknw0"]
+[gd_scene load_steps=1108 format=3 uid="uid://dsyornfipknw0"]
 
 [ext_resource type="Script" path="res://pet/vup.gd" id="1_7y2u6"]
 [ext_resource type="Texture2D" uid="uid://drap87carsggf" path="res://mods/vup/default/happy_1/loris_younger_vup-0.png" id="2_g0qoi"]
@@ -375,334 +375,556 @@
 [ext_resource type="Texture2D" uid="uid://d4an6t37mvoiw" path="res://mods/vup/startup/happy_1/loris_younger_vup-8.png" id="211_a6tgr"]
 [ext_resource type="Texture2D" uid="uid://n7uhinnixulk" path="res://mods/vup/startup/happy_1/loris_younger_vup-9.png" id="212_l4rkw"]
 [ext_resource type="Texture2D" uid="uid://conu07vx40qsd" path="res://mods/vup/startup/happy_1/loris_younger_vup-10.png" id="213_4dukw"]
+[ext_resource type="Texture2D" uid="uid://bbp5s1oakb542" path="res://mods/vup/idle/idle_aside_happy_a/loris_younger_vup-0.png" id="213_j1w2h"]
 [ext_resource type="Texture2D" uid="uid://cw56t7husc4y7" path="res://mods/vup/startup/happy_2/loris_younger_vup-0.png" id="214_3myid"]
+[ext_resource type="Texture2D" uid="uid://cg2vm5de2sqci" path="res://mods/vup/idle/idle_aside_happy_a/loris_younger_vup-1.png" id="214_abhjv"]
+[ext_resource type="Texture2D" uid="uid://jts6c476j0aw" path="res://mods/vup/idle/idle_aside_happy_a/loris_younger_vup-2.png" id="215_3ehxg"]
 [ext_resource type="Texture2D" uid="uid://bpwjxp4klwtwo" path="res://mods/vup/startup/happy_2/loris_younger_vup-1.png" id="215_jd4hw"]
 [ext_resource type="Texture2D" uid="uid://b6gl0oi7n2g2q" path="res://mods/vup/startup/happy_2/loris_younger_vup-2.png" id="216_aj106"]
+[ext_resource type="Texture2D" uid="uid://cjwrja3s32osm" path="res://mods/vup/idle/idle_aside_happy_a/loris_younger_vup-3.png" id="216_eeq8v"]
+[ext_resource type="Texture2D" uid="uid://cfukch3pni68u" path="res://mods/vup/idle/idle_aside_happy_a/loris_younger_vup-4.png" id="217_ty6lm"]
 [ext_resource type="Texture2D" uid="uid://cycfwjpcikcbq" path="res://mods/vup/startup/happy_2/loris_younger_vup-3.png" id="217_vqsul"]
 [ext_resource type="Texture2D" uid="uid://bcd5avqvw4k5p" path="res://mods/vup/startup/happy_2/loris_younger_vup-4.png" id="218_2hryu"]
+[ext_resource type="Texture2D" uid="uid://drtqnq3g0436i" path="res://mods/vup/idle/idle_aside_happy_c/loris_younger_vup-0.png" id="218_ilkh1"]
+[ext_resource type="Texture2D" uid="uid://b6ltwcaamv6dm" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-0.png" id="218_wg3yc"]
+[ext_resource type="Texture2D" uid="uid://cqn6r03o8kfbe" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-1.png" id="219_i7kb2"]
+[ext_resource type="Texture2D" uid="uid://0nu8crk5b7of" path="res://mods/vup/idle/idle_aside_happy_c/loris_younger_vup-1.png" id="219_ist6k"]
 [ext_resource type="Texture2D" uid="uid://cb4w3pfdnnhy7" path="res://mods/vup/startup/happy_2/loris_younger_vup-5.png" id="219_ktnb8"]
+[ext_resource type="Texture2D" uid="uid://cux3orx5yefj" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-2.png" id="220_201fc"]
+[ext_resource type="Texture2D" uid="uid://dooj05lmjwnrc" path="res://mods/vup/idle/idle_aside_happy_c/loris_younger_vup-2.png" id="220_lysw8"]
 [ext_resource type="Texture2D" uid="uid://tyxp4vh5dhab" path="res://mods/vup/startup/happy_2/loris_younger_vup-6.png" id="220_tsw2y"]
 [ext_resource type="Texture2D" uid="uid://c65t86i48tkap" path="res://mods/vup/startup/happy_2/loris_younger_vup-7.png" id="221_cfiae"]
+[ext_resource type="Texture2D" uid="uid://cwcgpyuvo8ull" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-3.png" id="221_xm6sk"]
 [ext_resource type="Texture2D" uid="uid://iehdxkihb4f7" path="res://mods/vup/startup/happy_2/loris_younger_vup-8.png" id="222_ihhkm"]
+[ext_resource type="Texture2D" uid="uid://ccwe2h46f4few" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-4.png" id="222_th7td"]
 [ext_resource type="Texture2D" uid="uid://05ih6s5c0gvo" path="res://mods/vup/startup/happy_2/loris_younger_vup-9.png" id="223_tlqae"]
+[ext_resource type="Texture2D" uid="uid://bm5sn6bmm44ei" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-5.png" id="223_w3axk"]
 [ext_resource type="Texture2D" uid="uid://dtbecjao0oo3u" path="res://mods/vup/startup/happy_2/loris_younger_vup-10.png" id="224_7swme"]
+[ext_resource type="Texture2D" uid="uid://0xcd52lm2w0c" path="res://mods/vup/idle/idle_aside_happy_tb1_b/loris_younger_vup-6.png" id="224_hd6qt"]
 [ext_resource type="Texture2D" uid="uid://dmqfgllt5supu" path="res://mods/vup/startup/happy_2/loris_younger_vup-11.png" id="225_md4b8"]
 [ext_resource type="Texture2D" uid="uid://dvmg1f2viuj1c" path="res://mods/vup/startup/happy_2/loris_younger_vup-12.png" id="226_p4ial"]
 [ext_resource type="Texture2D" uid="uid://dieecjd2g5g5c" path="res://mods/vup/startup/happy_2/loris_younger_vup-13.png" id="227_adn4y"]
+[ext_resource type="Texture2D" uid="uid://q26c4wuitc8m" path="res://mods/vup/idle/idle_aside_happy_tb2_b/loris_younger_vup-0.png" id="228_mxtti"]
 [ext_resource type="Texture2D" uid="uid://dqq6shkaogwaw" path="res://mods/vup/startup/ill/loris_younger_vup-0.png" id="228_x6a8v"]
 [ext_resource type="Texture2D" uid="uid://ji5phdodf1j1" path="res://mods/vup/startup/ill/loris_younger_vup-1.png" id="229_recrk"]
+[ext_resource type="Texture2D" uid="uid://b2vwxbca4oyy2" path="res://mods/vup/idle/idle_aside_happy_tb2_b/loris_younger_vup-1.png" id="229_vqpl4"]
 [ext_resource type="Texture2D" uid="uid://bn7dh2viw31l7" path="res://mods/vup/startup/ill/loris_younger_vup-2.png" id="230_armgo"]
+[ext_resource type="Texture2D" uid="uid://b5khb8otaddb0" path="res://mods/vup/idle/idle_aside_happy_tb2_b/loris_younger_vup-2.png" id="230_cth7y"]
+[ext_resource type="Texture2D" uid="uid://cx02wy7q481b1" path="res://mods/vup/idle/idle_aside_happy_tb2_b/loris_younger_vup-3.png" id="231_lnvtd"]
 [ext_resource type="Texture2D" uid="uid://bwme0g8afbkhb" path="res://mods/vup/startup/ill/loris_younger_vup-3.png" id="231_ug5ol"]
 [ext_resource type="Texture2D" uid="uid://dxlxlqmcqeakq" path="res://mods/vup/startup/ill/loris_younger_vup-4.png" id="232_n60g0"]
+[ext_resource type="Texture2D" uid="uid://cr6ms4kqul6mw" path="res://mods/vup/idle/idle_aside_happy_tb2_b/loris_younger_vup-4.png" id="232_vism8"]
+[ext_resource type="Texture2D" uid="uid://bmakwolgjrobc" path="res://mods/vup/idle/idle_aside_happy_tb2_b/loris_younger_vup-5.png" id="233_hgv2w"]
 [ext_resource type="Texture2D" uid="uid://n1ysrc2q4g2f" path="res://mods/vup/startup/ill/loris_younger_vup-5.png" id="233_vny0g"]
+[ext_resource type="Texture2D" uid="uid://c1251eis5kfdr" path="res://mods/vup/idle/idle_aside_happy_tb3_b/loris_younger_vup-0.png" id="234_5cigq"]
 [ext_resource type="Texture2D" uid="uid://cxfx34ktrjx3u" path="res://mods/vup/startup/ill/loris_younger_vup-6.png" id="234_cmph7"]
+[ext_resource type="Texture2D" uid="uid://cvj4lw8sgs0qr" path="res://mods/vup/idle/idle_aside_happy_tb3_b/loris_younger_vup-1.png" id="235_25f68"]
 [ext_resource type="Texture2D" uid="uid://cyoay2ol8s6wd" path="res://mods/vup/startup/ill/loris_younger_vup-7.png" id="235_jw12q"]
 [ext_resource type="Texture2D" uid="uid://cltlolwiv3ffk" path="res://mods/vup/startup/ill/loris_younger_vup-8.png" id="236_7m0p5"]
+[ext_resource type="Texture2D" uid="uid://dah1vea8vweta" path="res://mods/vup/idle/idle_aside_happy_tb3_b/loris_younger_vup-2.png" id="236_ok73x"]
+[ext_resource type="Texture2D" uid="uid://dh0m3vtg5w8o7" path="res://mods/vup/idle/idle_aside_happy_tb3_b/loris_younger_vup-3.png" id="237_4tryj"]
 [ext_resource type="Texture2D" uid="uid://b488yvolqemov" path="res://mods/vup/startup/ill/loris_younger_vup-9.png" id="237_ytfod"]
+[ext_resource type="Texture2D" uid="uid://drbjhjw1yiee5" path="res://mods/vup/idle/idle_aside_happy_tb3_b/loris_younger_vup-4.png" id="238_26exf"]
 [ext_resource type="Texture2D" uid="uid://c58qroyd663ht" path="res://mods/vup/startup/ill/loris_younger_vup-10.png" id="238_trn1t"]
 [ext_resource type="Texture2D" uid="uid://cjbqj1dsy4k5l" path="res://mods/vup/startup/ill/loris_younger_vup-11.png" id="239_3o068"]
+[ext_resource type="Texture2D" uid="uid://dgp27cxw56aho" path="res://mods/vup/idle/idle_aside_happy_tb4_b/loris_younger_vup-0.png" id="239_plwh8"]
 [ext_resource type="Texture2D" uid="uid://bwsh5s3cspnfv" path="res://mods/vup/startup/ill/loris_younger_vup-12.png" id="240_5xy4u"]
+[ext_resource type="Texture2D" uid="uid://drg0xpag1cj7j" path="res://mods/vup/idle/idle_aside_happy_tb4_b/loris_younger_vup-1.png" id="240_yselw"]
 [ext_resource type="Texture2D" uid="uid://d2l4q221fe8ds" path="res://mods/vup/startup/ill/loris_younger_vup-13.png" id="241_1tsf2"]
+[ext_resource type="Texture2D" uid="uid://b0573vba0ulps" path="res://mods/vup/idle/idle_aside_happy_tb4_b/loris_younger_vup-2.png" id="241_rc227"]
 [ext_resource type="Texture2D" uid="uid://brinmule8edjt" path="res://mods/vup/startup/ill/loris_younger_vup-14.png" id="242_oqoli"]
+[ext_resource type="Texture2D" uid="uid://bt6kneu40a45h" path="res://mods/vup/idle/idle_aside_happy_tb4_b/loris_younger_vup-3.png" id="242_xvn6b"]
+[ext_resource type="Texture2D" uid="uid://ckuxg86rgsgvu" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-0.png" id="243_g8jhe"]
 [ext_resource type="Texture2D" uid="uid://bgqwh7w1ue406" path="res://mods/vup/startup/ill/loris_younger_vup-15.png" id="243_sitay"]
+[ext_resource type="Texture2D" uid="uid://cjgsveddfd5hj" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-1.png" id="244_fe1o7"]
 [ext_resource type="Texture2D" uid="uid://duggap78u5paw" path="res://mods/vup/startup/ill/loris_younger_vup-16.png" id="244_kolcy"]
 [ext_resource type="Texture2D" uid="uid://cr63tsnupojat" path="res://mods/vup/startup/ill/loris_younger_vup-17.png" id="245_bq64e"]
+[ext_resource type="Texture2D" uid="uid://cyowok1v6rdvv" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-2.png" id="245_loycc"]
+[ext_resource type="Texture2D" uid="uid://bqvrw2gkq7hlw" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-3.png" id="246_l1jl2"]
 [ext_resource type="Texture2D" uid="uid://bspnppo18peum" path="res://mods/vup/startup/ill/loris_younger_vup-18.png" id="246_ujqid"]
 [ext_resource type="Texture2D" uid="uid://bfaf8t142syyp" path="res://mods/vup/startup/normal/loris_younger_vup-0.png" id="247_i256u"]
+[ext_resource type="Texture2D" uid="uid://cwvhlngijk7oq" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-4.png" id="247_py4j2"]
 [ext_resource type="Texture2D" uid="uid://2yefj5accrdv" path="res://mods/vup/startup/normal/loris_younger_vup-1.png" id="248_bvj4n"]
+[ext_resource type="Texture2D" uid="uid://sbr2fonww48d" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-5.png" id="248_vf7vh"]
+[ext_resource type="Texture2D" uid="uid://ccbmfubpe0ywe" path="res://mods/vup/idle/idle_aside_happy_tb5_b/loris_younger_vup-6.png" id="249_03r7x"]
 [ext_resource type="Texture2D" uid="uid://bcs15cxrtafe0" path="res://mods/vup/startup/normal/loris_younger_vup-2.png" id="249_jb6v6"]
 [ext_resource type="Texture2D" uid="uid://cqmhiwrd4v0ht" path="res://mods/vup/startup/normal/loris_younger_vup-3.png" id="250_ljhfj"]
+[ext_resource type="Texture2D" uid="uid://bsolt0o3fbu36" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-0.png" id="250_uiods"]
 [ext_resource type="Texture2D" uid="uid://br0xehkq00gsg" path="res://mods/vup/startup/normal/loris_younger_vup-4.png" id="251_1h1im"]
+[ext_resource type="Texture2D" uid="uid://khgr6n26gkwu" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-1.png" id="251_w8krb"]
 [ext_resource type="Texture2D" uid="uid://ch7fx4j8rr815" path="res://mods/vup/startup/normal/loris_younger_vup-5.png" id="252_0dtox"]
+[ext_resource type="Texture2D" uid="uid://cfij0u1r1d8w3" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-2.png" id="252_pk6g2"]
 [ext_resource type="Texture2D" uid="uid://d1plb6thoflgc" path="res://mods/vup/startup/normal/loris_younger_vup-6.png" id="253_p23lg"]
+[ext_resource type="Texture2D" uid="uid://prurvsuw3lj7" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-3.png" id="253_yftcf"]
 [ext_resource type="Texture2D" uid="uid://d3xd75vyshgny" path="res://mods/vup/startup/normal/loris_younger_vup-7.png" id="254_dv5rt"]
+[ext_resource type="Texture2D" uid="uid://cf1qx5imd5j37" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-4.png" id="254_x4gif"]
+[ext_resource type="Texture2D" uid="uid://hrtlxbqbangc" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-5.png" id="255_6p4jt"]
 [ext_resource type="Texture2D" uid="uid://b1y1sq1hrdx1s" path="res://mods/vup/startup/normal/loris_younger_vup-8.png" id="255_m1pc4"]
+[ext_resource type="Texture2D" uid="uid://o04wbnodho3d" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-6.png" id="256_i3h2x"]
 [ext_resource type="Texture2D" uid="uid://b8m2ybwr2p2n3" path="res://mods/vup/startup/normal/loris_younger_vup-9.png" id="256_p4o7p"]
 [ext_resource type="Texture2D" uid="uid://btdnswkr0c0ea" path="res://mods/vup/startup/normal/loris_younger_vup-10.png" id="257_sgfmf"]
+[ext_resource type="Texture2D" uid="uid://dt5lv80dwxjpu" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-7.png" id="257_uqdxm"]
+[ext_resource type="Texture2D" uid="uid://d80vyvqdig40" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-8.png" id="258_5keye"]
 [ext_resource type="Texture2D" uid="uid://bxgnmxlducrxl" path="res://mods/vup/startup/normal/loris_younger_vup-11.png" id="258_egax7"]
 [ext_resource type="Texture2D" uid="uid://dliae170n8bcy" path="res://mods/vup/startup/normal/loris_younger_vup-12.png" id="259_6dqvb"]
+[ext_resource type="Texture2D" uid="uid://dk315gi4ivulp" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-9.png" id="259_7g7uy"]
+[ext_resource type="Texture2D" uid="uid://lk1e1mqw731r" path="res://mods/vup/idle/idle_aside_happy_tb6_b/loris_younger_vup-10.png" id="260_1vx3s"]
 [ext_resource type="Texture2D" uid="uid://dlaim72s5jgv" path="res://mods/vup/startup/normal/loris_younger_vup-13.png" id="260_311gp"]
+[ext_resource type="Texture2D" uid="uid://wtlanavfahjt" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-0.png" id="261_av78w"]
 [ext_resource type="Texture2D" uid="uid://d0ww64v7c26yh" path="res://mods/vup/startup/poorcondition/loris_younger_vup-0.png" id="261_y62vm"]
 [ext_resource type="Texture2D" uid="uid://d2mftkhjtx1cr" path="res://mods/vup/startup/poorcondition/loris_younger_vup-1.png" id="262_0d48u"]
+[ext_resource type="Texture2D" uid="uid://d1k8yjmjbrwxl" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-1.png" id="262_ojxoi"]
 [ext_resource type="Texture2D" uid="uid://31hnlaptw7t3" path="res://mods/vup/startup/poorcondition/loris_younger_vup-2.png" id="263_imt6n"]
+[ext_resource type="Texture2D" uid="uid://bmy4e776q4vow" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-2.png" id="263_m88ol"]
+[ext_resource type="Texture2D" uid="uid://244pi7kub7od" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-3.png" id="264_agme8"]
 [ext_resource type="Texture2D" uid="uid://0dlbd52axav5" path="res://mods/vup/startup/poorcondition/loris_younger_vup-3.png" id="264_gcbam"]
 [ext_resource type="Texture2D" uid="uid://c71vcpf1hhy73" path="res://mods/vup/startup/poorcondition/loris_younger_vup-4.png" id="265_6vycd"]
+[ext_resource type="Texture2D" uid="uid://dspyxbs0t3ahr" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-4.png" id="265_58o6k"]
 [ext_resource type="Texture2D" uid="uid://c0pko37gnhycc" path="res://mods/vup/startup/poorcondition/loris_younger_vup-5.png" id="266_2frvl"]
+[ext_resource type="Texture2D" uid="uid://dfwnjrdg3lay5" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-5.png" id="266_k253n"]
 [ext_resource type="Texture2D" uid="uid://crn6nj0lyoxxp" path="res://mods/vup/startup/poorcondition/loris_younger_vup-6.png" id="267_0hgmn"]
+[ext_resource type="Texture2D" uid="uid://c66ln81g84ykx" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-6.png" id="267_hbujp"]
 [ext_resource type="Texture2D" uid="uid://cfax6ew3dfapn" path="res://mods/vup/startup/poorcondition/loris_younger_vup-7.png" id="268_7t8gr"]
+[ext_resource type="Texture2D" uid="uid://bfwrs5ew3xbka" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-7.png" id="268_kx206"]
 [ext_resource type="Texture2D" uid="uid://bwqyllhvmlpps" path="res://mods/vup/startup/poorcondition/loris_younger_vup-8.png" id="269_i6kro"]
+[ext_resource type="Texture2D" uid="uid://2h257gu1qxlm" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-8.png" id="269_pybup"]
+[ext_resource type="Texture2D" uid="uid://cuiywnr7kj1g0" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-9.png" id="270_3lrm5"]
 [ext_resource type="Texture2D" uid="uid://c7x033mji17c7" path="res://mods/vup/startup/poorcondition/loris_younger_vup-9.png" id="270_fqmek"]
+[ext_resource type="Texture2D" uid="uid://cenc8eg16l0lx" path="res://mods/vup/idle/idle_aside_happy_tb7_b/loris_younger_vup-10.png" id="271_7fjfs"]
 [ext_resource type="Texture2D" uid="uid://th7g5ba73byt" path="res://mods/vup/startup/poorcondition/loris_younger_vup-10.png" id="271_a5w6d"]
 [ext_resource type="Texture2D" uid="uid://bdf7hfwpg5qew" path="res://mods/vup/startup/poorcondition/loris_younger_vup-11.png" id="272_lr1dx"]
+[ext_resource type="Texture2D" uid="uid://crbgvv12hkk4k" path="res://mods/vup/idle/idle_aside_happy_tb8_b/loris_younger_vup-0.png" id="272_qfeqa"]
+[ext_resource type="Texture2D" uid="uid://cbc10mwvt3q71" path="res://mods/vup/idle/idle_aside_happy_tb8_b/loris_younger_vup-1.png" id="273_h0ikt"]
 [ext_resource type="Texture2D" uid="uid://pu4vpxjjuys5" path="res://mods/vup/startup/poorcondition/loris_younger_vup-12.png" id="273_i1h1w"]
+[ext_resource type="Texture2D" uid="uid://ceq4nnibmfm31" path="res://mods/vup/idle/idle_aside_happy_tb8_b/loris_younger_vup-2.png" id="274_tdb8r"]
 [ext_resource type="Texture2D" uid="uid://dwgpo3sqo7onp" path="res://mods/vup/startup/poorcondition/loris_younger_vup-13.png" id="274_w0i83"]
 [ext_resource type="Texture2D" uid="uid://b1iy6f33v6lae" path="res://mods/vup/startup/poorcondition/loris_younger_vup-14.png" id="275_aifcr"]
+[ext_resource type="Texture2D" uid="uid://bkd6aeyggdnmd" path="res://mods/vup/idle/idle_aside_happy_tb8_b/loris_younger_vup-3.png" id="275_t0rlq"]
 [ext_resource type="Texture2D" uid="uid://cqbpc3laqfyf4" path="res://mods/vup/startup/poorcondition/loris_younger_vup-15.png" id="276_0bj8b"]
+[ext_resource type="Texture2D" uid="uid://pogal5c0r8xs" path="res://mods/vup/idle/idle_aside_happy_tb8_b/loris_younger_vup-4.png" id="276_sauq6"]
 [ext_resource type="Texture2D" uid="uid://bcraulvfqb8mn" path="res://mods/vup/startup/poorcondition/loris_younger_vup-16.png" id="277_f0wes"]
+[ext_resource type="Texture2D" uid="uid://bhgpsoo0s8exd" path="res://mods/vup/idle/idle_aside_happy_tb8_b/loris_younger_vup-5.png" id="277_r7xwg"]
+[ext_resource type="Texture2D" uid="uid://bekj213rqgmfw" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-0.png" id="278_6jvs7"]
 [ext_resource type="Texture2D" uid="uid://dklfkxfo0fvgt" path="res://mods/vup/startup/poorcondition/loris_younger_vup-17.png" id="278_68oam"]
 [ext_resource type="Texture2D" uid="uid://dwoojwvn7j8b7" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-0.png" id="279_q577b"]
 [ext_resource type="Texture2D" uid="uid://dxlnppgapfaft" path="res://mods/vup/touch_head/happy_a/loris_younger_vup-0.png" id="279_tfg27"]
+[ext_resource type="Texture2D" uid="uid://del0bvha1gihc" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-1.png" id="279_yvi0i"]
 [ext_resource type="Texture2D" uid="uid://cbljfmhvwilpp" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-1.png" id="280_2j18e"]
 [ext_resource type="Texture2D" uid="uid://bv2j20txc6kfw" path="res://mods/vup/touch_head/happy_a/loris_younger_vup-1.png" id="280_6ugkk"]
+[ext_resource type="Texture2D" uid="uid://cnkdsejgm80jx" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-2.png" id="280_p3mv6"]
 [ext_resource type="Texture2D" uid="uid://cgqsrqhum6crc" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-2.png" id="281_dkids"]
+[ext_resource type="Texture2D" uid="uid://bbl3ld0wg6xb0" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-3.png" id="281_e64v1"]
 [ext_resource type="Texture2D" uid="uid://bsro2aecwg0vc" path="res://mods/vup/touch_head/happy_a/loris_younger_vup-2.png" id="281_wrc1e"]
+[ext_resource type="Texture2D" uid="uid://ctnov6tqxif85" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-4.png" id="282_2n6wb"]
 [ext_resource type="Texture2D" uid="uid://camjh80ejq3sy" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-0.png" id="282_fwsyc"]
 [ext_resource type="Texture2D" uid="uid://cbcqw8hgic7xt" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-3.png" id="282_ie7he"]
 [ext_resource type="Texture2D" uid="uid://cqu3ete1ff1ij" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-4.png" id="283_25p8o"]
+[ext_resource type="Texture2D" uid="uid://bu44injgo0efr" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-5.png" id="283_asm84"]
 [ext_resource type="Texture2D" uid="uid://cow1gqbbnkwpy" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-1.png" id="283_ln0lv"]
+[ext_resource type="Texture2D" uid="uid://cn4xv1pv1cu0y" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-6.png" id="284_333xv"]
 [ext_resource type="Texture2D" uid="uid://c8ggtggy5oune" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-5.png" id="284_ik1uu"]
 [ext_resource type="Texture2D" uid="uid://be4j5bivteomd" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-2.png" id="284_ou705"]
 [ext_resource type="Texture2D" uid="uid://rykpxt0epdv7" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-6.png" id="285_drdaf"]
 [ext_resource type="Texture2D" uid="uid://b671guiv503wm" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-3.png" id="285_twdod"]
+[ext_resource type="Texture2D" uid="uid://bmctggn28yink" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-7.png" id="285_yd2o8"]
+[ext_resource type="Texture2D" uid="uid://3h6dp5kuwkk4" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-8.png" id="286_6uyvb"]
 [ext_resource type="Texture2D" uid="uid://cbbkv2pxa4q3s" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-7.png" id="286_bt6ra"]
 [ext_resource type="Texture2D" uid="uid://bn7p6j6kvgsim" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-4.png" id="286_d4lha"]
+[ext_resource type="Texture2D" uid="uid://bj3uefjorugss" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-9.png" id="287_2hmvc"]
 [ext_resource type="Texture2D" uid="uid://b3v25ep5tmku2" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-5.png" id="287_l6ood"]
 [ext_resource type="Texture2D" uid="uid://dt8saim3pwltb" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-8.png" id="287_yn7fj"]
+[ext_resource type="Texture2D" uid="uid://b685muuxpp0kq" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-10.png" id="288_ee5ip"]
 [ext_resource type="Texture2D" uid="uid://cb5ok00s6tr6j" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-6.png" id="288_kbwhm"]
 [ext_resource type="Texture2D" uid="uid://chrr11nqudu6f" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-9.png" id="288_vq4v7"]
 [ext_resource type="Texture2D" uid="uid://cfta1uc2sxb1x" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-7.png" id="289_j67t8"]
 [ext_resource type="Texture2D" uid="uid://c6eygo71xqs5m" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-10.png" id="289_x7dch"]
+[ext_resource type="Texture2D" uid="uid://mr8acfp0yj4h" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-11.png" id="289_y8jvm"]
 [ext_resource type="Texture2D" uid="uid://c7fppptjlaer8" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-8.png" id="290_c70ll"]
 [ext_resource type="Texture2D" uid="uid://b5qw6ugxm4xpq" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-11.png" id="290_cpa4s"]
+[ext_resource type="Texture2D" uid="uid://dnxkmh0sgdm1h" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-12.png" id="290_mlywj"]
+[ext_resource type="Texture2D" uid="uid://dmr70y66mqs56" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-13.png" id="291_4l7km"]
 [ext_resource type="Texture2D" uid="uid://drvaeps6thcq2" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-12.png" id="291_72xrj"]
 [ext_resource type="Texture2D" uid="uid://c6hakg73mpswc" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-9.png" id="291_x43vf"]
 [ext_resource type="Texture2D" uid="uid://ce84egdqe7dmh" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-10.png" id="292_6gr6b"]
 [ext_resource type="Texture2D" uid="uid://2ly25ljqlf1f" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-13.png" id="292_ipavp"]
+[ext_resource type="Texture2D" uid="uid://jgrv3w55yyxb" path="res://mods/vup/idle/idle_aside_happy_tb9_b/loris_younger_vup-14.png" id="292_tp1ym"]
+[ext_resource type="Texture2D" uid="uid://cahowwqi0xi2l" path="res://mods/vup/idle/idle_aside_normal_a/loris_younger_vup-0.png" id="293_08d2m"]
 [ext_resource type="Texture2D" uid="uid://66vyoro5vpnt" path="res://mods/vup/touch_body/happy_tb1_a/loris_younger_vup-14.png" id="293_30pum"]
 [ext_resource type="Texture2D" uid="uid://cwbyxgc7ljyw5" path="res://mods/vup/touch_head/happy_b/loris_younger_vup-11.png" id="293_e8mia"]
 [ext_resource type="Texture2D" uid="uid://djqpym5a0o65c" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-0.png" id="294_3w4vl"]
+[ext_resource type="Texture2D" uid="uid://swp3x7udnum6" path="res://mods/vup/idle/idle_aside_normal_c/loris_younger_vup-0.png" id="294_23mg2"]
 [ext_resource type="Texture2D" uid="uid://bs4l6gkp5j6ov" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-0.png" id="294_bpw2o"]
+[ext_resource type="Texture2D" uid="uid://dmfaavi3f3ric" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-0.png" id="294_wee6g"]
 [ext_resource type="Texture2D" uid="uid://djdmyeb4nwuvq" path="res://mods/vup/touch_head/happy_c/loris_younger_vup-0.png" id="294_x4886"]
 [ext_resource type="Texture2D" uid="uid://bubhbwwbbqv77" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-1.png" id="295_02xkt"]
 [ext_resource type="Texture2D" uid="uid://cwxkogf34ww3" path="res://mods/vup/touch_head/happy_c/loris_younger_vup-1.png" id="295_bc5la"]
 [ext_resource type="Texture2D" uid="uid://coh0s2hhqxi64" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-1.png" id="295_ef2h6"]
+[ext_resource type="Texture2D" uid="uid://c34jeh4taxn6r" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-1.png" id="295_fhm1g"]
+[ext_resource type="Texture2D" uid="uid://12ohqiid5ac4" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-2.png" id="296_jmgdn"]
 [ext_resource type="Texture2D" uid="uid://dxoe0uge3oaqh" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-2.png" id="296_kal3b"]
 [ext_resource type="Texture2D" uid="uid://d0fpqromx75ru" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-2.png" id="296_my5te"]
 [ext_resource type="Texture2D" uid="uid://cux4ov78y4y25" path="res://mods/vup/touch_head/ill_a/loris_younger_vup-0.png" id="296_n8ftb"]
 [ext_resource type="Texture2D" uid="uid://drxkwquvdmg04" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-3.png" id="297_c2sl2"]
 [ext_resource type="Texture2D" uid="uid://bnb8bpleqxosi" path="res://mods/vup/touch_head/ill_a/loris_younger_vup-1.png" id="297_gddsy"]
 [ext_resource type="Texture2D" uid="uid://dq1jhoa5p41e5" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-3.png" id="297_ryjgf"]
+[ext_resource type="Texture2D" uid="uid://iovpgn72vpj0" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-3.png" id="297_vx1t6"]
 [ext_resource type="Texture2D" uid="uid://dbpmkfjqnq4q7" path="res://mods/vup/touch_head/ill_a/loris_younger_vup-2.png" id="298_8uvh0"]
+[ext_resource type="Texture2D" uid="uid://cxr1qip25he43" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-4.png" id="298_fhik6"]
 [ext_resource type="Texture2D" uid="uid://b655x1it03fby" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-4.png" id="298_rxg2a"]
 [ext_resource type="Texture2D" uid="uid://fov1mr2tp27i" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-4.png" id="298_wr8bu"]
+[ext_resource type="Texture2D" uid="uid://bn5x0ebbsqm22" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-5.png" id="299_gsx0b"]
 [ext_resource type="Texture2D" uid="uid://b7bo3itxr6o7w" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-5.png" id="299_n4o8p"]
 [ext_resource type="Texture2D" uid="uid://c1if20ugy2ywm" path="res://mods/vup/touch_head/ill_a/loris_younger_vup-3.png" id="299_o6pw0"]
 [ext_resource type="Texture2D" uid="uid://bhap1dcju1ahm" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-5.png" id="299_tj8ki"]
 [ext_resource type="Texture2D" uid="uid://b1o34qk2uc32k" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-6.png" id="300_dghdh"]
+[ext_resource type="Texture2D" uid="uid://b0yxnyei30anb" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-6.png" id="300_o3jws"]
 [ext_resource type="Texture2D" uid="uid://bvbi3hrd7ecys" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-0.png" id="300_qwhev"]
 [ext_resource type="Texture2D" uid="uid://cnw7252h7gk3a" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-6.png" id="300_vvnde"]
 [ext_resource type="Texture2D" uid="uid://b4pcyiq3eht1t" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-7.png" id="301_n8xm6"]
 [ext_resource type="Texture2D" uid="uid://bmcjr4ujth7jv" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-7.png" id="301_p5sb8"]
+[ext_resource type="Texture2D" uid="uid://cernpm3150juc" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-7.png" id="301_rlif1"]
 [ext_resource type="Texture2D" uid="uid://cgextdgc4b5yu" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-1.png" id="301_vdw4c"]
 [ext_resource type="Texture2D" uid="uid://bne3k1svjuu32" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-2.png" id="302_1p2jf"]
 [ext_resource type="Texture2D" uid="uid://bf1vtp33n8djv" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-8.png" id="302_1rxss"]
+[ext_resource type="Texture2D" uid="uid://pqrdycvafsq5" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-8.png" id="302_5vxhf"]
 [ext_resource type="Texture2D" uid="uid://q5p4101ksxan" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-8.png" id="302_ivlhg"]
 [ext_resource type="Texture2D" uid="uid://bgm3rui51fxkn" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-9.png" id="303_671s3"]
+[ext_resource type="Texture2D" uid="uid://bnankle781evi" path="res://mods/vup/idle/idle_aside_normal_tb1_b/loris_younger_vup-9.png" id="303_cqoby"]
 [ext_resource type="Texture2D" uid="uid://dahuiydto8k55" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-3.png" id="303_ga6f4"]
 [ext_resource type="Texture2D" uid="uid://c6ytehlrthe8k" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-9.png" id="303_pe6c8"]
 [ext_resource type="Texture2D" uid="uid://basg7tyqjwh7l" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-10.png" id="304_3qm6j"]
 [ext_resource type="Texture2D" uid="uid://bfhwp0ihhygwl" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-10.png" id="304_51wgg"]
 [ext_resource type="Texture2D" uid="uid://d1k58dxg3f621" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-4.png" id="304_qmtuc"]
 [ext_resource type="Texture2D" uid="uid://ssgjsi7uw3pw" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-11.png" id="305_iwbox"]
+[ext_resource type="Texture2D" uid="uid://cjloosm4jqkme" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-0.png" id="305_m2sbn"]
 [ext_resource type="Texture2D" uid="uid://3mm0pc1k76vp" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-11.png" id="305_n1i7f"]
 [ext_resource type="Texture2D" uid="uid://cp7fk2qo2ks6o" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-5.png" id="305_w01si"]
 [ext_resource type="Texture2D" uid="uid://888dll4q3rhc" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-12.png" id="306_06p41"]
 [ext_resource type="Texture2D" uid="uid://cm61wwn4stg6t" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-12.png" id="306_bk0xy"]
+[ext_resource type="Texture2D" uid="uid://bhxr4ig7p1wjg" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-1.png" id="306_q0pa0"]
 [ext_resource type="Texture2D" uid="uid://d4lflji86aohs" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-6.png" id="306_raj8n"]
 [ext_resource type="Texture2D" uid="uid://cq1g840gk1cs6" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-7.png" id="307_3oeuo"]
 [ext_resource type="Texture2D" uid="uid://cknjtrn45sjqi" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-13.png" id="307_8xiik"]
 [ext_resource type="Texture2D" uid="uid://3loym740xknw" path="res://mods/vup/touch_body/happy_tb1_b/loris_younger_vup-13.png" id="307_f3tj1"]
+[ext_resource type="Texture2D" uid="uid://b8frohbkn1p7h" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-2.png" id="307_qnsv2"]
 [ext_resource type="Texture2D" uid="uid://bnkp5qm2bmvxq" path="res://mods/vup/touch_body/happy_tb1_c/loris_younger_vup-0.png" id="308_3w6ep"]
 [ext_resource type="Texture2D" uid="uid://bcon54qo8qh2" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-8.png" id="308_mhyq8"]
+[ext_resource type="Texture2D" uid="uid://yosrij0cymx8" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-3.png" id="308_tsuy4"]
 [ext_resource type="Texture2D" uid="uid://dmmspu7nvjute" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-14.png" id="308_y30qy"]
+[ext_resource type="Texture2D" uid="uid://bgjdkigaqjpmv" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-4.png" id="309_7a73f"]
 [ext_resource type="Texture2D" uid="uid://d0osgxu58mohn" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-9.png" id="309_4812x"]
 [ext_resource type="Texture2D" uid="uid://b30p3pywwqlm3" path="res://mods/vup/touch_body/happy_tb1_c/loris_younger_vup-1.png" id="309_dh6tm"]
 [ext_resource type="Texture2D" uid="uid://eanehglpji3m" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-15.png" id="309_jo7rw"]
+[ext_resource type="Texture2D" uid="uid://gjfb37si5tu6" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-5.png" id="310_2rx6t"]
 [ext_resource type="Texture2D" uid="uid://2aik464lc4fn" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-16.png" id="310_13mq2"]
 [ext_resource type="Texture2D" uid="uid://dmxgx307yecwh" path="res://mods/vup/touch_body/happy_tb1_c/loris_younger_vup-2.png" id="310_ldmlh"]
 [ext_resource type="Texture2D" uid="uid://beu8lxnsk1pc2" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-10.png" id="310_teond"]
 [ext_resource type="Texture2D" uid="uid://cfptfikrtepv7" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-17.png" id="311_4clog"]
 [ext_resource type="Texture2D" uid="uid://dxn60d0w3c813" path="res://mods/vup/touch_head/ill_b/loris_younger_vup-11.png" id="311_bm2mn"]
 [ext_resource type="Texture2D" uid="uid://b1g7o8y6vlfuq" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-0.png" id="311_fkhjq"]
+[ext_resource type="Texture2D" uid="uid://d20g1ir41a04d" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-6.png" id="311_ijqgy"]
 [ext_resource type="Texture2D" uid="uid://27ryms72tj0v" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-1.png" id="312_deryf"]
+[ext_resource type="Texture2D" uid="uid://bm5d1rf5mvrlb" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-7.png" id="312_eimo4"]
 [ext_resource type="Texture2D" uid="uid://ocklkeq5yf32" path="res://mods/vup/touch_head/ill_c/loris_younger_vup-0.png" id="312_ek4f4"]
 [ext_resource type="Texture2D" uid="uid://kp7yvgect5fg" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-18.png" id="312_o4mra"]
+[ext_resource type="Texture2D" uid="uid://br73ch2eqdsx" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-8.png" id="313_g3uls"]
 [ext_resource type="Texture2D" uid="uid://cwu2cyw601ho5" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-19.png" id="313_uawf2"]
 [ext_resource type="Texture2D" uid="uid://3ll2dav6mpxd" path="res://mods/vup/touch_head/ill_c/loris_younger_vup-1.png" id="313_umnym"]
 [ext_resource type="Texture2D" uid="uid://bum725ngsinuk" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-2.png" id="313_wwltc"]
+[ext_resource type="Texture2D" uid="uid://bk7fp6n1xsbmy" path="res://mods/vup/idle/idle_aside_normal_tb2_b/loris_younger_vup-9.png" id="314_2qytg"]
 [ext_resource type="Texture2D" uid="uid://bto7vbam4w5fl" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-20.png" id="314_8bkkw"]
 [ext_resource type="Texture2D" uid="uid://dmkqx4oq1paqs" path="res://mods/vup/touch_head/ill_c/loris_younger_vup-2.png" id="314_dpe2x"]
 [ext_resource type="Texture2D" uid="uid://bef75kbxgphmx" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-3.png" id="314_vy416"]
 [ext_resource type="Texture2D" uid="uid://bvj6u5br3lfk7" path="res://mods/vup/touch_head/normal_a/loris_younger_vup-0.png" id="315_6ncxr"]
+[ext_resource type="Texture2D" uid="uid://dwwni5n3d31rw" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-0.png" id="315_8qqtf"]
 [ext_resource type="Texture2D" uid="uid://bco0aa37aopt2" path="res://mods/vup/raise/raised_moving/happy/loris_younger_vup-21.png" id="315_cg5no"]
 [ext_resource type="Texture2D" uid="uid://dc1h4bn65feki" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-4.png" id="315_g7kf1"]
 [ext_resource type="Texture2D" uid="uid://cp001wd31dngv" path="res://mods/vup/touch_head/normal_a/loris_younger_vup-1.png" id="316_8d22q"]
 [ext_resource type="Texture2D" uid="uid://ceow37pxkxg8k" path="res://mods/vup/raise/raised_moving/ill/loris_younger_vup-0.png" id="316_40ade"]
+[ext_resource type="Texture2D" uid="uid://w23pi7t3wk0s" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-1.png" id="316_cqidf"]
 [ext_resource type="Texture2D" uid="uid://blxv4fmaehllf" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-5.png" id="316_g2rjp"]
+[ext_resource type="Texture2D" uid="uid://12culrjep2a8" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-2.png" id="317_3nbjg"]
 [ext_resource type="Texture2D" uid="uid://c4dn6crvagen7" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-0.png" id="317_mxngh"]
 [ext_resource type="Texture2D" uid="uid://cfqialmhxxqec" path="res://mods/vup/raise/raised_moving/ill/loris_younger_vup-1.png" id="317_n75p7"]
 [ext_resource type="Texture2D" uid="uid://v5nxqs8avgmq" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-6.png" id="317_nkbxb"]
 [ext_resource type="Texture2D" uid="uid://dokdk0oi2dlsm" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-1.png" id="318_6vkff"]
 [ext_resource type="Texture2D" uid="uid://bbfe6hmwryxqv" path="res://mods/vup/raise/raised_moving/ill/loris_younger_vup-2.png" id="318_71w20"]
+[ext_resource type="Texture2D" uid="uid://duiiwstc221jg" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-3.png" id="318_mxhcm"]
 [ext_resource type="Texture2D" uid="uid://c4jqtg6jgc08a" path="res://mods/vup/touch_body/happy_tb2_a/loris_younger_vup-7.png" id="318_sniqb"]
 [ext_resource type="Texture2D" uid="uid://daqi3vvinssfq" path="res://mods/vup/raise/raised_moving/ill/loris_younger_vup-3.png" id="319_55mvb"]
 [ext_resource type="Texture2D" uid="uid://bw3jo8ydt0v6g" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-0.png" id="319_bo752"]
 [ext_resource type="Texture2D" uid="uid://c582xofx2qym6" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-2.png" id="319_die38"]
+[ext_resource type="Texture2D" uid="uid://bgga6aep45sqc" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-4.png" id="319_e0xmg"]
 [ext_resource type="Texture2D" uid="uid://c3iekrcke1wie" path="res://mods/vup/raise/raised_moving/ill/loris_younger_vup-4.png" id="320_bfoxw"]
 [ext_resource type="Texture2D" uid="uid://bnnc5a70kiepw" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-3.png" id="320_jgjir"]
+[ext_resource type="Texture2D" uid="uid://oyt4eqbmth36" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-5.png" id="320_urmf2"]
 [ext_resource type="Texture2D" uid="uid://covfckeeq0djt" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-1.png" id="320_vwmc1"]
 [ext_resource type="Texture2D" uid="uid://cxusxt5nga8r8" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-2.png" id="321_2lff5"]
 [ext_resource type="Texture2D" uid="uid://cbeujw6i8vrqh" path="res://mods/vup/raise/raised_moving/ill/loris_younger_vup-5.png" id="321_31vqc"]
+[ext_resource type="Texture2D" uid="uid://wm0koobf8mmh" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-6.png" id="321_bdo1p"]
 [ext_resource type="Texture2D" uid="uid://b8eex6xl8oodk" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-4.png" id="321_d0dkg"]
 [ext_resource type="Texture2D" uid="uid://cjoss3rpxntp2" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-3.png" id="322_c7clo"]
+[ext_resource type="Texture2D" uid="uid://b0qq66m14ppa8" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-7.png" id="322_hsa12"]
 [ext_resource type="Texture2D" uid="uid://bpktwre68e2kl" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-5.png" id="322_ucu3b"]
 [ext_resource type="Texture2D" uid="uid://c5wkpy2u6rq0" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-0.png" id="322_xfhxy"]
 [ext_resource type="Texture2D" uid="uid://bvtk110njoha5" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-6.png" id="323_0lreg"]
 [ext_resource type="Texture2D" uid="uid://ct26qojoms06o" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-4.png" id="323_8tpei"]
 [ext_resource type="Texture2D" uid="uid://6kyl50tun58b" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-1.png" id="323_gq8m8"]
+[ext_resource type="Texture2D" uid="uid://c24dqgjcdku06" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-8.png" id="323_jxxl7"]
 [ext_resource type="Texture2D" uid="uid://c8tnjy4g1qddw" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-7.png" id="324_g7njv"]
 [ext_resource type="Texture2D" uid="uid://1uhp1nsoyaam" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-5.png" id="324_hrdhb"]
+[ext_resource type="Texture2D" uid="uid://3dwruiqw6m6q" path="res://mods/vup/idle/idle_aside_normal_tb3_b/loris_younger_vup-9.png" id="324_k40gl"]
 [ext_resource type="Texture2D" uid="uid://dl7jl20tjm0b1" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-2.png" id="324_pmqje"]
 [ext_resource type="Texture2D" uid="uid://85aij2tof5gl" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-6.png" id="325_6m7qk"]
 [ext_resource type="Texture2D" uid="uid://bw1gtgf5ueva" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-8.png" id="325_64q7q"]
+[ext_resource type="Texture2D" uid="uid://dpff0dewoir5t" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-0.png" id="325_jcxr1"]
 [ext_resource type="Texture2D" uid="uid://boo8pijny0knt" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-3.png" id="325_vmd57"]
 [ext_resource type="Texture2D" uid="uid://bweli0m2edlbu" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-7.png" id="326_0tyhl"]
+[ext_resource type="Texture2D" uid="uid://jh6bdcd8oevx" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-1.png" id="326_bdbcb"]
 [ext_resource type="Texture2D" uid="uid://bg640cxtdueh2" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-9.png" id="326_mp5mw"]
 [ext_resource type="Texture2D" uid="uid://uox17besgvgn" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-4.png" id="326_ndgqr"]
 [ext_resource type="Texture2D" uid="uid://dgfa38h4g72la" path="res://mods/vup/touch_head/normal_b/loris_younger_vup-10.png" id="327_fop2j"]
+[ext_resource type="Texture2D" uid="uid://cjnmldsmrnxlu" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-2.png" id="327_j6vss"]
 [ext_resource type="Texture2D" uid="uid://c552stxkoge8t" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-5.png" id="327_jd4yj"]
 [ext_resource type="Texture2D" uid="uid://c6l5xlrsb7411" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-8.png" id="327_u8uee"]
 [ext_resource type="Texture2D" uid="uid://4xoucyu3aktn" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-9.png" id="328_0xg3o"]
 [ext_resource type="Texture2D" uid="uid://dukll6vyexqxp" path="res://mods/vup/touch_head/normal_c/loris_younger_vup-0.png" id="328_7oj18"]
+[ext_resource type="Texture2D" uid="uid://shfn6cfuxxth" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-3.png" id="328_48lan"]
 [ext_resource type="Texture2D" uid="uid://pcmlhktyx13c" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-6.png" id="328_kr2cl"]
 [ext_resource type="Texture2D" uid="uid://83usgyr1bp3u" path="res://mods/vup/touch_head/normal_c/loris_younger_vup-1.png" id="329_6l4qn"]
 [ext_resource type="Texture2D" uid="uid://bpaev38227gek" path="res://mods/vup/raise/raised_moving/normal_1/loris_younger_vup-7.png" id="329_drtes"]
+[ext_resource type="Texture2D" uid="uid://ni0p2a6k5fib" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-4.png" id="329_lv42l"]
 [ext_resource type="Texture2D" uid="uid://cgichngg5nusu" path="res://mods/vup/touch_body/happy_tb2_b/loris_younger_vup-10.png" id="329_xbajr"]
 [ext_resource type="Texture2D" uid="uid://dw84x6wnfhsk7" path="res://mods/vup/touch_body/happy_tb2_c/loris_younger_vup-0.png" id="330_besju"]
 [ext_resource type="Texture2D" uid="uid://dd7e4xnjqeqk6" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-0.png" id="330_grhyx"]
+[ext_resource type="Texture2D" uid="uid://mxfhy0qnfrht" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-5.png" id="330_lkpwc"]
 [ext_resource type="Texture2D" uid="uid://dyny1126n2rda" path="res://mods/vup/touch_body/happy_tb2_c/loris_younger_vup-1.png" id="331_7bbrv"]
 [ext_resource type="Texture2D" uid="uid://wryqukcpoghx" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-1.png" id="331_7jciu"]
+[ext_resource type="Texture2D" uid="uid://c0hnm0rtnxsn6" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-6.png" id="331_yg2c0"]
+[ext_resource type="Texture2D" uid="uid://m2vqcf64ybqb" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-7.png" id="332_jtd6k"]
 [ext_resource type="Texture2D" uid="uid://b32ji8q57722s" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-2.png" id="332_mn0w5"]
 [ext_resource type="Texture2D" uid="uid://bicetgg3cg3rx" path="res://mods/vup/touch_body/happy_tb2_c/loris_younger_vup-2.png" id="332_rw3cj"]
 [ext_resource type="Texture2D" uid="uid://bj80sjeehxgbj" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-3.png" id="333_7nd42"]
+[ext_resource type="Texture2D" uid="uid://8er5ygjknhme" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-8.png" id="333_7vj2g"]
 [ext_resource type="Texture2D" uid="uid://xgye8mvbrttp" path="res://mods/vup/touch_body/ill_a/loris_younger_vup-0.png" id="333_oy88c"]
+[ext_resource type="Texture2D" uid="uid://djbkqwpgf4x5y" path="res://mods/vup/idle/idle_aside_normal_tb4_b/loris_younger_vup-9.png" id="334_6crmn"]
 [ext_resource type="Texture2D" uid="uid://bthmhx5uvbsj6" path="res://mods/vup/touch_body/ill_a/loris_younger_vup-1.png" id="334_ihr6v"]
 [ext_resource type="Texture2D" uid="uid://dddbe4pg4o4g3" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-4.png" id="334_uuuj1"]
 [ext_resource type="Texture2D" uid="uid://ctnocwow7ejq3" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-5.png" id="335_4dql0"]
 [ext_resource type="Texture2D" uid="uid://cdrdkwxcueduh" path="res://mods/vup/touch_body/ill_a/loris_younger_vup-2.png" id="335_7ppv3"]
+[ext_resource type="Texture2D" uid="uid://0tio8fydog6r" path="res://mods/vup/idle/idle_aside_poorcondition_a/loris_younger_vup-0.png" id="335_cu773"]
+[ext_resource type="Texture2D" uid="uid://bmka2uqhn7h03" path="res://mods/vup/idle/idle_aside_poorcondition_a/loris_younger_vup-1.png" id="336_86euo"]
 [ext_resource type="Texture2D" uid="uid://b7nq4mlrxnma1" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-6.png" id="336_fbpe2"]
 [ext_resource type="Texture2D" uid="uid://ctwvvvqksel84" path="res://mods/vup/touch_body/ill_a/loris_younger_vup-3.png" id="336_srcsi"]
 [ext_resource type="Texture2D" uid="uid://7l6mdt0ek53e" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-0.png" id="337_ofcsv"]
 [ext_resource type="Texture2D" uid="uid://uqkjh0fv20lp" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-7.png" id="337_ojn5i"]
+[ext_resource type="Texture2D" uid="uid://br266wnpc8llj" path="res://mods/vup/idle/idle_aside_poorcondition_a/loris_younger_vup-2.png" id="337_supn7"]
 [ext_resource type="Texture2D" uid="uid://csjnbxoygl3dk" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-1.png" id="338_el3pe"]
 [ext_resource type="Texture2D" uid="uid://dxbooqquwdt1" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-8.png" id="338_f1nms"]
+[ext_resource type="Texture2D" uid="uid://dcw3ge81putcx" path="res://mods/vup/idle/idle_aside_poorcondition_a/loris_younger_vup-3.png" id="338_uul4t"]
 [ext_resource type="Texture2D" uid="uid://1u3hpc2s7g5c" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-2.png" id="339_3aqv3"]
 [ext_resource type="Texture2D" uid="uid://cj1tofeowu8rd" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-9.png" id="339_4k6hm"]
+[ext_resource type="Texture2D" uid="uid://cxd8eaauy2l0x" path="res://mods/vup/idle/idle_aside_poorcondition_a/loris_younger_vup-4.png" id="339_h834a"]
 [ext_resource type="Texture2D" uid="uid://ccf03f31x5v5v" path="res://mods/vup/raise/raised_moving/normal_2/loris_younger_vup-10.png" id="340_d5iub"]
 [ext_resource type="Texture2D" uid="uid://cpbwy0fn1x0tu" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-3.png" id="340_p5avc"]
+[ext_resource type="Texture2D" uid="uid://5jl3tck4ox72" path="res://mods/vup/idle/idle_aside_poorcondition_a/loris_younger_vup-5.png" id="340_phgyd"]
 [ext_resource type="Texture2D" uid="uid://ca2y8f7xgfnq" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-0.png" id="341_dexqf"]
 [ext_resource type="Texture2D" uid="uid://cs3eyyu7h60uf" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-4.png" id="341_qjq85"]
+[ext_resource type="Texture2D" uid="uid://b0x1qqrrl0tn6" path="res://mods/vup/idle/idle_aside_poorcondition_tb1_b/loris_younger_vup-0.png" id="341_u713i"]
+[ext_resource type="Texture2D" uid="uid://cun0knndjsd0k" path="res://mods/vup/idle/idle_aside_poorcondition_tb1_b/loris_younger_vup-1.png" id="342_7kdk6"]
 [ext_resource type="Texture2D" uid="uid://crvb8nuv7fu3p" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-5.png" id="342_pydt7"]
 [ext_resource type="Texture2D" uid="uid://bby2um1errf8v" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-1.png" id="342_sfush"]
 [ext_resource type="Texture2D" uid="uid://cfe5xdwtvq48k" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-6.png" id="343_564ec"]
 [ext_resource type="Texture2D" uid="uid://8q16j1b68dps" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-2.png" id="343_gt2u2"]
+[ext_resource type="Texture2D" uid="uid://nc6r112l6nb4" path="res://mods/vup/idle/idle_aside_poorcondition_tb1_b/loris_younger_vup-2.png" id="343_q8aa4"]
 [ext_resource type="Texture2D" uid="uid://bb04r21pvawcd" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-7.png" id="344_3vtwk"]
+[ext_resource type="Texture2D" uid="uid://dwpyg2jcy0dek" path="res://mods/vup/idle/idle_aside_poorcondition_tb1_b/loris_younger_vup-3.png" id="344_4tp56"]
 [ext_resource type="Texture2D" uid="uid://bv28hioaiaefk" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-3.png" id="344_7hfkl"]
 [ext_resource type="Texture2D" uid="uid://cpn8814w1xy6g" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-4.png" id="345_arjxl"]
 [ext_resource type="Texture2D" uid="uid://q66pnf2vok7f" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-8.png" id="345_j4e63"]
+[ext_resource type="Texture2D" uid="uid://d36pv1caf0i6a" path="res://mods/vup/idle/idle_aside_poorcondition_tb1_b/loris_younger_vup-4.png" id="345_xbtg3"]
 [ext_resource type="Texture2D" uid="uid://bsfp5scjjywgh" path="res://mods/vup/touch_body/ill_b/loris_younger_vup-9.png" id="346_3bsi6"]
+[ext_resource type="Texture2D" uid="uid://dc6hemgx7pyy4" path="res://mods/vup/idle/idle_aside_poorcondition_c/loris_younger_vup-0.png" id="346_opvpc"]
 [ext_resource type="Texture2D" uid="uid://c8o32dkne6vta" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-5.png" id="346_vkccp"]
 [ext_resource type="Texture2D" uid="uid://cs75pm662mieq" path="res://mods/vup/touch_body/ill_c/loris_younger_vup-0.png" id="347_e1egq"]
+[ext_resource type="Texture2D" uid="uid://llr08illsa0h" path="res://mods/vup/idle/idle_aside_poorcondition_c/loris_younger_vup-1.png" id="347_l5bqx"]
 [ext_resource type="Texture2D" uid="uid://5m735w8dj8yw" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-6.png" id="347_n4lva"]
+[ext_resource type="Texture2D" uid="uid://d1kaica40x0yf" path="res://mods/vup/idle/idle_aside_poorcondition_c/loris_younger_vup-2.png" id="348_1ok3q"]
 [ext_resource type="Texture2D" uid="uid://x7vea1sqsr80" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-7.png" id="348_62ipg"]
 [ext_resource type="Texture2D" uid="uid://dyr806irrigbi" path="res://mods/vup/touch_body/ill_c/loris_younger_vup-1.png" id="348_o0y2p"]
+[ext_resource type="Texture2D" uid="uid://b60tfhk73wjoa" path="res://mods/vup/idle/idle_aside_poorcondition_c/loris_younger_vup-3.png" id="349_a0qgw"]
 [ext_resource type="Texture2D" uid="uid://4awfvjja32hf" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-8.png" id="349_nm35q"]
 [ext_resource type="Texture2D" uid="uid://bqy8u74k5ut6d" path="res://mods/vup/touch_body/ill_c/loris_younger_vup-2.png" id="349_wxlqd"]
+[ext_resource type="Texture2D" uid="uid://dey6jwwyjsv6v" path="res://mods/vup/idle/idle_aside_poorcondition_tb2_b/loris_younger_vup-0.png" id="350_4ob51"]
 [ext_resource type="Texture2D" uid="uid://bcs128uwdjms7" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-9.png" id="350_d4cr2"]
 [ext_resource type="Texture2D" uid="uid://biijudwnj53tv" path="res://mods/vup/touch_body/ill_c/loris_younger_vup-3.png" id="350_fm8dt"]
+[ext_resource type="Texture2D" uid="uid://cqcd4va6e4eks" path="res://mods/vup/idle/idle_aside_poorcondition_tb3_b/loris_younger_vup-0.png" id="351_k8voh"]
 [ext_resource type="Texture2D" uid="uid://bp4bpueyc0l21" path="res://mods/vup/raise/raised_moving/poorcondition/loris_younger_vup-10.png" id="351_lrbfp"]
 [ext_resource type="Texture2D" uid="uid://147ep6f5ygdw" path="res://mods/vup/raise/raised_stop/happy_a/loris_younger_vup-0.png" id="352_bcxx8"]
+[ext_resource type="Texture2D" uid="uid://bfbynrqssf7o5" path="res://mods/vup/idle/idle_aside_poorcondition_tb3_b/loris_younger_vup-1.png" id="352_qwm1h"]
+[ext_resource type="Texture2D" uid="uid://clo46hqx1bu7p" path="res://mods/vup/idle/idle_aside_poorcondition_tb3_b/loris_younger_vup-2.png" id="353_2sums"]
 [ext_resource type="Texture2D" uid="uid://b5yn4fripnd3e" path="res://mods/vup/raise/raised_stop/happy_a/loris_younger_vup-1.png" id="353_14o5y"]
 [ext_resource type="Texture2D" uid="uid://c2cjb1mj3hqf8" path="res://mods/vup/raise/raised_stop/happy_a/loris_younger_vup-2.png" id="354_o01to"]
+[ext_resource type="Texture2D" uid="uid://deyl6cm7gmfq1" path="res://mods/vup/idle/idle_boring_normal_a/loris_younger_vup-0.png" id="354_vv7qe"]
 [ext_resource type="Texture2D" uid="uid://hdp8ssr067gi" path="res://mods/vup/raise/raised_stop/happy_a/loris_younger_vup-3.png" id="355_j4icg"]
+[ext_resource type="Texture2D" uid="uid://cncahvty22cy1" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-0.png" id="355_ud1mh"]
+[ext_resource type="Texture2D" uid="uid://bwnnpxf8p4s6x" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-1.png" id="356_04rwr"]
 [ext_resource type="Texture2D" uid="uid://da018860tr5xm" path="res://mods/vup/raise/raised_stop/happy_a/loris_younger_vup-4.png" id="356_mxyxj"]
+[ext_resource type="Texture2D" uid="uid://bj7p1llrkm725" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-2.png" id="357_1cv27"]
 [ext_resource type="Texture2D" uid="uid://hwja2mqrrpd3" path="res://mods/vup/raise/raised_stop/happy_a/loris_younger_vup-5.png" id="357_7x1ft"]
 [ext_resource type="Texture2D" uid="uid://bv67ba8vcfl5s" path="res://mods/vup/raise/raised_stop/happy_b/loris_younger_vup-0.png" id="358_golhi"]
+[ext_resource type="Texture2D" uid="uid://cqe88c8n4kscy" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-3.png" id="358_mfm71"]
+[ext_resource type="Texture2D" uid="uid://byfuw04q3l5v" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-4.png" id="359_s7h0k"]
 [ext_resource type="Texture2D" uid="uid://b7q6hba6luxbb" path="res://mods/vup/raise/raised_stop/happy_b/loris_younger_vup-1.png" id="359_vh6o0"]
+[ext_resource type="Texture2D" uid="uid://bvnqasuouxjat" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-5.png" id="360_iu3qj"]
 [ext_resource type="Texture2D" uid="uid://bb6q4ij82fj1c" path="res://mods/vup/raise/raised_stop/happy_b/loris_younger_vup-2.png" id="360_sc3a5"]
 [ext_resource type="Texture2D" uid="uid://cxxvays6m36fn" path="res://mods/vup/raise/raised_stop/happy_b/loris_younger_vup-3.png" id="361_jvwa7"]
+[ext_resource type="Texture2D" uid="uid://bnag75qs8otaq" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-6.png" id="361_sxm8e"]
+[ext_resource type="Texture2D" uid="uid://cmdpk5qslxn25" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-7.png" id="362_7ic6h"]
 [ext_resource type="Texture2D" uid="uid://wgc4la68hgta" path="res://mods/vup/raise/raised_stop/happy_b/loris_younger_vup-4.png" id="362_gwvb1"]
+[ext_resource type="Texture2D" uid="uid://dpco630opcggf" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-8.png" id="363_c4kxd"]
 [ext_resource type="Texture2D" uid="uid://ct3chynnfwnnv" path="res://mods/vup/raise/raised_stop/happy_b/loris_younger_vup-5.png" id="363_fnvys"]
 [ext_resource type="Texture2D" uid="uid://5778wx0578ra" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-0.png" id="364_t4m17"]
+[ext_resource type="Texture2D" uid="uid://betiuw4wasye0" path="res://mods/vup/idle/idle_boring_normal_b/loris_younger_vup-9.png" id="364_wh5ca"]
+[ext_resource type="Texture2D" uid="uid://di0gw1cgne6bt" path="res://mods/vup/idle/idle_boring_normal_c/loris_younger_vup-0.png" id="365_jnw4o"]
 [ext_resource type="Texture2D" uid="uid://diivtsrmoer4a" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-1.png" id="365_on13k"]
 [ext_resource type="Texture2D" uid="uid://ik0ibktvj1is" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-2.png" id="366_2mdic"]
+[ext_resource type="Texture2D" uid="uid://bt1undr6bfg2w" path="res://mods/vup/idle/idle_squat_normal_a/loris_younger_vup-0.png" id="366_ajifl"]
 [ext_resource type="Texture2D" uid="uid://lwh8iqwcwwvb" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-3.png" id="367_p8w1m"]
+[ext_resource type="Texture2D" uid="uid://cs6glpypsn0bf" path="res://mods/vup/idle/idle_squat_normal_a/loris_younger_vup-1.png" id="367_plxln"]
 [ext_resource type="Texture2D" uid="uid://dlcp7vkt08k2c" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-4.png" id="368_8hote"]
+[ext_resource type="Texture2D" uid="uid://w1lmyg3syyqg" path="res://mods/vup/idle/idle_squat_normal_a/loris_younger_vup-2.png" id="368_sr2eb"]
+[ext_resource type="Texture2D" uid="uid://b6nr48ubgh06o" path="res://mods/vup/idle/idle_squat_normal_a/loris_younger_vup-3.png" id="369_ft1is"]
 [ext_resource type="Texture2D" uid="uid://duy6r08eep2bg" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-5.png" id="369_tuqyg"]
+[ext_resource type="Texture2D" uid="uid://bptu3sg1t8h5p" path="res://mods/vup/idle/idle_squat_normal_a/loris_younger_vup-4.png" id="370_84co6"]
 [ext_resource type="Texture2D" uid="uid://ce8iloowrct4m" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-6.png" id="370_a3chq"]
 [ext_resource type="Texture2D" uid="uid://vi6vt8tyo1rw" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-7.png" id="371_ovruq"]
+[ext_resource type="Texture2D" uid="uid://b1n5630ldhimh" path="res://mods/vup/idle/idle_squat_normal_a/loris_younger_vup-5.png" id="371_w6bk0"]
 [ext_resource type="Texture2D" uid="uid://dwcx33nhn5o52" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-8.png" id="372_ekmah"]
+[ext_resource type="Texture2D" uid="uid://c3tshahc2xbsq" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-0.png" id="372_huyox"]
+[ext_resource type="Texture2D" uid="uid://o57d4ptx6mpr" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-1.png" id="373_5fhml"]
 [ext_resource type="Texture2D" uid="uid://clmdpp6d5nf2u" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-9.png" id="373_dxmu5"]
 [ext_resource type="Texture2D" uid="uid://b5fdy6yd1pcj0" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-10.png" id="374_4l7se"]
+[ext_resource type="Texture2D" uid="uid://bhteipuu02tr7" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-2.png" id="374_wfq7f"]
+[ext_resource type="Texture2D" uid="uid://4bfhsqjlktlt" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-3.png" id="375_hu1wf"]
 [ext_resource type="Texture2D" uid="uid://wp6k1g4s0yd1" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-11.png" id="375_t3apl"]
 [ext_resource type="Texture2D" uid="uid://dhtrtwnd3mymp" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-12.png" id="376_cv014"]
+[ext_resource type="Texture2D" uid="uid://dbw680vjq032g" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-4.png" id="376_m06j2"]
 [ext_resource type="Texture2D" uid="uid://cb1mk2h0q30uv" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-13.png" id="377_31qax"]
+[ext_resource type="Texture2D" uid="uid://bticcwmdhdld5" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-5.png" id="377_ltxbl"]
 [ext_resource type="Texture2D" uid="uid://beilx4eresc8k" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-14.png" id="378_pndvi"]
+[ext_resource type="Texture2D" uid="uid://dklhtu0q23beh" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-6.png" id="378_wyy5v"]
 [ext_resource type="Texture2D" uid="uid://dggi26dvlna6j" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-15.png" id="379_jfbra"]
+[ext_resource type="Texture2D" uid="uid://4dtgjlmj24gq" path="res://mods/vup/idle/idle_squat_normal_tb1_b/loris_younger_vup-7.png" id="379_wmqee"]
+[ext_resource type="Texture2D" uid="uid://dwpswmx7e5sfh" path="res://mods/vup/idle/idle_squat_normal_c/loris_younger_vup-0.png" id="380_7pdqn"]
 [ext_resource type="Texture2D" uid="uid://w8qojotglawn" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-16.png" id="380_npv4r"]
 [ext_resource type="Texture2D" uid="uid://bkv6bf5nftxq" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-17.png" id="381_exf7v"]
+[ext_resource type="Texture2D" uid="uid://dve0brh2inbu" path="res://mods/vup/idle/idle_squat_normal_c/loris_younger_vup-1.png" id="381_j4ldc"]
 [ext_resource type="Texture2D" uid="uid://daoc4paxhexfl" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-18.png" id="382_3tdd6"]
+[ext_resource type="Texture2D" uid="uid://p0n1e1w0fjnw" path="res://mods/vup/idle/idle_squat_normal_c/loris_younger_vup-2.png" id="382_op6cj"]
+[ext_resource type="Texture2D" uid="uid://fmr5ls6jp458" path="res://mods/vup/idle/idle_squat_normal_c/loris_younger_vup-3.png" id="383_ip56d"]
 [ext_resource type="Texture2D" uid="uid://syrud4t4a1hq" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-19.png" id="383_opbmn"]
 [ext_resource type="Texture2D" uid="uid://0c525i423gjl" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-20.png" id="384_0at63"]
+[ext_resource type="Texture2D" uid="uid://dbxkeg4vigiwr" path="res://mods/vup/idle/idle_squat_normal_c/loris_younger_vup-4.png" id="384_1pyvy"]
+[ext_resource type="Texture2D" uid="uid://3rrdyktgccjv" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-0.png" id="385_2bthg"]
 [ext_resource type="Texture2D" uid="uid://cnn254s4g2v1c" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-21.png" id="385_176q0"]
 [ext_resource type="Texture2D" uid="uid://rxkn7rrm31ls" path="res://mods/vup/raise/raised_stop/happy_c/loris_younger_vup-22.png" id="386_irqy5"]
+[ext_resource type="Texture2D" uid="uid://b5iqbr3etxctf" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-1.png" id="386_qcnt5"]
 [ext_resource type="Texture2D" uid="uid://yts4fcxpchhn" path="res://mods/vup/raise/raised_stop/ill_a/loris_younger_vup-0.png" id="387_rhc3t"]
+[ext_resource type="Texture2D" uid="uid://bun6q0qrqw8d4" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-2.png" id="387_vfai0"]
 [ext_resource type="Texture2D" uid="uid://cj2xuwawpqrs6" path="res://mods/vup/raise/raised_stop/ill_a/loris_younger_vup-1.png" id="388_inau5"]
+[ext_resource type="Texture2D" uid="uid://dcgyht3fx11to" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-3.png" id="388_yd8oj"]
+[ext_resource type="Texture2D" uid="uid://dnqqbyju4mfb1" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-4.png" id="389_jggjb"]
 [ext_resource type="Texture2D" uid="uid://djic1454ibxue" path="res://mods/vup/raise/raised_stop/ill_a/loris_younger_vup-2.png" id="389_oiyne"]
 [ext_resource type="Texture2D" uid="uid://ddwtqktrpvkac" path="res://mods/vup/raise/raised_stop/ill_a/loris_younger_vup-3.png" id="390_c713b"]
+[ext_resource type="Texture2D" uid="uid://cou5dbcr4031w" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-5.png" id="390_k1ose"]
+[ext_resource type="Texture2D" uid="uid://biokkr6csut6o" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-6.png" id="391_4ub1r"]
 [ext_resource type="Texture2D" uid="uid://cqhgi3dmhtj48" path="res://mods/vup/raise/raised_stop/ill_a/loris_younger_vup-4.png" id="391_cyv5j"]
+[ext_resource type="Texture2D" uid="uid://cdfkl276fjfcn" path="res://mods/vup/idle/idle_squat_normal_tb2_b/loris_younger_vup-7.png" id="392_7acxa"]
 [ext_resource type="Texture2D" uid="uid://b6h74qdjkpwcp" path="res://mods/vup/raise/raised_stop/ill_b/loris_younger_vup-0.png" id="392_ndgjo"]
 [ext_resource type="Texture2D" uid="uid://bk52bvfsv04ej" path="res://mods/vup/raise/raised_stop/ill_b/loris_younger_vup-1.png" id="393_505vg"]
+[ext_resource type="Texture2D" uid="uid://caj4db4g5nqec" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-0.png" id="393_gnfwo"]
 [ext_resource type="Texture2D" uid="uid://bo6aney6ojsvg" path="res://mods/vup/raise/raised_stop/ill_b/loris_younger_vup-2.png" id="394_ust5c"]
+[ext_resource type="Texture2D" uid="uid://nehdd3emflte" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-1.png" id="394_vmdoc"]
 [ext_resource type="Texture2D" uid="uid://b4fgi5i5iqvsk" path="res://mods/vup/raise/raised_stop/ill_b/loris_younger_vup-3.png" id="395_eksul"]
+[ext_resource type="Texture2D" uid="uid://d0ak18plobss8" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-2.png" id="395_kbgij"]
+[ext_resource type="Texture2D" uid="uid://o2llijxv4iel" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-3.png" id="396_28fbb"]
 [ext_resource type="Texture2D" uid="uid://b7evvsjjvfp7f" path="res://mods/vup/raise/raised_stop/ill_b/loris_younger_vup-4.png" id="396_e4p42"]
+[ext_resource type="Texture2D" uid="uid://i60n44yx5eti" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-4.png" id="397_c0ons"]
 [ext_resource type="Texture2D" uid="uid://d3a3yp7wnogfj" path="res://mods/vup/raise/raised_stop/ill_c/loris_younger_vup-0.png" id="397_ieio8"]
 [ext_resource type="Texture2D" uid="uid://du0clinovbj66" path="res://mods/vup/raise/raised_stop/ill_c/loris_younger_vup-1.png" id="398_cej0u"]
+[ext_resource type="Texture2D" uid="uid://dxtf0heeep58w" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-5.png" id="398_d63b6"]
 [ext_resource type="Texture2D" uid="uid://cckwj3p3f5j44" path="res://mods/vup/raise/raised_stop/ill_c/loris_younger_vup-2.png" id="399_cxylp"]
+[ext_resource type="Texture2D" uid="uid://dqhrglwniwxjq" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-6.png" id="399_wcso4"]
+[ext_resource type="Texture2D" uid="uid://dwbgcbxybn2oo" path="res://mods/vup/idle/idle_squat_normal_tb3_b/loris_younger_vup-7.png" id="400_a1vdb"]
 [ext_resource type="Texture2D" uid="uid://d1675wog6jrjx" path="res://mods/vup/raise/raised_stop/normal_a/loris_younger_vup-0.png" id="400_kqiyt"]
 [ext_resource type="Texture2D" uid="uid://c3y7phjlrox7n" path="res://mods/vup/raise/raised_stop/normal_a/loris_younger_vup-1.png" id="401_cubej"]
+[ext_resource type="Texture2D" uid="uid://covhk11xpe2lg" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-0.png" id="401_hk4hr"]
 [ext_resource type="Texture2D" uid="uid://fjgnl7qhxovk" path="res://mods/vup/raise/raised_stop/normal_a/loris_younger_vup-2.png" id="402_l0q6q"]
+[ext_resource type="Texture2D" uid="uid://cxm7krhsr22qw" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-1.png" id="402_r6aao"]
+[ext_resource type="Texture2D" uid="uid://v0gqjbkpq5vb" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-2.png" id="403_cvbhv"]
 [ext_resource type="Texture2D" uid="uid://cbx1wa1ecdr0x" path="res://mods/vup/raise/raised_stop/normal_a/loris_younger_vup-3.png" id="403_xqk8c"]
+[ext_resource type="Texture2D" uid="uid://dihk6tbtff7nf" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-3.png" id="404_dddad"]
 [ext_resource type="Texture2D" uid="uid://3fu8tulvpa2n" path="res://mods/vup/raise/raised_stop/normal_a/loris_younger_vup-4.png" id="404_lgju0"]
 [ext_resource type="Texture2D" uid="uid://8fo4xfvc7iv4" path="res://mods/vup/raise/raised_stop/normal_a/loris_younger_vup-5.png" id="405_70bll"]
+[ext_resource type="Texture2D" uid="uid://b85n6wx11red2" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-4.png" id="405_b8x8r"]
+[ext_resource type="Texture2D" uid="uid://bjxryxlonb6yt" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-5.png" id="406_qvm0d"]
 [ext_resource type="Texture2D" uid="uid://jnvil68auphn" path="res://mods/vup/raise/raised_stop/normal_b/loris_younger_vup-0.png" id="406_yl644"]
+[ext_resource type="Texture2D" uid="uid://bii4u613f6puw" path="res://mods/vup/idle/idle_squat_poorcondition_a/loris_younger_vup-6.png" id="407_31res"]
 [ext_resource type="Texture2D" uid="uid://c7f4rmpocr3l7" path="res://mods/vup/raise/raised_stop/normal_b/loris_younger_vup-1.png" id="407_dl6m5"]
 [ext_resource type="Texture2D" uid="uid://0dtyxsmlw2bf" path="res://mods/vup/raise/raised_stop/normal_b/loris_younger_vup-2.png" id="408_fnotq"]
+[ext_resource type="Texture2D" uid="uid://bysbf76h3bscx" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-0.png" id="408_wdksp"]
+[ext_resource type="Texture2D" uid="uid://dcwqn6pwa4ekq" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-1.png" id="409_0rd37"]
 [ext_resource type="Texture2D" uid="uid://hdx8f5632knh" path="res://mods/vup/raise/raised_stop/normal_b/loris_younger_vup-3.png" id="409_ktodv"]
+[ext_resource type="Texture2D" uid="uid://bd203xs1lllq6" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-2.png" id="410_2k8k8"]
 [ext_resource type="Texture2D" uid="uid://bsaqr30srlbn7" path="res://mods/vup/raise/raised_stop/normal_b/loris_younger_vup-4.png" id="410_6bsl2"]
+[ext_resource type="Texture2D" uid="uid://yliylkap2g5y" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-3.png" id="411_0akjt"]
 [ext_resource type="Texture2D" uid="uid://ky6k10pv8085" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-0.png" id="411_5icis"]
 [ext_resource type="Texture2D" uid="uid://nx4llw1iluv2" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-1.png" id="412_77icu"]
+[ext_resource type="Texture2D" uid="uid://chr6lvpbi7p1x" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-4.png" id="412_mtmr8"]
+[ext_resource type="Texture2D" uid="uid://dswcdaeq78jl" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-5.png" id="413_0cahm"]
 [ext_resource type="Texture2D" uid="uid://0nbdhlvd8anh" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-2.png" id="413_pud3l"]
+[ext_resource type="Texture2D" uid="uid://pce3txgl5ph3" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-6.png" id="414_6soet"]
 [ext_resource type="Texture2D" uid="uid://dllxdjfatu73i" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-3.png" id="414_xxbl0"]
+[ext_resource type="Texture2D" uid="uid://dde0v7baot5ky" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-7.png" id="415_0nl6v"]
 [ext_resource type="Texture2D" uid="uid://ctes3uq0s5rbb" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-4.png" id="415_v47nl"]
+[ext_resource type="Texture2D" uid="uid://dncdrbetlha5t" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-8.png" id="416_asb4y"]
 [ext_resource type="Texture2D" uid="uid://iuop8f5pg5a" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-5.png" id="416_ytaqd"]
 [ext_resource type="Texture2D" uid="uid://b1twq3fi6e7p1" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-6.png" id="417_87jn4"]
+[ext_resource type="Texture2D" uid="uid://bxq555bv0ecrh" path="res://mods/vup/idle/idle_squat_poorcondition_tb1_b/loris_younger_vup-9.png" id="417_hqjfm"]
+[ext_resource type="Texture2D" uid="uid://c5644l8xp1fkd" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-0.png" id="418_tcuqy"]
 [ext_resource type="Texture2D" uid="uid://doc5qgps3l7u4" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-7.png" id="418_ypj1f"]
+[ext_resource type="Texture2D" uid="uid://cg2irs3i65ki0" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-1.png" id="419_c0h4w"]
 [ext_resource type="Texture2D" uid="uid://cbfqto41tf0po" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-8.png" id="419_f3k8c"]
+[ext_resource type="Texture2D" uid="uid://cgmd8rre5hryi" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-2.png" id="420_6ic5v"]
 [ext_resource type="Texture2D" uid="uid://dgvisqh5ctue0" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-9.png" id="420_h28pn"]
+[ext_resource type="Texture2D" uid="uid://cfnm2nhsrm16t" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-3.png" id="421_7ykh6"]
 [ext_resource type="Texture2D" uid="uid://umvoca6b7jc4" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-10.png" id="421_w4o5t"]
 [ext_resource type="Texture2D" uid="uid://c0nk6f2uert8n" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-11.png" id="422_cc4k3"]
+[ext_resource type="Texture2D" uid="uid://deqxywl8rkjup" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-4.png" id="422_qjobr"]
+[ext_resource type="Texture2D" uid="uid://ct4jo5iw2pgdb" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-5.png" id="423_10x15"]
 [ext_resource type="Texture2D" uid="uid://ddcpfp5sgdfdt" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-12.png" id="423_t4ci7"]
 [ext_resource type="Texture2D" uid="uid://ck1f6og17jyd3" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-13.png" id="424_21tp8"]
+[ext_resource type="Texture2D" uid="uid://do36jlwayugjh" path="res://mods/vup/idle/idle_squat_poorcondition_c/loris_younger_vup-6.png" id="424_63nhx"]
 [ext_resource type="Texture2D" uid="uid://jykehkgy7ydi" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-14.png" id="425_1vmts"]
+[ext_resource type="Texture2D" uid="uid://58npadtufi5t" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-0.png" id="425_y7vbw"]
 [ext_resource type="Texture2D" uid="uid://dvfb3q77rc8co" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-15.png" id="426_frymw"]
+[ext_resource type="Texture2D" uid="uid://cfe6bx3k7b2lh" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-1.png" id="426_so3vp"]
+[ext_resource type="Texture2D" uid="uid://b3gm7cmrr6o4q" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-2.png" id="427_54hj1"]
 [ext_resource type="Texture2D" uid="uid://dsx03iab0ap4e" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-16.png" id="427_w02yg"]
+[ext_resource type="Texture2D" uid="uid://b0rdim44ebw4v" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-3.png" id="428_khs21"]
 [ext_resource type="Texture2D" uid="uid://ksqnsql3ap3h" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-17.png" id="428_u5srv"]
+[ext_resource type="Texture2D" uid="uid://dmr5xhcg4vkl2" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-4.png" id="429_cw16w"]
 [ext_resource type="Texture2D" uid="uid://dj4u7kyndv06j" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-18.png" id="429_w8ocu"]
+[ext_resource type="Texture2D" uid="uid://cbckwgdcv0sj6" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-5.png" id="430_gvlyc"]
 [ext_resource type="Texture2D" uid="uid://benj2n7jdlscx" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-19.png" id="430_sbwsh"]
 [ext_resource type="Texture2D" uid="uid://bbna1gdbss31k" path="res://mods/vup/raise/raised_stop/normal_c/loris_younger_vup-20.png" id="431_0cl5e"]
+[ext_resource type="Texture2D" uid="uid://gfkcyuqwe58e" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-6.png" id="431_g2e7n"]
+[ext_resource type="Texture2D" uid="uid://cgb4eevnweak0" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-7.png" id="432_0t3qy"]
 [ext_resource type="Texture2D" uid="uid://cy8bj3g21fdmn" path="res://mods/vup/raise/raised_stop/poorcondition_a/loris_younger_vup-0.png" id="432_btvlh"]
+[ext_resource type="Texture2D" uid="uid://brbxj0top4s71" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-8.png" id="433_1oevq"]
 [ext_resource type="Texture2D" uid="uid://bkfa6sj7x2xls" path="res://mods/vup/raise/raised_stop/poorcondition_a/loris_younger_vup-1.png" id="433_fbnx4"]
+[ext_resource type="Texture2D" uid="uid://bjewo3fdv263f" path="res://mods/vup/idle/idle_squat_poorcondition_tb2_b/loris_younger_vup-9.png" id="434_8rv7i"]
 [ext_resource type="Texture2D" uid="uid://bq8s152xy3rks" path="res://mods/vup/raise/raised_stop/poorcondition_a/loris_younger_vup-2.png" id="434_pb2xe"]
 [ext_resource type="Texture2D" uid="uid://bor8o6hvb01x" path="res://mods/vup/raise/raised_stop/poorcondition_b/loris_younger_vup-0.png" id="435_ft42t"]
 [ext_resource type="Texture2D" uid="uid://gkk76audn5h6" path="res://mods/vup/raise/raised_stop/poorcondition_b/loris_younger_vup-1.png" id="436_63xa6"]
@@ -1486,6 +1708,842 @@ animations = [{
 }],
 "loop": false,
 "name": &"eat_poorcondition_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("213_j1w2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_abhjv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_3ehxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_eeq8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_ty6lm")
+}],
+"loop": false,
+"name": &"idle_aside_happy_tb1_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("218_wg3yc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_i7kb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_201fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_xm6sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_th7td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_w3axk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_hd6qt")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb1_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("218_ilkh1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_ist6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_lysw8")
+}],
+"loop": false,
+"name": &"idle_aside_happy_tb1_c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("228_mxtti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_vqpl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_cth7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_lnvtd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_vism8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_hgv2w")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb2_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("234_5cigq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_25f68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_ok73x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_4tryj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_26exf")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb3_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("239_plwh8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_yselw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_rc227")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_xvn6b")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb4_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("243_g8jhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_fe1o7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_loycc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_l1jl2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_py4j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_vf7vh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_03r7x")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb5_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("250_uiods")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_w8krb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_pk6g2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_yftcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_x4gif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_6p4jt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_i3h2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_uqdxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_5keye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_7g7uy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_1vx3s")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb6_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("261_av78w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_ojxoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_m88ol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_agme8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_58o6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_k253n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_hbujp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_kx206")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_pybup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_3lrm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_7fjfs")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb7_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("272_qfeqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_h0ikt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_tdb8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_t0rlq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_sauq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_r7xwg")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb8_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("278_6jvs7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_yvi0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_p3mv6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_e64v1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_2n6wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_asm84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_333xv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_yd2o8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_6uyvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_2hmvc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_ee5ip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_y8jvm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_mlywj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_4l7km")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_tp1ym")
+}],
+"loop": true,
+"name": &"idle_aside_happy_tb9_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("293_08d2m")
+}],
+"loop": false,
+"name": &"idle_aside_normal_tb1_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("294_wee6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_fhm1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_jmgdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_vx1t6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_fhik6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_gsx0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_o3jws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_rlif1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_5vxhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_cqoby")
+}],
+"loop": true,
+"name": &"idle_aside_normal_tb1_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("294_23mg2")
+}],
+"loop": false,
+"name": &"idle_aside_normal_tb1_c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("305_m2sbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_q0pa0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_qnsv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_tsuy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_7a73f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_2rx6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_ijqgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_eimo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_g3uls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_2qytg")
+}],
+"loop": true,
+"name": &"idle_aside_normal_tb2_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("315_8qqtf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_cqidf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_3nbjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_mxhcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_e0xmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_urmf2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_bdo1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_hsa12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_jxxl7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_k40gl")
+}],
+"loop": true,
+"name": &"idle_aside_normal_tb3_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("325_jcxr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("326_bdbcb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_j6vss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_48lan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_lv42l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_lkpwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_yg2c0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_jtd6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_7vj2g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_6crmn")
+}],
+"loop": true,
+"name": &"idle_aside_normal_tb4_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("335_cu773")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_86euo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_supn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_uul4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_h834a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_phgyd")
+}],
+"loop": false,
+"name": &"idle_aside_poorcondition_tb1_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("341_u713i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_7kdk6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_q8aa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_4tp56")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_xbtg3")
+}],
+"loop": true,
+"name": &"idle_aside_poorcondition_tb1_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("346_opvpc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_l5bqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_1ok3q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_a0qgw")
+}],
+"loop": false,
+"name": &"idle_aside_poorcondition_tb1_c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("350_4ob51")
+}],
+"loop": true,
+"name": &"idle_aside_poorcondition_tb2_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("351_k8voh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_qwm1h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_2sums")
+}],
+"loop": true,
+"name": &"idle_aside_poorcondition_tb3_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("354_vv7qe")
+}],
+"loop": false,
+"name": &"idle_boring_normal_tb1_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("355_ud1mh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_04rwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_1cv27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_mfm71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_s7h0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_iu3qj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_sxm8e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_7ic6h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_c4kxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_wh5ca")
+}],
+"loop": true,
+"name": &"idle_boring_normal_tb1_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("365_jnw4o")
+}],
+"loop": false,
+"name": &"idle_boring_normal_tb1_c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("366_ajifl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_plxln")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_sr2eb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_ft1is")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_84co6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_w6bk0")
+}],
+"loop": false,
+"name": &"idle_squat_normal_tb1_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("372_huyox")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_5fhml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("374_wfq7f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_hu1wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_m06j2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("377_ltxbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("378_wyy5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("379_wmqee")
+}],
+"loop": true,
+"name": &"idle_squat_normal_tb1_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("380_7pdqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("381_j4ldc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("382_op6cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("383_ip56d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("384_1pyvy")
+}],
+"loop": false,
+"name": &"idle_squat_normal_tb1_c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("385_2bthg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("386_qcnt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("387_vfai0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("388_yd8oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("389_jggjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("390_k1ose")
+}, {
+"duration": 1.0,
+"texture": ExtResource("391_4ub1r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("392_7acxa")
+}],
+"loop": true,
+"name": &"idle_squat_normal_tb2_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("393_gnfwo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("394_vmdoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("395_kbgij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("396_28fbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("397_c0ons")
+}, {
+"duration": 1.0,
+"texture": ExtResource("398_d63b6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("399_wcso4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("400_a1vdb")
+}],
+"loop": true,
+"name": &"idle_squat_normal_tb3_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("401_hk4hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("402_r6aao")
+}, {
+"duration": 1.0,
+"texture": ExtResource("403_cvbhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("404_dddad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("405_b8x8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("406_qvm0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("407_31res")
+}],
+"loop": true,
+"name": &"idle_squat_poorcondition_tb1_a",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("408_wdksp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("409_0rd37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("410_2k8k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("411_0akjt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("412_mtmr8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("413_0cahm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("414_6soet")
+}, {
+"duration": 1.0,
+"texture": ExtResource("415_0nl6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("416_asb4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("417_hqjfm")
+}],
+"loop": true,
+"name": &"idle_squat_poorcondition_tb1_b",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("418_tcuqy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("419_c0h4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("420_6ic5v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("421_7ykh6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("422_qjobr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("423_10x15")
+}, {
+"duration": 1.0,
+"texture": ExtResource("424_63nhx")
+}],
+"loop": false,
+"name": &"idle_squat_poorcondition_tb1_c",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("425_y7vbw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("426_so3vp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("427_54hj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("428_khs21")
+}, {
+"duration": 1.0,
+"texture": ExtResource("429_cw16w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("430_gvlyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("431_g2e7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("432_0t3qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("433_1oevq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("434_8rv7i")
+}],
+"loop": true,
+"name": &"idle_squat_poorcondition_tb2_b",
 "speed": 5.0
 }, {
 "frames": [{
@@ -3910,10 +4968,10 @@ tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 1.2),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, 0), Vector2(-150, 300)]
+"values": [Vector2(-150, 300)]
 }
 
 [sub_resource type="Animation" id="Animation_ax5ft"]
@@ -3985,10 +5043,10 @@ tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0, 0), Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
+"values": [Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
 }
 
 [sub_resource type="Animation" id="Animation_d8qh3"]
@@ -4060,10 +5118,947 @@ tracks/5/path = NodePath("AnimatedSprite2D/Layer2:offset")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0, 0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
+"times": PackedFloat32Array(0.6, 0.8, 1, 1.6, 1.8, 2.4, 2.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
+}
+
+[sub_resource type="Animation" id="Animation_utpw6"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb1_a"]
+}
+
+[sub_resource type="Animation" id="Animation_2sq1u"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb1_b"]
+}
+
+[sub_resource type="Animation" id="Animation_k2tbm"]
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb1_c"]
+}
+
+[sub_resource type="Animation" id="Animation_03pwn"]
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb2_b"]
+}
+
+[sub_resource type="Animation" id="Animation_rrbk1"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb3_b"]
+}
+
+[sub_resource type="Animation" id="Animation_wujoo"]
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb4_b"]
+}
+
+[sub_resource type="Animation" id="Animation_x1l1d"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb5_b"]
+}
+
+[sub_resource type="Animation" id="Animation_8km8f"]
+length = 2.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb6_b"]
+}
+
+[sub_resource type="Animation" id="Animation_sc74g"]
+length = 2.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb7_b"]
+}
+
+[sub_resource type="Animation" id="Animation_wy43f"]
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb8_b"]
+}
+
+[sub_resource type="Animation" id="Animation_6eho2"]
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_happy_tb9_b"]
+}
+
+[sub_resource type="Animation" id="Animation_d4yyu"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_normal_tb1_a"]
+}
+
+[sub_resource type="Animation" id="Animation_aqfe2"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_normal_tb1_b"]
+}
+
+[sub_resource type="Animation" id="Animation_k46ks"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_normal_tb1_c"]
+}
+
+[sub_resource type="Animation" id="Animation_7aha5"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_normal_tb2_b"]
+}
+
+[sub_resource type="Animation" id="Animation_u5jcs"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_normal_tb3_b"]
+}
+
+[sub_resource type="Animation" id="Animation_8r4kn"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_normal_tb4_b"]
+}
+
+[sub_resource type="Animation" id="Animation_crd8t"]
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_poorcondition_tb1_a"]
+}
+
+[sub_resource type="Animation" id="Animation_42sjt"]
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_poorcondition_tb1_b"]
+}
+
+[sub_resource type="Animation" id="Animation_gttga"]
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_poorcondition_tb1_c"]
+}
+
+[sub_resource type="Animation" id="Animation_vkp4m"]
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_poorcondition_tb2_b"]
+}
+
+[sub_resource type="Animation" id="Animation_xedf8"]
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_aside_poorcondition_tb3_b"]
+}
+
+[sub_resource type="Animation" id="Animation_rs0fr"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_boring_normal_tb1_a"]
+}
+
+[sub_resource type="Animation" id="Animation_kk1ap"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_boring_normal_tb1_b"]
+}
+
+[sub_resource type="Animation" id="Animation_ryam2"]
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_boring_normal_tb1_c"]
+}
+
+[sub_resource type="Animation" id="Animation_70i7h"]
+length = 1.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_normal_tb1_a"]
+}
+
+[sub_resource type="Animation" id="Animation_80r8e"]
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [Vector2(0, 0), Vector2(-50, -80), Vector2(-30, -110), Vector2(-30, -105), Vector2(-30, -190), Vector2(-30, -150), Vector2(-30, -190), Vector2(-50, -190)]
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_normal_tb1_b"]
+}
+
+[sub_resource type="Animation" id="Animation_q25km"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_normal_tb1_c"]
+}
+
+[sub_resource type="Animation" id="Animation_254ys"]
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_normal_tb2_b"]
+}
+
+[sub_resource type="Animation" id="Animation_8i3ko"]
+length = 1.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_normal_tb3_b"]
+}
+
+[sub_resource type="Animation" id="Animation_6xm22"]
+length = 1.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_poorcondition_tb1_a"]
+}
+
+[sub_resource type="Animation" id="Animation_5bheh"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_poorcondition_tb1_b"]
+}
+
+[sub_resource type="Animation" id="Animation_b7nur"]
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_poorcondition_tb1_c"]
+}
+
+[sub_resource type="Animation" id="Animation_wjben"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D/Layer1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D/Layer1:animation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["idle_squat_poorcondition_tb2_b"]
 }
 
 [sub_resource type="Animation" id="Animation_mpwmw"]
@@ -5474,6 +7469,40 @@ _data = {
 "eat_ill_1": SubResource("Animation_34edp"),
 "eat_normal_1": SubResource("Animation_ax5ft"),
 "eat_poorcondition_1": SubResource("Animation_d8qh3"),
+"idle_aside_happy_tb1_a": SubResource("Animation_utpw6"),
+"idle_aside_happy_tb1_b": SubResource("Animation_2sq1u"),
+"idle_aside_happy_tb1_c": SubResource("Animation_k2tbm"),
+"idle_aside_happy_tb2_b": SubResource("Animation_03pwn"),
+"idle_aside_happy_tb3_b": SubResource("Animation_rrbk1"),
+"idle_aside_happy_tb4_b": SubResource("Animation_wujoo"),
+"idle_aside_happy_tb5_b": SubResource("Animation_x1l1d"),
+"idle_aside_happy_tb6_b": SubResource("Animation_8km8f"),
+"idle_aside_happy_tb7_b": SubResource("Animation_sc74g"),
+"idle_aside_happy_tb8_b": SubResource("Animation_wy43f"),
+"idle_aside_happy_tb9_b": SubResource("Animation_6eho2"),
+"idle_aside_normal_tb1_a": SubResource("Animation_d4yyu"),
+"idle_aside_normal_tb1_b": SubResource("Animation_aqfe2"),
+"idle_aside_normal_tb1_c": SubResource("Animation_k46ks"),
+"idle_aside_normal_tb2_b": SubResource("Animation_7aha5"),
+"idle_aside_normal_tb3_b": SubResource("Animation_u5jcs"),
+"idle_aside_normal_tb4_b": SubResource("Animation_8r4kn"),
+"idle_aside_poorcondition_tb1_a": SubResource("Animation_crd8t"),
+"idle_aside_poorcondition_tb1_b": SubResource("Animation_42sjt"),
+"idle_aside_poorcondition_tb1_c": SubResource("Animation_gttga"),
+"idle_aside_poorcondition_tb2_b": SubResource("Animation_vkp4m"),
+"idle_aside_poorcondition_tb3_b": SubResource("Animation_xedf8"),
+"idle_boring_normal_tb1_a": SubResource("Animation_rs0fr"),
+"idle_boring_normal_tb1_b": SubResource("Animation_kk1ap"),
+"idle_boring_normal_tb1_c": SubResource("Animation_ryam2"),
+"idle_squat_normal_tb1_a": SubResource("Animation_70i7h"),
+"idle_squat_normal_tb1_b": SubResource("Animation_80r8e"),
+"idle_squat_normal_tb1_c": SubResource("Animation_q25km"),
+"idle_squat_normal_tb2_b": SubResource("Animation_254ys"),
+"idle_squat_normal_tb3_b": SubResource("Animation_8i3ko"),
+"idle_squat_poorcondition_tb1_a": SubResource("Animation_6xm22"),
+"idle_squat_poorcondition_tb1_b": SubResource("Animation_5bheh"),
+"idle_squat_poorcondition_tb1_c": SubResource("Animation_b7nur"),
+"idle_squat_poorcondition_tb2_b": SubResource("Animation_wjben"),
 "raised_moving_happy_1": SubResource("Animation_mpwmw"),
 "raised_moving_ill_1": SubResource("Animation_ucb45"),
 "raised_moving_normal_1": SubResource("Animation_l538u"),
@@ -5529,14 +7558,13 @@ _data = {
 
 [node name="Vup" type="Node2D"]
 script = ExtResource("1_7y2u6")
-current_mood = 0
 
 [node name="AnimatedSprite2D" type="Node2D" parent="."]
 position = Vector2(250, 250)
 
 [node name="Layer1" type="AnimatedSprite2D" parent="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_8bfo5")
-animation = &"eat_poorcondition_1"
+animation = &"idle_squat_normal_tb1_c"
 
 [node name="Layer2" type="Sprite2D" parent="AnimatedSprite2D"]
 visible = false

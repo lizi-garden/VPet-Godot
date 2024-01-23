@@ -94,6 +94,11 @@ wait_time = 0.2
 
 [node name="HandlerDelayTimer" type="Node" parent="."]
 
+[node name="Idle" type="Timer" parent="HandlerDelayTimer"]
+wait_time = 30.0
+one_shot = true
+autostart = true
+
 [node name="Raised" type="Timer" parent="HandlerDelayTimer"]
 one_shot = true
 
@@ -115,12 +120,13 @@ one_shot = true
 wait_time = 0.5
 one_shot = true
 
-[connection signal="mouse_shape_entered" from="TouchBody1" to="." method="_on_touch_body_input_event"]
 [connection signal="mouse_shape_entered" from="TouchBody1" to="." method="_on_happy_turn_input_event"]
-[connection signal="mouse_shape_entered" from="TouchBody2" to="." method="_on_touch_body_input_event"]
+[connection signal="mouse_shape_entered" from="TouchBody1" to="." method="_on_touch_body_input_event"]
 [connection signal="mouse_shape_entered" from="TouchBody2" to="." method="_on_happy_turn_input_event"]
+[connection signal="mouse_shape_entered" from="TouchBody2" to="." method="_on_touch_body_input_event"]
 [connection signal="input_event" from="TouchHead1" to="." method="_on_touch_head_input_event"]
 [connection signal="input_event" from="TouchHead2" to="." method="_on_touch_head_input_event"]
+[connection signal="timeout" from="HandlerDelayTimer/Idle" to="." method="_on_handler_delay_idle_timeout"]
 [connection signal="timeout" from="HandlerDelayTimer/Raised" to="." method="_on_handler_delay_raised_timeout"]
 [connection signal="timeout" from="UnhandledTimer/Raised" to="." method="_on_unhandled_raised_timeout"]
 [connection signal="timeout" from="UnhandledTimer/TouchHead" to="." method="_on_unhandled_touch_head_timeout"]

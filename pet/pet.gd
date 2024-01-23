@@ -40,20 +40,35 @@ func _ready():
     update_node()
 
 
+func _unhandled_input(event):
+    idle_unhandled_input(event)
+    raised_unhandled_input(event)
+
+
+## Read Idle Event
+@onready var idle_handler_delay_timer = $HandlerDelayTimer/Idle
+
+func idle_unhandled_input(_event):
+    idle_handler_delay_timer.start()
+    if vup.current_action == vup.Action.IDLE:
+        vup.idle(false)
+
+
+# Handler Delay Idle
+func _on_handler_delay_idle_timeout():
+    vup.idle(true)
+
+
 ## Read Raised Event
 @onready var raised_handler_delay_timer = $HandlerDelayTimer/Raised
 @onready var raised_unhandler_timer = $UnhandledTimer/Raised
 
-var dragging = false:
-    set(value):
-        if value:       Input.set_default_cursor_shape(Input.CURSOR_DRAG)
-        else:           Input.set_default_cursor_shape(Input.CURSOR_ARROW)
-        dragging = value
+var dragging = false
             
 var mouse_pos   :Vector2
 var window_pos  :Vector2
 
-func _unhandled_input(event):
+func raised_unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
             if raised_handler_delay_timer.time_left == 0 and not dragging:
@@ -63,6 +78,7 @@ func _unhandled_input(event):
             raised_unhandler_timer.start()
             if dragging:
                 dragging = false
+                Input.set_default_cursor_shape(Input.CURSOR_ARROW)
                 vup.raised_stop(false)
 
     
@@ -77,6 +93,7 @@ func _unhandled_input(event):
 # Handler Delay Raised
 func _on_handler_delay_raised_timeout():
     dragging = true
+    Input.set_default_cursor_shape(Input.CURSOR_DRAG)
     
     window_pos = get_tree().get_root().position
     mouse_pos = get_global_mouse_position()

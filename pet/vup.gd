@@ -81,6 +81,14 @@ func eat(food :Texture2D):
     eat_set_play(current_mood)
 
 
+func idle(start :bool = true):
+    if start:
+        current_action = Action.IDLE
+    else:
+        current_action = Action.IDLE
+        fsm.change_state_to("end")
+
+
 func shutdown():
     current_action = Action.SHUTDOWN
 
@@ -147,7 +155,7 @@ func _on_current_action_changed(action :Action):
         Action.DRINK:           pass
         Action.EAT:             eat_set_play(current_mood)
         Action.GIFT:            pass
-        Action.IDLE:            pass
+        Action.IDLE:            fsm.change_state_to("play")
         Action.MOVE:            pass
         Action.MUSIC:           pass
         Action.PINCH:           pass
@@ -180,6 +188,27 @@ func eat_set_play(mood :Mood):
         Mood.ILL:              play_animation("eat", "ill")
         Mood.NORMAL:           play_animation("eat", "normal")
         Mood.POORCONDITION:    play_animation("eat", "poorcondition")
+
+var random_idle
+func idle_set_play(mood :Mood):
+    if _suffix == "_a":
+        random_idle = randf()
+    
+    if random_idle == null:
+        random_idle = randf()
+    
+    match mood:
+        Mood.HAPPY:
+            play_animation("idle_aside", "happy", Mode.FSM)
+        Mood.ILL:
+            pass
+        Mood.NORMAL:
+            if random_idle > 0.6:    play_animation("idle_aside", "normal", Mode.FSM)
+            elif random_idle > 0.3:  play_animation("idle_boring", "normal", Mode.FSM)
+            else:               play_animation("idle_squat", "normal", Mode.FSM)
+        Mood.POORCONDITION:
+            if random_idle > 0.5:    play_animation("idle_aside", "poorcondition", Mode.FSM)
+            else:               play_animation("idle_squat", "poorcondition", Mode.FSM)
 
 
 func raised_stop_set_play(mood :Mood):
@@ -263,19 +292,22 @@ func play_animation(action_name :String, mood_name :String, mode :Mode = Mode.GE
         # Get the number of animations
         var num
         for i in range(1, 4):
-            if animation_player.has_animation(action_name + "_" + mood_name + "_" + "tb" + str(i) + _suffix):
+            if animation_player.has_animation(action_name + "_" + mood_name + "_tb" + str(i) + _suffix):
                 num = i
 
         # If animation is not exist
         if num == null:
-            print(action_name + "_" + mood_name + "_" + "tb1"  + _suffix + " is not exist")
+            print(action_name + "_" + mood_name + "_tb1"  + _suffix + " is not exist")
             return
         
         # Play animations randomly
         if random_fsm == null:
             random_fsm = get_random(num)
         
-        animation_player.play(action_name + "_" + mood_name + "_" + "tb" + str(random_fsm) + _suffix)
+        if animation_player.has_animation(action_name + "_" + mood_name + "_tb" + str(random_fsm) + _suffix):
+            animation_player.play(action_name + "_" + mood_name + "_tb" + str(random_fsm) + _suffix)
+        else:
+            animation_player.play(action_name + "_" + mood_name + "_tb1" + _suffix)
 
 
 # shuffle bag
@@ -323,6 +355,7 @@ func _on_fsm_entered(to):
         "end":      _suffix = "_c"
     
     match current_action:
+        Action.IDLE:            idle_set_play(current_mood)
         Action.RAISED_STOP:     raised_stop_set_play(current_mood)
         Action.TOUCHBODY:       touch_body_set_play(current_mood)
         Action.HAPPYTURN:       happy_turn_set_play()
