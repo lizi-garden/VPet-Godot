@@ -205,10 +205,10 @@ func idle_set_play(mood :Mood):
         Mood.NORMAL:
             if random_idle > 0.6:    play_animation("idle_aside", "normal", Mode.FSM)
             elif random_idle > 0.3:  play_animation("idle_boring", "normal", Mode.FSM)
-            else:               play_animation("idle_squat", "normal", Mode.FSM)
+            else:                    play_animation("idle_squat", "normal", Mode.FSM)
         Mood.POORCONDITION:
             if random_idle > 0.5:    play_animation("idle_aside", "poorcondition", Mode.FSM)
-            else:               play_animation("idle_squat", "poorcondition", Mode.FSM)
+            else:                    play_animation("idle_squat", "poorcondition", Mode.FSM)
 
 
 func raised_stop_set_play(mood :Mood):
@@ -338,12 +338,14 @@ func _on_animation_finished(anim_name :String):
             get_tree().quit()
         var value when value.contains("eat"):
             current_action = Action.DEFAULT
-        var value when value.contains("_a"):
-            fsm.change_state_to("stay")
-        var value when value.contains("_c"):
-            current_action = Action.DEFAULT
-            fsm.change_state_to("empty")
 
+
+    if anim_name.contains("_a"):
+        fsm.change_state_to("stay")
+    
+    if anim_name.contains("_c"):
+        current_action = Action.DEFAULT
+        fsm.change_state_to("empty")
 
 # FSM
 ################################################################################
