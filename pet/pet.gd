@@ -48,15 +48,20 @@ func _unhandled_input(event):
 ## Read Idle Event
 @onready var idle_handler_delay_timer = $HandlerDelayTimer/Idle
 
+var idling = false
+
 func idle_unhandled_input(_event):
     idle_handler_delay_timer.start()
-    if vup.current_action == vup.Action.IDLE:
+    if idling:
+        idling = false
         vup.idle(false)
 
 
 # Handler Delay Idle
 func _on_handler_delay_idle_timeout():
-    vup.idle(true)
+    if !idling:
+        idling = true
+        vup.idle(true)
 
 
 ## Read Raised Event
