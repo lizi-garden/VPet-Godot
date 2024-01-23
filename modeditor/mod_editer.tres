@@ -2,6 +2,8 @@
 
 [resource]
 HBoxContainer/constants/separation = 10
+MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
+MarginContainer/constants/margin_top = 10
 VBoxContainer/constants/separation = 10

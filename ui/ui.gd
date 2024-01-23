@@ -33,8 +33,15 @@ func _unhandled_input(event):
 
 func _on_right_click_menu_index_pressed(index :int):
     match right_click_menu.get_item_text(index).to_lower():
-        "setting":  setting_window.show_window()
+        "setting":  _on_show_setting_window()
         "exit":     exit.emit()
+
+
+func _on_show_setting_window():
+    if not has_node("SettingWindow"):
+        add_child(setting_window)
+    
+    setting_window.show()
 
 
 func _on_show_items_window(tab_name :String = "food"):
@@ -44,3 +51,6 @@ func _on_show_items_window(tab_name :String = "food"):
     items_window.switch_tab(tab_name)
     items_window.show()
     pass
+
+
+

@@ -1,9 +1,17 @@
-[gd_scene format=3 uid="uid://bdjabf7pisdel"]
+[gd_scene load_steps=5 format=3 uid="uid://bdjabf7pisdel"]
+
+[ext_resource type="Script" path="res://ui/setting_window.gd" id="1_5va00"]
+[ext_resource type="Theme" uid="uid://5m2lhduot4nl" path="res://modeditor/mod_editer.tres" id="1_6jdhq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ov8it"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0uj7k"]
 
 [node name="SettingWindow" type="Window"]
 title = "Setting Window"
 position = Vector2i(0, 36)
-size = Vector2i(990, 540)
+size = Vector2i(800, 500)
+script = ExtResource("1_5va00")
 
 [node name="TabContainer" type="TabContainer" parent="."]
 anchors_preset = 15
@@ -13,24 +21,393 @@ grow_horizontal = 2
 grow_vertical = 2
 tab_alignment = 1
 
-[node name="Data" type="VBoxContainer" parent="TabContainer"]
+[node name="Data" type="MarginContainer" parent="TabContainer"]
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Data"]
 layout_mode = 2
 
-[node name="Custom" type="VBoxContainer" parent="TabContainer"]
+[node name="Data" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="Label" type="Label" parent="TabContainer/Data/VBoxContainer/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Load Data"
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer/Data/VBoxContainer/Data"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+item_count = 2
+popup/item_0/text = "New Data"
+popup/item_0/id = 100
+popup/item_1/text = "---------"
+popup/item_1/id = 99
+popup/item_1/separator = true
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Data/VBoxContainer/Data"]
 visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 2.0
+placeholder_text = "New Data"
+caret_blink = true
+caret_force_displayed = true
+caret_mid_grapheme = true
+
+[node name="LoadButton" type="Button" parent="TabContainer/Data/VBoxContainer/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Load"
+
+[node name="SaveButton" type="Button" parent="TabContainer/Data/VBoxContainer/Data"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Save"
+
+[node name="DeleteButton" type="Button" parent="TabContainer/Data/VBoxContainer/Data"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Delete"
+
+[node name="CancelButton" type="Button" parent="TabContainer/Data/VBoxContainer/Data"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Cancel"
+
+[node name="DataFrozen" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/Data/VBoxContainer/DataFrozen"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Data-Frozen"
+
+[node name="OptionButton" type="OptionButton" parent="TabContainer/Data/VBoxContainer/DataFrozen"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+disabled = true
+item_count = 4
+popup/item_0/text = "HAPPY"
+popup/item_0/id = 0
+popup/item_1/text = "ILL"
+popup/item_1/id = 1
+popup/item_2/text = "NORMAL"
+popup/item_2/id = 2
+popup/item_3/text = "POORCONDITION"
+popup/item_3/id = 3
+
+[node name="RestoreDefault" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Mods" type="VBoxContainer" parent="TabContainer"]
-visible = false
+[node name="Button" type="Button" parent="TabContainer/Data/VBoxContainer/RestoreDefault"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Restore Default"
+
+[node name="FillerPanel" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="System" type="VBoxContainer" parent="TabContainer"]
-visible = false
+[node name="Panel" type="Panel" parent="TabContainer/Data/VBoxContainer/FillerPanel"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_ov8it")
+
+[node name="ModifierEngine" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Info" type="VBoxContainer" parent="TabContainer"]
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/ModifierEngine"]
+layout_mode = 2
+size_flags_horizontal = 6
+text = "Modifier Engine"
+
+[node name="Button" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierEngine"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Apply"
+
+[node name="HealthModifier" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Health
+"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+value = 100.0
+
+[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealthModifier2" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Health
+"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+value = 100.0
+
+[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealthModifier3" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Health
+"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+value = 100.0
+
+[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealthModifier4" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Health
+"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier4"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+value = 100.0
+
+[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier4"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HealthModifier5" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+layout_mode = 2
+
+[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Health
+"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier5"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+value = 100.0
+
+[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier5"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Custom" type="MarginContainer" parent="TabContainer"]
 visible = false
 layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Custom"]
+layout_mode = 2
+
+[node name="AllowMoving" type="HBoxContainer" parent="TabContainer/Custom/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="CheckButton" type="CheckButton" parent="TabContainer/Custom/VBoxContainer/AllowMoving"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Allow Moving"
+
+[node name="Panel" type="Panel" parent="TabContainer/Custom/VBoxContainer/AllowMoving"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0uj7k")
+
+[node name="RaisedDelay" type="HBoxContainer" parent="TabContainer/Custom/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Custom/VBoxContainer/RaisedDelay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Raised Delay Time"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Custom/VBoxContainer/RaisedDelay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+rounded = true
+tick_count = 5
+ticks_on_borders = true
+
+[node name="IdleDelay" type="HBoxContainer" parent="TabContainer/Custom/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Custom/VBoxContainer/IdleDelay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Idle Delay Time"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Custom/VBoxContainer/IdleDelay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+rounded = true
+tick_count = 5
+ticks_on_borders = true
+
+[node name="MovingDelay" type="HBoxContainer" parent="TabContainer/Custom/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Custom/VBoxContainer/MovingDelay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Moving Delay Time"
+
+[node name="HSlider" type="HSlider" parent="TabContainer/Custom/VBoxContainer/MovingDelay"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+rounded = true
+tick_count = 5
+ticks_on_borders = true
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="TabContainer/Custom/VBoxContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="TabContainer/Custom/VBoxContainer"]
+layout_mode = 2
+
+[node name="Mods" type="MarginContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Mods"]
+layout_mode = 2
+
+[node name="ModsDefaultFolder" type="HBoxContainer" parent="TabContainer/Mods/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/Mods/VBoxContainer/ModsDefaultFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Mods Default Folder"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/Mods/VBoxContainer/ModsDefaultFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Mods/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Tree" type="Tree" parent="TabContainer/Mods/VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="System" type="MarginContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/System"]
+layout_mode = 2
+
+[node name="ScreenShotDefaultFolder" type="HBoxContainer" parent="TabContainer/System/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/System/VBoxContainer/ScreenShotDefaultFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "ScreenShot Default Folder
+"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/System/VBoxContainer/ScreenShotDefaultFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RecordingDefaultFolder" type="HBoxContainer" parent="TabContainer/System/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="TabContainer/System/VBoxContainer/RecordingDefaultFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Recording Default Folder"
+
+[node name="LineEdit" type="LineEdit" parent="TabContainer/System/VBoxContainer/RecordingDefaultFolder"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Info" type="MarginContainer" parent="TabContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("1_6jdhq")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="TabContainer/Info"]
+layout_mode = 2
+bbcode_enabled = true
+text = "[b]VPet-Godot[/b]
+
+An open-source desktop pet/shimeji/virtual pet app by godot
+
+If you want to find offical repository. please [url=https://github.com/LorisYounger/VPet]click here[/url]
+
+[b]Animation copyright notice and authorization terms[/b]
+
+The copyright of the [url=./VPet-Simulator.Windows/mod/0000_core/pet/vup]pet animation files[/url] provided in the source code belongs to [url=https://www.exlb.net/VUP-Simulator]the VUP-Simulator team[/url]. When using this game's core library in your application, you may either use your own animation files or ours. Providing that you follow the following terms, you may use our animations freely:
+
+ [b]Note[/b]
+ This copyright notice only applies to the default animation files and doesn't apply to custom animation files created by third parties."
+scroll_following = true
 
 [node name="FileDialog" type="FileDialog" parent="."]
 size = Vector2i(295, 154)

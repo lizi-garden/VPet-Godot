@@ -190,3 +190,5 @@ popup/item_0/text = "Food"
 popup/item_0/id = 0
 popup/item_1/text = "Setting"
 popup/item_1/id = 1
+
+[connection signal="index_pressed" from="RightClickMenu" to="." method="_on_right_click_menu_index_pressed"]
