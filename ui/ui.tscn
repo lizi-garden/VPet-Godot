@@ -22,6 +22,7 @@ layout_mode = 3
 anchors_preset = 0
 size_flags_horizontal = 8
 size_flags_vertical = 0
+mouse_filter = 1
 script = ExtResource("2_476th")
 
 [node name="PopupBar" type="Control" parent="MainUI"]
@@ -37,7 +38,6 @@ script = ExtResource("2_ov4nx")
 [node name="Items" type="PopupMenu" parent="MainUI/PopupBar"]
 disable_3d = true
 size = Vector2i(100, 89)
-extend_to_title = true
 item_count = 3
 item_0/text = "Food"
 item_0/id = 0
@@ -46,7 +46,7 @@ item_1/id = 1
 item_2/text = "Medicine"
 item_2/id = 2
 
-[node name="Info" type="PopupPanel" parent="MainUI/PopupBar"]
+[node name="Data" type="PopupPanel" parent="MainUI/PopupBar"]
 disable_3d = true
 gui_disable_input = true
 size = Vector2i(500, 195)
@@ -54,17 +54,17 @@ extend_to_title = true
 mouse_passthrough = true
 content_scale_size = Vector2i(1000, 495)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/PopupBar/Info"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/PopupBar/Data"]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 496.0
 offset_bottom = 191.0
 size_flags_horizontal = 3
 
-[node name="Wealth" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
+[node name="Wealth" type="HBoxContainer" parent="MainUI/PopupBar/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Wealth"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Data/VBoxContainer/Wealth"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -72,33 +72,33 @@ text = "Wealth:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Value" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Wealth"]
+[node name="Value" type="Label" parent="MainUI/PopupBar/Data/VBoxContainer/Wealth"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 text = "100 RMB"
 
-[node name="Health" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
+[node name="Health" type="HBoxContainer" parent="MainUI/PopupBar/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Health"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Data/VBoxContainer/Health"]
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Health:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Health"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Data/VBoxContainer/Health"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="Mood" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
+[node name="Mood" type="HBoxContainer" parent="MainUI/PopupBar/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Mood"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Data/VBoxContainer/Mood"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -106,17 +106,17 @@ text = "Mood:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Mood"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Data/VBoxContainer/Mood"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="Satiety" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
+[node name="Satiety" type="HBoxContainer" parent="MainUI/PopupBar/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Satiety"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Data/VBoxContainer/Satiety"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -124,17 +124,17 @@ text = "Satiety:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Satiety"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Data/VBoxContainer/Satiety"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0
 step = 1.0
 value = 100.0
 
-[node name="Thirst" type="HBoxContainer" parent="MainUI/PopupBar/Info/VBoxContainer"]
+[node name="Thirst" type="HBoxContainer" parent="MainUI/PopupBar/Data/VBoxContainer"]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainUI/PopupBar/Info/VBoxContainer/Thirst"]
+[node name="Label" type="Label" parent="MainUI/PopupBar/Data/VBoxContainer/Thirst"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
@@ -142,7 +142,7 @@ text = "Thirst:"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Info/VBoxContainer/Thirst"]
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/PopupBar/Data/VBoxContainer/Thirst"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 2.0

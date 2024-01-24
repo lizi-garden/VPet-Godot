@@ -2,6 +2,8 @@
 extends Control
 class_name PopupBar
 
+signal button_pressed(button_name :String)
+
 var dock :HBoxContainer = HBoxContainer.new()
 
 var viewport_size   :Vector2

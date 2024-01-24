@@ -1,6 +1,14 @@
 extends Window
 
 
+func _enter_tree():
+    show()
+
+
+func _exit_tree():
+    queue_free()
+
+
 func _ready():
     connect("close_requested", hide)
     connect("focus_exited", hide)

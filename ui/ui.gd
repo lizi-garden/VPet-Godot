@@ -51,6 +51,3 @@ func _on_show_items_window(tab_name :String = "food"):
     items_window.switch_tab(tab_name)
     items_window.show()
     pass
-
-
-

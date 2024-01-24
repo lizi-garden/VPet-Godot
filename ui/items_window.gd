@@ -12,6 +12,14 @@ extends Window
 @onready var medicine_item_list = $HBoxContainer/MedicineContainer/ItemList
 
 
+func _enter_tree():
+    show()
+
+
+func _exit_tree():
+    queue_free()
+
+
 func _init():
     pass
 
