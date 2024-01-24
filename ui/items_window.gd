@@ -35,7 +35,6 @@ func _ready():
     food_item_list.connect("item_activated", func(index): _on_item_activated(index, "food"))
     drink_item_list.connect("item_activated", func(index): _on_item_activated(index, "drink"))
     medicine_item_list.connect("item_activated", func(index): _on_item_activated(index, "medicine"))
-    pass
 
 
 func switch_tab(tab :String):

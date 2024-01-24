@@ -19,6 +19,17 @@ func _ready():
     allow_moving_init()
 
 
+@onready var tab_container = $TabContainer
+
+func switch_tab(tab :String):
+    match tab:
+        "data":     tab_container.current_tab = 0
+        "custom":   tab_container.current_tab = 1
+        "Mods":     tab_container.current_tab = 2
+        "system":   tab_container.current_tab = 3
+        "info":     tab_container.current_tab = 4
+
+
 ## Data
 
 @onready var data_label = $TabContainer/Data/VBoxContainer/Data/Label
