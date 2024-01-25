@@ -24,6 +24,11 @@ func _ready():
     right_click_menu.hide()
 
 
+func windows_queue_free():
+    setting_window.queue_free()
+    items_window.queue_free()
+
+
 func _unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.double_click:
