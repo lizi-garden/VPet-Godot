@@ -1,11 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsthj3x3pr5fb"]
+[gd_scene load_steps=4 format=3 uid="uid://dsthj3x3pr5fb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_ba0m6"]
 [ext_resource type="Script" path="res://ui/main_ui.gd" id="2_476th"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bhf7"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_glo6w"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_ba0m6")
@@ -43,123 +41,110 @@ size_flags_stretch_ratio = 4.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxEmpty_0bhf7")
 
-[node name="DataShow" type="Panel" parent="MainUI/VBoxContainer"]
+[node name="DataPanel" type="Panel" parent="MainUI/VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 mouse_filter = 1
 
-[node name="CustomShow" type="Panel" parent="MainUI/VBoxContainer"]
+[node name="CustomPanel" type="Panel" parent="MainUI/VBoxContainer"]
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 mouse_filter = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainUI/VBoxContainer"]
+[node name="MenuContainer" type="HBoxContainer" parent="MainUI/VBoxContainer"]
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="ItemsContainer" type="VBoxContainer" parent="MainUI/VBoxContainer/HBoxContainer"]
+[node name="ItemsMenu" type="VBoxContainer" parent="MainUI/VBoxContainer/MenuContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="ItemMenu" type="VBoxContainer" parent="MainUI/VBoxContainer/HBoxContainer/ItemsContainer"]
-visible = false
-layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 5
 
-[node name="Button" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/ItemsContainer/ItemMenu"]
+[node name="FoodButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Food"
+text_overrun_behavior = 3
+clip_text = true
 
-[node name="Button2" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/ItemsContainer/ItemMenu"]
+[node name="DrinkButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Drink"
+text_overrun_behavior = 3
+clip_text = true
 
-[node name="Button3" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/ItemsContainer/ItemMenu"]
+[node name="MachineButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Machine"
+text_overrun_behavior = 3
+clip_text = true
 
-[node name="Panel" type="Panel" parent="MainUI/VBoxContainer/HBoxContainer/ItemsContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_glo6w")
-
-[node name="Button" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/ItemsContainer"]
-custom_minimum_size = Vector2(0, 105)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Items"
-
-[node name="DataContainer" type="VBoxContainer" parent="MainUI/VBoxContainer/HBoxContainer"]
+[node name="FillerPanel" type="Panel" parent="MainUI/VBoxContainer/MenuContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_0bhf7")
 
-[node name="Panel" type="Panel" parent="MainUI/VBoxContainer/HBoxContainer/DataContainer"]
+[node name="SystemMenu" type="VBoxContainer" parent="MainUI/VBoxContainer/MenuContainer"]
 visible = false
-layout_mode = 2
-size_flags_vertical = 3
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxEmpty_glo6w")
-
-[node name="Button" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/DataContainer"]
-custom_minimum_size = Vector2(0, 105)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Data"
-
-[node name="CustomContainer" type="VBoxContainer" parent="MainUI/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Panel" type="Panel" parent="MainUI/VBoxContainer/HBoxContainer/CustomContainer"]
-visible = false
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_glo6w")
-
-[node name="Button" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/CustomContainer"]
-custom_minimum_size = Vector2(0, 105)
-layout_mode = 2
-size_flags_vertical = 3
-text = "Custom"
-
-[node name="SystemContainer" type="VBoxContainer" parent="MainUI/VBoxContainer/HBoxContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="SystemMenu" type="VBoxContainer" parent="MainUI/VBoxContainer/HBoxContainer/SystemContainer"]
-visible = false
-layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Button" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/SystemContainer/SystemMenu"]
+[node name="ScreenShotButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/SystemMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "ScreenShot"
+text_overrun_behavior = 3
+clip_text = true
 
-[node name="Button2" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/SystemContainer/SystemMenu"]
+[node name="RecordingButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/SystemMenu"]
 layout_mode = 2
 size_flags_vertical = 3
 text = "Recording"
+text_overrun_behavior = 3
+clip_text = true
 
-[node name="Panel" type="Panel" parent="MainUI/VBoxContainer/HBoxContainer/SystemContainer"]
-visible = false
+[node name="DockContainer" type="AspectRatioContainer" parent="MainUI/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_styles/panel = SubResource("StyleBoxEmpty_glo6w")
+ratio = 5.0
 
-[node name="Button" type="Button" parent="MainUI/VBoxContainer/HBoxContainer/SystemContainer"]
-custom_minimum_size = Vector2(0, 105)
+[node name="HBoxContainer" type="HBoxContainer" parent="MainUI/VBoxContainer/DockContainer"]
 layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ItemsButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Items"
+
+[node name="DataButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Data"
+
+[node name="CustomButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Custom"
+
+[node name="SystemButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "System"
 
