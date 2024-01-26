@@ -268,6 +268,8 @@ var random_gen
 var random_fsm
 
 func play_animation(action_name :String, mood_name :String, mode :Mode = Mode.GENERAL):
+    # Eat Food Sprite Hide
+    eat_food_sprite.hide()
     
     # General Mode
     if mode == Mode.GENERAL:
