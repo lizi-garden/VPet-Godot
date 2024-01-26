@@ -4,9 +4,11 @@ signal exit
 signal eat(food :Texture2D)
 signal drink(drink :Texture2D)
 
-
-@onready var right_click_menu = $RightClickMenu
 @onready var main_ui = $MainUI
+@onready var right_click_menu = $RightClickMenu
+@onready var exit_button = $ExitButton
+@onready var exit_dialog = $ExitDialog
+
 
 var setting_window  :Window
 var items_window    :Window
@@ -18,6 +20,8 @@ var viewport_size   :Vector2
 func _ready():
     main_ui.connect("custom_button_pressed", func(): _on_show_setting_window("custom"))
     main_ui.connect("data_button_pressed", func(): _on_show_setting_window("data"))
+    exit_button.connect("pressed", func(): exit_dialog.show())
+    exit_dialog.connect("confirmed", func(): exit.emit())
     
     viewport_size = get_viewport().size
     right_click_menu.hide()
@@ -38,7 +42,7 @@ func _on_right_click_menu_index_pressed(index :int):
     match right_click_menu.get_item_text(index).to_lower():
         "setting":  _on_show_setting_window()
         "dock":     main_ui.visible = !main_ui.visible
-        "exit":     exit.emit()
+        "exit":     exit_dialog.show()
 
 
 func _on_system_button_pressed(tab_name):
