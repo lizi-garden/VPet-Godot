@@ -6,9 +6,7 @@ If you want to find offical repository. please [click here](https://github.com/L
 
 ## TODO
 
-- [ ] MainUI
-- [ ] EatWindow
-- [ ] SettingWindow
+- [ ] Window Resizable Support
 - [ ] Mod Support
 
 ## Animation copyright notice and authorization terms
