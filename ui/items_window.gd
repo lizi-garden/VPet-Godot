@@ -25,8 +25,8 @@ func _init():
 
 
 func _ready():
-    connect("close_requested", hide)
-    connect("focus_exited", hide)
+    connect("close_requested", queue_free)
+    connect("focus_exited", queue_free)
     
     food_button.connect("toggled", func(toggled_on): if toggled_on: switch_tab("food"))
     drink_button.connect("toggled", func(toggled_on): if toggled_on: switch_tab("drink"))
@@ -60,4 +60,4 @@ func _on_item_activated(index :int, category :String):
         "drink":    parent.drink.emit(drink_item_list.get_item_icon(index))
         "medicine": parent.eat.emit(medicine_item_list.get_item_icon(index))
 
-    hide()
+    queue_free()

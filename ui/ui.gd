@@ -8,9 +8,8 @@ signal drink(drink :Texture2D)
 @onready var right_click_menu = $RightClickMenu
 @onready var main_ui = $MainUI
 
-
-var setting_window = preload("res://ui/setting_window.tscn").instantiate()
-var items_window = preload("res://ui/items_window.tscn").instantiate()
+var setting_window  :Window
+var items_window    :Window
 
 var viewport_pos    :Vector2
 var viewport_size   :Vector2
@@ -22,11 +21,6 @@ func _ready():
     
     viewport_size = get_viewport().size
     right_click_menu.hide()
-
-
-func windows_queue_free():
-    setting_window.queue_free()
-    items_window.queue_free()
 
 
 func _unhandled_input(event):
@@ -56,7 +50,13 @@ func _on_system_button_pressed(tab_name):
 
 func _on_show_setting_window(tab_name :String = "data"):
     if not has_node("SettingWindow"):
+        setting_window = preload("res://ui/setting_window.tscn").instantiate()
         add_child(setting_window)
+    else:
+        setting_window = get_node("SettingWindow")
+    
+    if tab_name == "":
+        tab_name = "data"
     
     setting_window.switch_tab(tab_name)
     setting_window.show()
@@ -64,7 +64,13 @@ func _on_show_setting_window(tab_name :String = "data"):
 
 func _on_show_items_window(tab_name :String = "food"):
     if not has_node("ItemsWindow"):
+        items_window = preload("res://ui/items_window.tscn").instantiate()
         add_child(items_window)
+    else:
+        items_window = get_node("ItemsWindow")
+    
+    if tab_name == "":
+        tab_name = "food"
     
     items_window.switch_tab(tab_name)
     items_window.show()

@@ -10,8 +10,8 @@ func _exit_tree():
 
 
 func _ready():
-    connect("close_requested", hide)
-    connect("focus_exited", hide)
+    connect("close_requested", queue_free)
+    connect("focus_exited", queue_free)
     
     data_init()
     data_frozen_init()
