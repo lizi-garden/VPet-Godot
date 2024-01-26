@@ -1,5 +1,6 @@
 extends Window
 
+@export var pin_window = false
 
 @onready var food_button = $HBoxContainer/VBoxContainer/Food
 @onready var drink_button = $HBoxContainer/VBoxContainer/Drink
@@ -10,6 +11,7 @@ extends Window
 @onready var food_item_list = $HBoxContainer/FoodContainer/ItemList
 @onready var drink_item_list = $HBoxContainer/DrinkContainer/ItemList
 @onready var medicine_item_list = $HBoxContainer/MedicineContainer/ItemList
+@onready var pin_button = $PinButton
 
 
 func _enter_tree():
@@ -36,6 +38,7 @@ func _ready():
     drink_item_list.connect("item_activated", func(index): _on_item_activated(index, "drink"))
     medicine_item_list.connect("item_activated", func(index): _on_item_activated(index, "medicine"))
 
+    pin_button.connect("toggled", func(toggled_on): pin_window = toggled_on)
 
 func switch_tab(tab :String):
     match tab:
@@ -60,4 +63,5 @@ func _on_item_activated(index :int, category :String):
         "drink":    parent.drink.emit(drink_item_list.get_item_icon(index))
         "medicine": parent.eat.emit(medicine_item_list.get_item_icon(index))
 
-    queue_free()
+    if pin_window == false:
+        queue_free()

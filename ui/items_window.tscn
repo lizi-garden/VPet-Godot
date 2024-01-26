@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dl2v75gbsgsqc"]
+[gd_scene load_steps=9 format=3 uid="uid://dl2v75gbsgsqc"]
 
 [ext_resource type="Script" path="res://ui/items_window.gd" id="1_tjnsq"]
 [ext_resource type="ButtonGroup" uid="uid://cgjtf6ex0m1k2" path="res://ui/items_button.tres" id="2_af5sp"]
 [ext_resource type="Theme" uid="uid://5m2lhduot4nl" path="res://modeditor/mod_editer.tres" id="2_m4bx0"]
 [ext_resource type="Texture2D" uid="uid://vj5k3r2jde3r" path="res://mods/image/food.png" id="2_xar11"]
+[ext_resource type="Texture2D" uid="uid://ci6tjo76gfbqh" path="res://mods/image/icons/pin_normal.png" id="5_6nue8"]
+[ext_resource type="Texture2D" uid="uid://deerhs254gare" path="res://mods/image/icons/pin_pressed.png" id="6_vni5l"]
+[ext_resource type="Texture2D" uid="uid://dv1fuwcb6imd" path="res://mods/image/icons/pin_hover.png" id="7_g8ng1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_i6vu6"]
 
 [node name="ItemsWindow" type="Window"]
 disable_3d = true
@@ -32,12 +37,14 @@ theme = ExtResource("2_m4bx0")
 
 [node name="Food" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 toggle_mode = true
 button_group = ExtResource("2_af5sp")
 text = "Food"
 
 [node name="Drink" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 toggle_mode = true
 button_group = ExtResource("2_af5sp")
 text = "Drink
@@ -45,9 +52,17 @@ text = "Drink
 
 [node name="Medicine" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 toggle_mode = true
 button_group = ExtResource("2_af5sp")
 text = "Medicine"
+
+[node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 7.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_i6vu6")
 
 [node name="FoodContainer" type="ScrollContainer" parent="HBoxContainer"]
 layout_mode = 2
@@ -195,3 +210,20 @@ item_8/selectable = false
 item_9/text = "Medicine"
 item_9/icon = ExtResource("2_xar11")
 item_9/selectable = false
+
+[node name="PinButton" type="TextureButton" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -50.0
+offset_top = -50.0
+grow_horizontal = 0
+grow_vertical = 0
+toggle_mode = true
+texture_normal = ExtResource("5_6nue8")
+texture_pressed = ExtResource("6_vni5l")
+texture_hover = ExtResource("7_g8ng1")
+ignore_texture_size = true
+stretch_mode = 5
