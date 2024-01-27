@@ -45,6 +45,7 @@ func _ready():
     
     pin_button.connect("toggled", func(toggled_on): pin_window = toggled_on)
 
+
 func switch_tab(tab :String):
     match tab:
         "food":
