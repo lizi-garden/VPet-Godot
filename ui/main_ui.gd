@@ -5,9 +5,51 @@ signal data_button_pressed
 signal custom_button_pressed
 signal system_button_pressed(tab_name :String)
 
-var viewport_size :Vector2
 
 func _ready():
+    main_ui_init()
+
+## Data Panel Init
+
+@onready var level_value_label = $VBoxContainer/DataPanel/MarginContainer/VBoxContainer/LevelContainer/Value
+@onready var money_value_label = $VBoxContainer/DataPanel/MarginContainer/VBoxContainer/MoneyContainer/Value
+@onready var health_progress_bar = $VBoxContainer/DataPanel/MarginContainer/VBoxContainer/HealthContainer/ProgressBar
+@onready var hunger_progress_bar = $VBoxContainer/DataPanel/MarginContainer/VBoxContainer/HungerContainer/ProgressBar
+@onready var thirsty_progress_bar = $VBoxContainer/DataPanel/MarginContainer/VBoxContainer/ThirstyContainer/ProgressBar
+
+func level_value_label_update(value :int):
+    level_value_label.text = "lv." + str(value)
+
+func money_value_label_update(value :int):
+    money_value_label.text = str(value) + "RMB"
+
+func health_progress_bar_update(value :int):
+    health_progress_bar.value = value
+    
+func hunger_progress_bar_update(value :int):
+    hunger_progress_bar.value = value
+
+func thirsty_progress_bar_update(value :int):
+    thirsty_progress_bar.value = value
+
+
+## Main UI Init
+
+@onready var filler_panel = $VBoxContainer/FillerPanel
+@onready var data_panel = $VBoxContainer/DataPanel
+@onready var custom_panel = $VBoxContainer/CustomPanel
+@onready var menu_container = $VBoxContainer/MenuContainer
+@onready var items_menu = $VBoxContainer/MenuContainer/ItemsMenu
+@onready var system_menu = $VBoxContainer/MenuContainer/SystemMenu
+@onready var dock_container = $VBoxContainer/DockContainer
+@onready var items_button = $VBoxContainer/DockContainer/HBoxContainer/ItemsButton
+@onready var data_button = $VBoxContainer/DockContainer/HBoxContainer/DataButton
+@onready var custom_button = $VBoxContainer/DockContainer/HBoxContainer/CustomButton
+@onready var system_button = $VBoxContainer/DockContainer/HBoxContainer/SystemButton
+
+var viewport_size :Vector2
+
+func main_ui_init():
     filler_panel.connect("mouse_entered", display_init)
     items_button.connect("mouse_entered", items_menu_show)
     data_button.connect("mouse_entered", data_panel_show)
@@ -30,19 +72,6 @@ func _ready():
     custom_button.connect("pressed", func(): custom_button_pressed.emit())
     system_button.connect("pressed", func(): system_button_pressed.emit(system_button.text.to_lower()))
     display_init()
-
-@onready var filler_panel = $VBoxContainer/FillerPanel
-@onready var data_panel = $VBoxContainer/DataPanel
-@onready var custom_panel = $VBoxContainer/CustomPanel
-@onready var menu_container = $VBoxContainer/MenuContainer
-@onready var items_menu = $VBoxContainer/MenuContainer/ItemsMenu
-@onready var system_menu = $VBoxContainer/MenuContainer/SystemMenu
-@onready var dock_container = $VBoxContainer/DockContainer
-@onready var items_button = $VBoxContainer/DockContainer/HBoxContainer/ItemsButton
-@onready var data_button = $VBoxContainer/DockContainer/HBoxContainer/DataButton
-@onready var custom_button = $VBoxContainer/DockContainer/HBoxContainer/CustomButton
-@onready var system_button = $VBoxContainer/DockContainer/HBoxContainer/SystemButton
-
 
 func display_init():
     filler_panel.size_flags_stretch_ratio = 4

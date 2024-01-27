@@ -4,6 +4,42 @@ signal exit
 signal eat(food :Texture2D)
 signal drink(drink :Texture2D)
 
+signal level_value_changed(value :int)
+signal money_value_changed(value :int)
+signal health_value_changed(value :int)
+signal hunger_value_changed(value :int)
+signal thirsty_value_changed(value :int)
+
+@export var level_value := 1:
+    set(value):
+        level_value_changed.emit(value)
+        main_ui.level_value_label_update(value)
+        level_value = value
+
+@export var money_value := 1_000:
+    set(value):
+        money_value_changed.emit(value)
+        main_ui.money_value_label_update(value)
+        money_value = value
+
+@export var health_value := 500_000:
+    set(value):
+        health_value_changed.emit(value)
+        main_ui.health_progress_bar_update(value)
+        health_value = value
+
+@export var hunger_value := 500_000:
+    set(value):
+        hunger_value_changed.emit(value)
+        main_ui.hunger_progress_bar_update(value)
+        hunger_value = value
+
+@export var thirsty_value := 500_000:
+    set(value):
+        thirsty_value_changed.emit(value)
+        main_ui.thirsty_progress_bar_update(value)
+        thirsty_value = value
+
 @onready var main_ui = $MainUI
 @onready var right_click_menu = $RightClickMenu
 @onready var exit_button = $ExitButton

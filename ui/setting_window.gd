@@ -10,13 +10,14 @@ func _exit_tree():
 
 
 func _ready():
-    connect("close_requested", queue_free)
-    connect("focus_exited", queue_free)
+    connect("close_requested", save_dialog.show)
+    connect("focus_exited", save_dialog.show)
     
     data_init()
     data_frozen_init()
     modifier_engine_init()
     allow_moving_init()
+    save_dialog_init()
 
 
 @onready var tab_container = $TabContainer
@@ -124,34 +125,32 @@ func _on_state_frozen_option_button(index):
 
 ## ModifierEngine
 
-@onready var modifier_check_box = $TabContainer/Data/VBoxContainer/ModifierEngine/CheckBox
-@onready var modifier_button = $TabContainer/Data/VBoxContainer/ModifierEngine/Button
-@onready var health_modifier_check_box = $TabContainer/Data/VBoxContainer/HealthModifier/CheckBox
-@onready var health_modifier_h_slider = $TabContainer/Data/VBoxContainer/HealthModifier/HSlider
-@onready var health_modifier_spin_box = $TabContainer/Data/VBoxContainer/HealthModifier/SpinBox
+@onready var modifier_check_box = $TabContainer/Data/VBoxContainer/ModifierCheckBox
+@onready var level_button = $TabContainer/Data/VBoxContainer/ModifierContainer/LevelButton
+@onready var money_button = $TabContainer/Data/VBoxContainer/ModifierContainer/MoneyButton
+@onready var health_button = $TabContainer/Data/VBoxContainer/ModifierContainer/HealthButton
+@onready var hunger_button = $TabContainer/Data/VBoxContainer/ModifierContainer/HungerButton
+@onready var thirsty_button = $TabContainer/Data/VBoxContainer/ModifierContainer/ThirstyButton
 
+var ui :Node
 
 func modifier_engine_init():
+    ui = get_parent()
+    level_button.connect("pressed", func(): ui.level_value += 1)
+    money_button.connect("pressed", func(): ui.money_value += 100_000)
+    health_button.connect("pressed", func(): ui.health_value = 500)
+    hunger_button.connect("pressed", func(): ui.hunger_value = 500)
+    thirsty_button.connect("pressed", func(): ui.thirsty_value = 500)
     modifier_check_box.connect("toggled", _on_modifier_check_box)
-    modifier_button.disabled = !modifier_check_box.button_pressed
-    health_modifier_check_box.disabled = !modifier_check_box.button_pressed
-    health_modifier_h_slider.editable = false
-    health_modifier_spin_box.editable = false
-    
-    health_modifier_check_box.connect("toggled", _on_health_modifier_check_box)
+    _on_modifier_check_box(modifier_check_box.button_pressed)
 
 
 func _on_modifier_check_box(toggled_on):
-    modifier_button.disabled = !toggled_on
-    health_modifier_check_box.disabled = !toggled_on
-    
-    if toggled_on == false:
-        health_modifier_check_box.button_pressed = false
-
-
-func _on_health_modifier_check_box(toggled_on):
-    health_modifier_h_slider.editable = toggled_on
-    health_modifier_spin_box.editable = toggled_on
+    level_button.disabled = !toggled_on
+    money_button.disabled = !toggled_on
+    health_button.disabled = !toggled_on
+    hunger_button.disabled = !toggled_on
+    thirsty_button.disabled = !toggled_on
 
 
 ## Arrow Moving
@@ -169,3 +168,22 @@ func allow_moving_init():
 ## Idle Delay
 
 ## Moving Delay
+
+## Save Dialog
+
+@onready var save_dialog = $SaveDialog
+
+func save_dialog_init():
+    save_dialog.connect("canceled", queue_free)
+    save_dialog.connect("confirmed", save_profile)
+
+
+func save_profile():
+    var config = ConfigFile.new()
+    
+    config.set_value("data", "load data", load_data_option_button.text)
+    config.set_value("data", "data frozen", data_frozen_check_button.button_pressed)
+    
+    config.save("user://setting.cfg")
+    
+    queue_free()

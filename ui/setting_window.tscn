@@ -11,6 +11,10 @@
 title = "Setting Window"
 position = Vector2i(0, 36)
 size = Vector2i(800, 500)
+wrap_controls = true
+transient = true
+exclusive = true
+popup_window = true
 script = ExtResource("1_5va00")
 
 [node name="TabContainer" type="TabContainer" parent="."]
@@ -124,118 +128,40 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/panel = SubResource("StyleBoxEmpty_ov8it")
 
-[node name="ModifierEngine" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
+[node name="ModifierCheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer"]
 layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/ModifierEngine"]
-layout_mode = 2
-size_flags_horizontal = 6
+size_flags_horizontal = 0
 text = "Modifier Engine"
 
-[node name="Button" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierEngine"]
+[node name="ModifierContainer" type="GridContainer" parent="TabContainer/Data/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Apply"
+columns = 2
 
-[node name="HealthModifier" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
-layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier"]
+[node name="LevelButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Health
-"
+text = "Level 1 Upgrade (+1)"
 
-[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier"]
+[node name="MoneyButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
-value = 100.0
+text = "Get Money (+100_000)"
 
-[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier"]
+[node name="HealthButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+text = "Pull through (Full)"
 
-[node name="HealthModifier2" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
-layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier2"]
+[node name="HungerButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Health
-"
+text = "Full Up  (Full)"
 
-[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier2"]
+[node name="ThirstyButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
-value = 100.0
-
-[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier2"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HealthModifier3" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
-layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier3"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Health
-"
-
-[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier3"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
-value = 100.0
-
-[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier3"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HealthModifier4" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
-layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier4"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Health
-"
-
-[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier4"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
-value = 100.0
-
-[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier4"]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="HealthModifier5" type="HBoxContainer" parent="TabContainer/Data/VBoxContainer"]
-layout_mode = 2
-
-[node name="CheckBox" type="CheckBox" parent="TabContainer/Data/VBoxContainer/HealthModifier5"]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Health
-"
-
-[node name="HSlider" type="HSlider" parent="TabContainer/Data/VBoxContainer/HealthModifier5"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-size_flags_stretch_ratio = 2.0
-value = 100.0
-
-[node name="SpinBox" type="SpinBox" parent="TabContainer/Data/VBoxContainer/HealthModifier5"]
-layout_mode = 2
-size_flags_horizontal = 3
+text = "Quench Thirst  (Full)"
 
 [node name="Custom" type="MarginContainer" parent="TabContainer"]
 visible = false
@@ -411,3 +337,8 @@ scroll_following = true
 
 [node name="FileDialog" type="FileDialog" parent="."]
 size = Vector2i(295, 154)
+
+[node name="SaveDialog" type="ConfirmationDialog" parent="."]
+ok_button_text = "Yes"
+dialog_text = "Do you want to save current profile?"
+cancel_button_text = "No"

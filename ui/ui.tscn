@@ -1,10 +1,17 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsthj3x3pr5fb"]
+[gd_scene load_steps=12 format=3 uid="uid://dsthj3x3pr5fb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_ba0m6"]
 [ext_resource type="Script" path="res://ui/main_ui.gd" id="2_476th"]
 [ext_resource type="Texture2D" uid="uid://b3ov502ooqoeq" path="res://mods/image/icons/exit.png" id="3_2me8u"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bhf7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jldcw"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5sesx"]
 
@@ -53,6 +60,110 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_jldcw")
+
+[node name="MarginContainer" type="MarginContainer" parent="MainUI/VBoxContainer/DataPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/VBoxContainer/DataPanel/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LevelContainer" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/LevelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Level:"
+
+[node name="Value" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/LevelContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 5.0
+text = "lv.1"
+
+[node name="MoneyContainer" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/MoneyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Money:"
+
+[node name="Value" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/MoneyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 5.0
+text = "100 RMB"
+
+[node name="HealthContainer" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/HealthContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Health:"
+
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/HealthContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 5.0
+max_value = 500000.0
+step = 1.0
+value = 500000.0
+
+[node name="HungerContainer" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/HungerContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Hunger:"
+
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/HungerContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 5.0
+max_value = 500000.0
+step = 1.0
+value = 500000.0
+
+[node name="ThirstyContainer" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/ThirstyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Thirsty:"
+
+[node name="ProgressBar" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/MarginContainer/VBoxContainer/ThirstyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 5.0
+max_value = 500000.0
+step = 1.0
+value = 500000.0
 
 [node name="CustomPanel" type="Panel" parent="MainUI/VBoxContainer"]
 visible = false
@@ -60,6 +171,7 @@ layout_mode = 2
 size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 mouse_filter = 1
+theme_override_styles/panel = SubResource("StyleBoxFlat_jldcw")
 
 [node name="MenuContainer" type="HBoxContainer" parent="MainUI/VBoxContainer"]
 visible = false
@@ -134,6 +246,12 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../SystemButton")
+focus_neighbor_top = NodePath("../../../../../ExitButton")
+focus_neighbor_right = NodePath("../DataButton")
+focus_neighbor_bottom = NodePath("../../../../../ExitButton")
+focus_next = NodePath("../DataButton")
+focus_previous = NodePath("../SystemButton")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_5sesx")
 text = "Items"
 
@@ -141,6 +259,12 @@ text = "Items"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../ItemsButton")
+focus_neighbor_top = NodePath("../../../../../ExitButton")
+focus_neighbor_right = NodePath("../CustomButton")
+focus_neighbor_bottom = NodePath("../../../../../ExitButton")
+focus_next = NodePath("../CustomButton")
+focus_previous = NodePath("../ItemsButton")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_6dxj5")
 text = "Data"
 
@@ -148,6 +272,12 @@ text = "Data"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../DataButton")
+focus_neighbor_top = NodePath("../../../../../ExitButton")
+focus_neighbor_right = NodePath("../SystemButton")
+focus_neighbor_bottom = NodePath("../../../../../ExitButton")
+focus_next = NodePath("../SystemButton")
+focus_previous = NodePath("../DataButton")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_o1iag")
 text = "Custom"
 
@@ -155,6 +285,12 @@ text = "Custom"
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+focus_neighbor_left = NodePath("../CustomButton")
+focus_neighbor_top = NodePath("../../../../../ExitButton")
+focus_neighbor_right = NodePath("../ItemsButton")
+focus_neighbor_bottom = NodePath("../../../../../ExitButton")
+focus_next = NodePath("../ItemsButton")
+focus_previous = NodePath("../CustomButton")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_grb0h")
 text = "System"
 
@@ -165,6 +301,8 @@ anchor_right = 1.0
 offset_left = -50.0
 offset_bottom = 50.0
 grow_horizontal = 0
+focus_neighbor_top = NodePath("../MainUI/VBoxContainer/DockContainer/HBoxContainer/ItemsButton")
+focus_neighbor_bottom = NodePath("../MainUI/VBoxContainer/DockContainer/HBoxContainer/ItemsButton")
 theme_override_styles/normal = SubResource("StyleBoxTexture_m7apc")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1mmi3")
 icon = ExtResource("3_2me8u")
@@ -184,7 +322,7 @@ item_2/id = 1
 
 [node name="ExitDialog" type="ConfirmationDialog" parent="."]
 title = "Exit"
-initial_position = 2
+initial_position = 1
 ok_button_text = "Yes"
 dialog_text = "Do you want to exit?"
 cancel_button_text = "No"
