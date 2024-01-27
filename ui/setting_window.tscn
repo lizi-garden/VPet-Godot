@@ -141,26 +141,31 @@ columns = 2
 [node name="LevelButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Level 1 Upgrade (+1)"
 
 [node name="MoneyButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Get Money (+100_000)"
 
 [node name="HealthButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Pull through (Full)"
 
 [node name="HungerButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Full Up  (Full)"
 
 [node name="ThirstyButton" type="Button" parent="TabContainer/Data/VBoxContainer/ModifierContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+disabled = true
 text = "Quench Thirst  (Full)"
 
 [node name="Custom" type="MarginContainer" parent="TabContainer"]
@@ -338,7 +343,8 @@ scroll_following = true
 [node name="FileDialog" type="FileDialog" parent="."]
 size = Vector2i(295, 154)
 
-[node name="SaveDialog" type="ConfirmationDialog" parent="."]
+[node name="SaveProfileDialog" type="ConfirmationDialog" parent="."]
+initial_position = 1
 ok_button_text = "Yes"
 dialog_text = "Do you want to save current profile?"
 cancel_button_text = "No"

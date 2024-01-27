@@ -10,14 +10,14 @@ func _exit_tree():
 
 
 func _ready():
-    connect("close_requested", save_dialog.show)
-    connect("focus_exited", save_dialog.show)
+    connect("close_requested", save_profile_dialog.show)
+    connect("focus_exited", save_profile_dialog.show)
     
     data_init()
     data_frozen_init()
     modifier_engine_init()
     allow_moving_init()
-    save_dialog_init()
+    save_profile_dialog_init()
 
 
 @onready var tab_container = $TabContainer
@@ -165,25 +165,57 @@ func allow_moving_init():
 
 ## Raised Delay
 
+@onready var raised_delay_h_slider = $TabContainer/Custom/VBoxContainer/RaisedDelay/HSlider
+
 ## Idle Delay
+
+@onready var idle_delay_h_slider = $TabContainer/Custom/VBoxContainer/IdleDelay/HSlider
 
 ## Moving Delay
 
+@onready var moving_delay_h_slider = $TabContainer/Custom/VBoxContainer/MovingDelay/HSlider
+
 ## Save Dialog
 
-@onready var save_dialog = $SaveDialog
+@onready var save_profile_dialog = $SaveProfileDialog
 
-func save_dialog_init():
-    save_dialog.connect("canceled", queue_free)
-    save_dialog.connect("confirmed", save_profile)
+func save_profile_dialog_init():
+    save_profile_dialog.connect("canceled", queue_free)
+    save_profile_dialog.connect("confirmed", save_profile)
+    
+    load_profile()
 
 
 func save_profile():
     var config = ConfigFile.new()
     
-    config.set_value("data", "load data", load_data_option_button.text)
-    config.set_value("data", "data frozen", data_frozen_check_button.button_pressed)
+    config.set_value("Data", "load data", load_data_option_button.selected)
+    config.set_value("Data", "data frozen", data_frozen_check_button.button_pressed)
+    config.set_value("Data", "state frozen", state_frozen_option_button.selected)
+    config.set_value("Data", "modifier checkbox", modifier_check_box.button_pressed)
+    config.set_value("Custom", "allow moving", allow_moving_check_button.button_pressed)
+    config.set_value("Custom", "raised delay", raised_delay_h_slider.value)
+    config.set_value("Custom", "idle delay", idle_delay_h_slider.value)
+    config.set_value("Custom", "moving delay", moving_delay_h_slider.value)
     
     config.save("user://setting.cfg")
     
     queue_free()
+
+
+func load_profile():
+    var config = ConfigFile.new()
+    
+    var err = config.load("user://setting.cfg")
+    
+    if err != OK:
+        return
+    
+    load_data_option_button.selected = config.get_value("Data", "load data")
+    data_frozen_check_button.button_pressed = config.get_value("Data", "data frozen")
+    state_frozen_option_button.selected = config.get_value("Data", "state frozen")
+    modifier_check_box.button_pressed = config.get_value("Data", "modifier checkbox")
+    allow_moving_check_button.button_pressed = config.get_value("Custom", "allow moving")
+    raised_delay_h_slider.value = config.get_value("Custom", "raised delay")
+    idle_delay_h_slider.value = config.get_value("Custom", "idle delay")
+    moving_delay_h_slider.value = config.get_value("Custom", "moving delay")
