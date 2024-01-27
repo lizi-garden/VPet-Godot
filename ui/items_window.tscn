@@ -57,10 +57,17 @@ toggle_mode = true
 button_group = ExtResource("2_af5sp")
 text = "Medicine"
 
+[node name="Gift" type="Button" parent="HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+toggle_mode = true
+button_group = ExtResource("2_af5sp")
+text = "Gift"
+
 [node name="Panel" type="Panel" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 7.0
+size_flags_stretch_ratio = 6.0
 mouse_filter = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_i6vu6")
 
@@ -208,6 +215,55 @@ item_8/text = "Medicine"
 item_8/icon = ExtResource("2_xar11")
 item_8/selectable = false
 item_9/text = "Medicine"
+item_9/icon = ExtResource("2_xar11")
+item_9/selectable = false
+
+[node name="GiftContainer" type="ScrollContainer" parent="HBoxContainer"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 5.0
+
+[node name="ItemList" type="ItemList" parent="HBoxContainer/GiftContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+max_text_lines = 2
+auto_height = true
+item_count = 10
+max_columns = 5
+same_column_width = true
+fixed_column_width = 120
+icon_mode = 0
+fixed_icon_size = Vector2i(100, 100)
+item_0/text = "Gift"
+item_0/icon = ExtResource("2_xar11")
+item_0/selectable = false
+item_1/text = "Gift"
+item_1/icon = ExtResource("2_xar11")
+item_1/selectable = false
+item_2/text = "Gift"
+item_2/icon = ExtResource("2_xar11")
+item_2/selectable = false
+item_3/text = "Gift"
+item_3/icon = ExtResource("2_xar11")
+item_3/selectable = false
+item_4/text = "Gift"
+item_4/icon = ExtResource("2_xar11")
+item_4/selectable = false
+item_5/text = "Gift"
+item_5/icon = ExtResource("2_xar11")
+item_5/selectable = false
+item_6/text = "Gift"
+item_6/icon = ExtResource("2_xar11")
+item_6/selectable = false
+item_7/text = "Gift"
+item_7/icon = ExtResource("2_xar11")
+item_7/selectable = false
+item_8/text = "Gift"
+item_8/icon = ExtResource("2_xar11")
+item_8/selectable = false
+item_9/text = "Gift"
 item_9/icon = ExtResource("2_xar11")
 item_9/selectable = false
 

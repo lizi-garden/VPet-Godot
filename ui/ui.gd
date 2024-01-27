@@ -3,6 +3,7 @@ extends CanvasLayer
 signal exit
 signal eat(food :Texture2D)
 signal drink(drink :Texture2D)
+signal gift(gift :Texture2D)
 
 signal level_value_changed(value :int)
 signal money_value_changed(value :int)
