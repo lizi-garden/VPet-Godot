@@ -80,10 +80,10 @@ text = "Drink"
 text_overrun_behavior = 3
 clip_text = true
 
-[node name="MachineButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
+[node name="MedicineButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
-text = "Machine"
+text = "Medicine"
 text_overrun_behavior = 3
 clip_text = true
 

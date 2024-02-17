@@ -38,7 +38,12 @@ export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/AS2P/plugin.cfg")
+enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/statemachine/plugin.cfg", "res://addons/vpetgesture/plugin.cfg")
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://locale/zh_CN.mo")
+locale/translations_pot_files=PackedStringArray("res://ui/setting_window.tscn", "res://ui/ui.tscn", "res://ui/main_ui.gd", "res://ui/setting_window.gd", "res://ui/ui.gd", "res://ui/items_window.gd", "res://ui/items_window.tscn")
 
 [rendering]
 

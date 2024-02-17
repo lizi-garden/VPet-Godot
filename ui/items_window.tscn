@@ -40,8 +40,7 @@ text = "Food"
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("2_af5sp")
-text = "Drink
-"
+text = "Drink"
 
 [node name="Medicine" type="Button" parent="HBoxContainer/VBoxContainer"]
 layout_mode = 2

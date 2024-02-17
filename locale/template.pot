@@ -1,0 +1,185 @@
+# LANGUAGE translation for VPet for the following files:
+# res://ui/setting_window.tscn
+# res://ui/ui.tscn
+# res://ui/main_ui.gd
+# res://ui/setting_window.gd
+# res://ui/ui.gd
+# res://ui/items_window.gd
+# res://ui/items_window.tscn
+#
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: VPet\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8-bit\n"
+
+#: ui/setting_window.tscn
+#: ui/setting_window.gd
+msgid "Save Data"
+msgstr ""
+
+#: ui/setting_window.tscn
+#: ui/setting_window.gd
+msgid "Load Data"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Setting Window"
+msgstr ""
+
+#: ui/setting_window.tscn
+#: ui/setting_window.gd
+msgid ""
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "New Data"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Load"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Save"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Delete"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Cancel"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Data-Frozen"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Restore Default"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Modifier Engine"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Apply"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Health\n"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Allow Moving"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Raised Delay Time"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Idle Delay Time"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Moving Delay Time"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Mods"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Mods Default Folder"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "ScreenShot Default Folder"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Recording Default Folder"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid "Info"
+msgstr ""
+
+#: ui/setting_window.tscn
+msgid ""
+"[b]VPet-Godot[/b]\n"
+"\n"
+"An open-source desktop pet/shimeji/virtual pet app by godot\n"
+"\n"
+"If you want to find offical repository. please [url=https://github.com/LorisYounger/VPet]click here[/url]\n"
+"\n"
+"[b]Animation copyright notice and authorization terms[/b]\n"
+"\n"
+"The copyright of the [url=./VPet-Simulator.Windows/mod/0000_core/pet/vup]pet animation files[/url] provided in the source code belongs to [url=https://www.exlb.net/VUP-Simulator]the VUP-Simulator team[/url]. When using this game\'s core library in your application, you may either use your own animation files or ours. Providing that you follow the following terms, you may use our animations freely:\n"
+"\n"
+" [b]Note[/b]\n"
+" This copyright notice only applies to the default animation files and doesn\'t apply to custom animation files created by third parties."
+msgstr ""
+
+#: ui/ui.tscn
+#: ui/items_window.tscn
+msgid "Food"
+msgstr ""
+
+#: ui/ui.tscn
+#: ui/items_window.tscn
+msgid "Drink"
+msgstr ""
+
+#: ui/ui.tscn
+#: ui/items_window.tscn
+msgid "Medicine"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "ScreenShot"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Recording"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Items"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Data"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Custom"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "System"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Setting"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Dock"
+msgstr ""
+
+#: ui/ui.tscn
+msgid "Exit"
+msgstr ""
+
+#: ui/items_window.tscn
+msgid "Items Window"
+msgstr ""
+

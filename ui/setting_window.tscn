@@ -368,8 +368,7 @@ layout_mode = 2
 [node name="Label" type="Label" parent="TabContainer/System/VBoxContainer/ScreenShotDefaultFolder"]
 layout_mode = 2
 size_flags_horizontal = 3
-text = "ScreenShot Default Folder
-"
+text = "ScreenShot Default Folder"
 
 [node name="LineEdit" type="LineEdit" parent="TabContainer/System/VBoxContainer/ScreenShotDefaultFolder"]
 layout_mode = 2
