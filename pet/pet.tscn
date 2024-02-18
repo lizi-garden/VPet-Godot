@@ -75,6 +75,9 @@ position = Vector2(290, 130)
 [node name="DragPlot2" type="Node2D" parent="."]
 position = Vector2(230, 115)
 
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(250, 250)
+
 [node name="TouchBodyTimer" type="Node" parent="."]
 
 [node name="Timer" type="Timer" parent="TouchBodyTimer"]

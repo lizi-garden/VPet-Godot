@@ -38,6 +38,7 @@ func update_node():
 
 func _ready():
     update_node()
+    system_init()
 
 
 func _unhandled_input(event):
@@ -212,3 +213,22 @@ func _on_unhandled_happy_turn_timeout():
         vup.happy_turn(false)
         Input.set_default_cursor_shape(Input.CURSOR_ARROW)
 
+
+var ssCount = 1
+
+func system_init():
+    var dir = DirAccess.open("user://")
+    dir.make_dir("screenshots")
+    
+    dir = DirAccess.open("user://screenshots")
+    for n in dir.get_files():
+        ssCount += 1
+
+
+func screenshot():
+    await RenderingServer.frame_post_draw
+    
+    var viewport = get_viewport()
+    var img = viewport.get_texture().get_image()
+    img.save_png("user://screenshots/ss" + str(ssCount) + ".png")
+    ssCount += 1

@@ -3,10 +3,13 @@ extends CanvasLayer
 signal exit
 signal eat(food :Texture2D)
 signal drink(drink :Texture2D)
+signal screenshot
+signal recording(start :bool)
 
 
 @onready var right_click_menu = $RightClickMenu
 @onready var main_ui = $MainUI
+@onready var screenshot_dialog = $ScreenShotDialog
 
 
 var setting_window = preload("res://ui/setting_window.tscn").instantiate()
@@ -22,7 +25,7 @@ func _ready():
     
     viewport_size = get_viewport().size
     right_click_menu.hide()
-
+    
 
 func windows_queue_free():
     setting_window.queue_free()
@@ -49,9 +52,13 @@ func _on_right_click_menu_index_pressed(index :int):
 
 func _on_system_button_pressed(tab_name):
     match tab_name:
-        "system":       _on_show_setting_window("system")
-        "screenshot":   pass
-        "recording":    pass
+        "system":
+            _on_show_setting_window("system")
+        "screenshot":
+            screenshot.emit()
+            screenshot_dialog.show()
+        "recording":
+            pass
 
 
 func _on_show_setting_window(tab_name :String = "data"):
@@ -70,4 +77,4 @@ func _on_show_items_window(tab_name :String = "food"):
     items_window.show()
 
 
-
+    

@@ -148,6 +148,12 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "System"
 
+[node name="ScreenShotDialog" type="AcceptDialog" parent="."]
+title = "Inform"
+initial_position = 2
+size = Vector2i(187, 100)
+dialog_text = "Screenshot Successful"
+
 [connection signal="index_pressed" from="RightClickMenu" to="." method="_on_right_click_menu_index_pressed"]
 [connection signal="items_button_pressed" from="MainUI" to="." method="_on_show_items_window"]
 [connection signal="system_button_pressed" from="MainUI" to="." method="_on_system_button_pressed"]
