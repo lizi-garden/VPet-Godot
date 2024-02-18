@@ -76,7 +76,7 @@ var window_pos  :Vector2
 func raised_unhandled_input(event):
     if event is InputEventMouseButton:
         if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
-            if raised_handler_delay_timer.time_left == 0 and not dragging:
+            if not dragging:
                 raised_handler_delay_timer.start()
             
         else:
