@@ -31,6 +31,31 @@ func _ready():
     system_button.connect("pressed", func(): system_button_pressed.emit(system_button.text.to_lower()))
     display_init()
 
+
+@onready var level_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Level/Value
+@onready var exp_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Exp/Value
+@onready var money_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Money/Value
+@onready var health_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Health/Value
+@onready var hunger_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Hunger/Value
+@onready var thirst_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Thirst/Value
+@onready var mood_value = $VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Mood/Value
+
+
+func update_data(data :UserData):
+    level_value.text = "lv." + str(data.level_value)
+    exp_value.max_value = data.exp_max_value
+    exp_value.value = data.exp_value
+    money_value.text = str(data.money_value) + " RMB"
+    health_value.max_value = data.health_max_value
+    health_value.value = data.health_value
+    hunger_value.max_value = data.hunger_max_value
+    hunger_value.value = data.hunger_value
+    thirst_value.max_value = data.thirst_max_value
+    thirst_value.value = data.thirst_value
+    mood_value.max_value = data.mood_max_value
+    mood_value.value = data.mood_value
+
+
 @onready var filler_panel = $VBoxContainer/FillerPanel
 @onready var data_panel = $VBoxContainer/DataPanel
 @onready var custom_panel = $VBoxContainer/CustomPanel

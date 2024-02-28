@@ -6,7 +6,7 @@ extends Node
 
 func _ready():
     ui.connect("exit", pet.vup.shutdown)
-    ui.connect("exit", ui.windows_queue_free)
+    ui.connect("exit", ui.autosave_userdata)
     ui.connect("eat", pet.vup.eat)
     ui.connect("screenshot", pet.screenshot)
 

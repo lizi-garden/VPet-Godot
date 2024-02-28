@@ -20,17 +20,51 @@ var viewport_size   :Vector2
 
 
 func _ready():
+    autoload_userdata()
     main_ui.connect("custom_button_pressed", func(): _on_show_setting_window("custom"))
     main_ui.connect("data_button_pressed", func(): _on_show_setting_window("data"))
     
     viewport_size = get_viewport().size
     right_click_menu.hide()
+
+
+var userdata :UserData
+
+func autoload_userdata():
+    var path = "user://save/autosave.tres"
+    var load_res = ResourceLoader.exists(path)
+    
+    if load_res:
+        userdata = ResourceLoader.load(path)
+    else:
+        userdata = UserData.new()
+        userdata.name = "Auto Save"
+        userdata.time = Time.get_date_string_from_system()
+        userdata.mood = AnimeData.MOOD_NAME.HAPPY
+        
+        DirAccess.make_dir_absolute("user://save")
+        var save_res = ResourceSaver.save(userdata, path)
+        assert(save_res == OK)
+        
+    main_ui.update_data(userdata)
+
+
+func autosave_userdata():
+    var path = "user://save/autosave.tres"
+    DirAccess.make_dir_absolute("user://save")
+    
+    var res = ResourceSaver.save(userdata, path)
+    assert(res == OK)
     
 
-func windows_queue_free():
-    setting_window.queue_free()
-    items_window.queue_free()
-
+func load_userdata(dataname :String):
+    var path = "user://save/" + dataname.to_lower().replace(" ", "_")
+    var res = ResourceLoader.exists(path)
+    
+    if res:
+        userdata = ResourceLoader.load(path)
+        main_ui.update_data(userdata)
+    
 
 func _unhandled_input(event):
     if event is InputEventMouseButton:
@@ -42,7 +76,7 @@ func _unhandled_input(event):
             right_click_menu.position = viewport_pos + event.global_position
             right_click_menu.show()
 
-
+               
 func _on_right_click_menu_index_pressed(index :int):
     match right_click_menu.get_item_text(index).to_lower():
         "setting":  _on_show_setting_window()
@@ -76,5 +110,3 @@ func _on_show_items_window(tab_name :String = "food"):
     items_window.switch_tab(tab_name)
     items_window.show()
 
-
-    

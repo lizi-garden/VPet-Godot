@@ -1,9 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsthj3x3pr5fb"]
+[gd_scene load_steps=9 format=3 uid="uid://dsthj3x3pr5fb"]
 
 [ext_resource type="Script" path="res://ui/ui.gd" id="1_ba0m6"]
 [ext_resource type="Script" path="res://ui/main_ui.gd" id="2_476th"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0bhf7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l40em"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0am7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h4q51"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p66p3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o7l7i"]
 
 [node name="UI" type="CanvasLayer"]
 script = ExtResource("1_ba0m6")
@@ -48,6 +58,152 @@ size_flags_vertical = 3
 size_flags_stretch_ratio = 2.0
 mouse_filter = 1
 
+[node name="ScrollContainer" type="ScrollContainer" parent="MainUI/VBoxContainer/DataPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Level" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Level"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Level:"
+
+[node name="Value" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Level"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "lv.1"
+
+[node name="Exp" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Exp"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "EXP:"
+
+[node name="Value" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Exp"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+step = 1.0
+value = 100.0
+
+[node name="Money" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Money"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Money:"
+
+[node name="Value" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Money"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+text = "1000 RMB"
+
+[node name="Health" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Health"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Health:"
+
+[node name="Value" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Health"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+step = 1.0
+value = 100.0
+
+[node name="Hunger" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Hunger"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Hunger:"
+
+[node name="Value" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Hunger"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+step = 1.0
+value = 100.0
+
+[node name="Thirst" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Thirst"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Thirst:"
+
+[node name="Value" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Thirst"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+step = 1.0
+value = 100.0
+
+[node name="Mood" type="HBoxContainer" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Mood"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Mood:"
+
+[node name="Value" type="ProgressBar" parent="MainUI/VBoxContainer/DataPanel/ScrollContainer/MarginContainer/VBoxContainer/Mood"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+size_flags_stretch_ratio = 2.0
+step = 1.0
+value = 100.0
+
 [node name="CustomPanel" type="Panel" parent="MainUI/VBoxContainer"]
 visible = false
 layout_mode = 2
@@ -69,6 +225,7 @@ theme_override_constants/separation = 5
 [node name="FoodButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_l40em")
 text = "Food"
 text_overrun_behavior = 3
 clip_text = true
@@ -76,6 +233,7 @@ clip_text = true
 [node name="DrinkButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_k0am7")
 text = "Drink"
 text_overrun_behavior = 3
 clip_text = true
@@ -83,6 +241,7 @@ clip_text = true
 [node name="MedicineButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/ItemsMenu"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_h4q51")
 text = "Medicine"
 text_overrun_behavior = 3
 clip_text = true
@@ -104,6 +263,7 @@ size_flags_vertical = 3
 [node name="ScreenShotButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/SystemMenu"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p66p3")
 text = "ScreenShot"
 text_overrun_behavior = 3
 clip_text = true
@@ -111,6 +271,7 @@ clip_text = true
 [node name="RecordingButton" type="Button" parent="MainUI/VBoxContainer/MenuContainer/SystemMenu"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p66p3")
 text = "Recording"
 text_overrun_behavior = 3
 clip_text = true
@@ -128,24 +289,28 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7l7i")
 text = "Items"
 
 [node name="DataButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7l7i")
 text = "Data"
 
 [node name="CustomButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7l7i")
 text = "Custom"
 
 [node name="SystemButton" type="Button" parent="MainUI/VBoxContainer/DockContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o7l7i")
 text = "System"
 
 [node name="ScreenShotDialog" type="AcceptDialog" parent="."]

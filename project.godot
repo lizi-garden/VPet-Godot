@@ -24,6 +24,10 @@ boot_splash/image="res://boot_splash.png"
 config/icon="res://icon.png"
 boot_splash/minimum_display_time=1
 
+[autoload]
+
+AnimeData="*res://data/animedata.gd"
+
 [display]
 
 window/size/viewport_width=500
@@ -47,8 +51,10 @@ enabled=PackedStringArray("res://addons/AS2P/plugin.cfg", "res://addons/statemac
 
 folder_colors={
 "res://addons/": "gray",
+"res://data/": "red",
 "res://locale/": "blue",
-"res://modeditor/": "gray"
+"res://modeditor/": "gray",
+"res://mods/": "orange"
 }
 
 [internationalization]
